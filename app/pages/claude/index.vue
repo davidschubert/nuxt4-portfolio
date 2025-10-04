@@ -13,596 +13,629 @@
                 class="min-h-screen flex flex-col justify-center pt-8"
                 aria-labelledby="hero-title"
             >
-            <!-- Verfügbarkeits-Widget -->
-            <div
-                class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm mb-8 text-sm font-medium mx-auto"
-            >
-                <span
-                    class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
-                ></span>
-                <span
-                    >VERFÜGBAR ab Februar 2025 | Express-Projekte sofort |
-                    Remote DACH-weit</span
-                >
-            </div>
-
-            <div class="max-w-7xl mx-auto px-4">
-                <h1
-                    id="hero-title"
-                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
-                >
-                    UI/UX Designer Freelancer für SaaS, Corporate & Dashboard
-                    Design
-                </h1>
-
-                <p
-                    class="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-600 mb-8"
-                >
-                    Senior
-                    <strong class="text-gray-900 font-semibold"
-                        >UX Designer mit 25+ Jahren Erfahrung</strong
-                    >
-                    im
-                    <strong class="text-gray-900 font-semibold"
-                        >DACH-Raum</strong
-                    >. Spezialisiert auf
-                    <strong class="text-gray-900 font-semibold"
-                        >SaaS UI Design</strong
-                    >,
-                    <strong class="text-gray-900 font-semibold"
-                        >Dashboard UX</strong
-                    >
-                    und
-                    <strong class="text-gray-900 font-semibold"
-                        >konversionsstarke Landing Pages</strong
-                    >. Als erfahrener
-                    <strong class="text-gray-900 font-semibold"
-                        >Figma Designer Freelancer</strong
-                    >
-                    verbinde ich
-                    <strong class="text-gray-900 font-semibold"
-                        >barrierefreies Webdesign</strong
-                    >
-                    mit messbar besseren Business-Metriken – 100%
-                    <strong class="text-gray-900 font-semibold">Remote</strong>
-                    aus Deutschland, Österreich oder der Schweiz.
-                </p>
-
-                <!-- Trust Badges -->
+                <!-- Verfügbarkeits-Widget -->
                 <div
-                    class="flex flex-wrap gap-4 mb-12"
-                    role="list"
-                    aria-label="Vertrauensmerkmale"
+                    class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm mb-8 text-sm font-medium mx-auto"
                 >
                     <span
-                        class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
-                        role="listitem"
-                        >✓ 25+ Jahre Freelance UX Designer Remote</span
-                    >
+                        class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+                    ></span>
                     <span
-                        class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
-                        role="listitem"
-                        >✓ 200+ Projekte in Deutschland, Österreich,
-                        Schweiz</span
-                    >
-                    <span
-                        class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
-                        role="listitem"
-                        >✓ Spezialist für Corporate Webdesign Freelancer</span
-                    >
-                    <span
-                        class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
-                        role="listitem"
-                        >✓ UX Audit Deutschland mit Ø +73% Conversion</span
+                        >VERFÜGBAR ab Februar 2025 | Express-Projekte sofort |
+                        Remote DACH-weit</span
                     >
                 </div>
 
-                <!-- Value Propositions -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <div
-                        class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                <div class="max-w-7xl mx-auto px-4">
+                    <h1
+                        id="hero-title"
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
                     >
-                        <h3 class="text-xl font-semibold text-blue-600 mb-3">
-                            SaaS UI Design & Dashboard UX Design
-                        </h3>
-                        <p class="text-gray-600">
-                            Komplexe B2B-Software wird endlich intuitiv. Als
-                            spezialisierter Dashboard UX Designer transformiere
-                            ich Ihre Datenvisualisierungen in nutzerfreundliche
-                            Interfaces. Durchschnittlich 43% mehr
-                            Feature-Adoption.
-                        </p>
+                        UI/UX Designer Freelancer für SaaS, Corporate &
+                        Dashboard Design
+                    </h1>
+
+                    <p
+                        class="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-600 mb-8"
+                    >
+                        Senior
+                        <strong class="text-gray-900 font-semibold"
+                            >UX Designer mit 25+ Jahren Erfahrung</strong
+                        >
+                        im
+                        <strong class="text-gray-900 font-semibold"
+                            >DACH-Raum</strong
+                        >. Spezialisiert auf
+                        <strong class="text-gray-900 font-semibold"
+                            >SaaS UI Design</strong
+                        >,
+                        <strong class="text-gray-900 font-semibold"
+                            >Dashboard UX</strong
+                        >
+                        und
+                        <strong class="text-gray-900 font-semibold"
+                            >konversionsstarke Landing Pages</strong
+                        >. Als erfahrener
+                        <strong class="text-gray-900 font-semibold"
+                            >Figma Designer Freelancer</strong
+                        >
+                        verbinde ich
+                        <strong class="text-gray-900 font-semibold"
+                            >barrierefreies Webdesign</strong
+                        >
+                        mit messbar besseren Business-Metriken – 100%
+                        <strong class="text-gray-900 font-semibold"
+                            >Remote</strong
+                        >
+                        aus Deutschland, Österreich oder der Schweiz.
+                    </p>
+
+                    <!-- Trust Badges -->
+                    <div
+                        class="flex flex-wrap gap-4 mb-12"
+                        role="list"
+                        aria-label="Vertrauensmerkmale"
+                    >
+                        <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                            role="listitem"
+                            >✓ 25+ Jahre Freelance UX Designer Remote</span
+                        >
+                        <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                            role="listitem"
+                            >✓ 200+ Projekte in Deutschland, Österreich,
+                            Schweiz</span
+                        >
+                        <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                            role="listitem"
+                            >✓ Spezialist für Corporate Webdesign
+                            Freelancer</span
+                        >
+                        <span
+                            class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                            role="listitem"
+                            >✓ UX Audit Deutschland mit Ø +73% Conversion</span
+                        >
                     </div>
-                    <div
-                        class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <h3 class="text-xl font-semibold text-blue-600 mb-3">
-                            Corporate Webdesign Freelancer für KMU
-                        </h3>
-                        <p class="text-gray-600">
-                            Professionelle Unternehmenswebsites, die Vertrauen
-                            schaffen und konvertieren. Ihr Corporate Webdesign
-                            Freelancer für den gesamten DACH-Markt – von München
-                            bis Zürich.
-                        </p>
+
+                    <!-- Value Propositions -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div
+                            class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                        >
+                            <h3
+                                class="text-xl font-semibold text-blue-600 mb-3"
+                            >
+                                SaaS UI Design & Dashboard UX Design
+                            </h3>
+                            <p class="text-gray-600">
+                                Komplexe B2B-Software wird endlich intuitiv. Als
+                                spezialisierter Dashboard UX Designer
+                                transformiere ich Ihre Datenvisualisierungen in
+                                nutzerfreundliche Interfaces. Durchschnittlich
+                                43% mehr Feature-Adoption.
+                            </p>
+                        </div>
+                        <div
+                            class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                        >
+                            <h3
+                                class="text-xl font-semibold text-blue-600 mb-3"
+                            >
+                                Corporate Webdesign Freelancer für KMU
+                            </h3>
+                            <p class="text-gray-600">
+                                Professionelle Unternehmenswebsites, die
+                                Vertrauen schaffen und konvertieren. Ihr
+                                Corporate Webdesign Freelancer für den gesamten
+                                DACH-Markt – von München bis Zürich.
+                            </p>
+                        </div>
+                        <div
+                            class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                        >
+                            <h3
+                                class="text-xl font-semibold text-blue-600 mb-3"
+                            >
+                                Landing Page Designer mit Conversion-Garantie
+                            </h3>
+                            <p class="text-gray-600">
+                                Jede Landing Page ist eine Chance. Als
+                                erfahrener Landing Page Designer und Conversion
+                                Optimierung Designer steigere ich Ihre
+                                Conversion Rate durchschnittlich um 73%.
+                            </p>
+                        </div>
+                        <div
+                            class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                        >
+                            <h3
+                                class="text-xl font-semibold text-blue-600 mb-3"
+                            >
+                                Figma Designer Freelancer & Design System
+                                Experte
+                            </h3>
+                            <p class="text-gray-600">
+                                Developer-ready Designs in Figma, skalierbare
+                                Design Systems und barrierefreie WCAG-konforme
+                                Interfaces. Ihr Figma Design System Freelancer
+                                Remote.
+                            </p>
+                        </div>
                     </div>
-                    <div
-                        class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <h3 class="text-xl font-semibold text-blue-600 mb-3">
-                            Landing Page Designer mit Conversion-Garantie
-                        </h3>
-                        <p class="text-gray-600">
-                            Jede Landing Page ist eine Chance. Als erfahrener
-                            Landing Page Designer und Conversion Optimierung
-                            Designer steigere ich Ihre Conversion Rate
-                            durchschnittlich um 73%.
-                        </p>
-                    </div>
-                    <div
-                        class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                    >
-                        <h3 class="text-xl font-semibold text-blue-600 mb-3">
-                            Figma Designer Freelancer & Design System Experte
-                        </h3>
-                        <p class="text-gray-600">
-                            Developer-ready Designs in Figma, skalierbare Design
-                            Systems und barrierefreie WCAG-konforme Interfaces.
-                            Ihr Figma Design System Freelancer Remote.
-                        </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <NuxtLink
+                            to="#kontakt"
+                            class="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
+                        >
+                            Kostenloses Erstgespräch mit Ihrem UI/UX Designer
+                            Freelancer buchen →
+                        </NuxtLink>
+                        <NuxtLink
+                            to="#portfolio"
+                            class="inline-flex items-center px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
+                        >
+                            Portfolio: SaaS, Dashboard & Corporate Design
+                            ansehen
+                        </NuxtLink>
                     </div>
                 </div>
 
-                <!-- CTAs -->
-                <div class="flex flex-wrap gap-4 mb-12">
-                    <NuxtLink
-                        to="#kontakt"
-                        class="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
-                    >
-                        Kostenloses Erstgespräch mit Ihrem UI/UX Designer
-                        Freelancer buchen →
-                    </NuxtLink>
-                    <NuxtLink
-                        to="#portfolio"
-                        class="inline-flex items-center px-8 py-4 bg-white text-blue-600 border-2 border-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
-                    >
-                        Portfolio: SaaS, Dashboard & Corporate Design ansehen
-                    </NuxtLink>
-                </div>
-            </div>
-
-            <!-- Hero Image with optimized loading -->
-            <img
-                src="https://picsum.photos/1920/1080"
-                alt="UI UX Designer Freelancer arbeitet remote an SaaS Dashboard Design in Figma mit Design System Komponenten für DACH-Kunden"
-                width="1920"
-                height="1080"
-                loading="eager"
-                class="w-full h-auto"
-            />
-        </section>
+                <!-- Hero Image with optimized loading -->
+                <img
+                    src="https://picsum.photos/1920/1080"
+                    alt="UI UX Designer Freelancer arbeitet remote an SaaS Dashboard Design in Figma mit Design System Komponenten für DACH-Kunden"
+                    width="1920"
+                    height="1080"
+                    loading="eager"
+                    class="w-full h-auto"
+                />
+            </section>
+        </header>
 
         <main id="content" class="focus:outline-none" role="main">
             <!-- Problem/Solution Section -->
             <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
-                >
-                    Digitale Herausforderungen lösen – mit einem erfahrenen UI
-                    Designer aus München, Berlin oder Remote
-                </h2>
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
+                    >
+                        Digitale Herausforderungen lösen – mit einem erfahrenen
+                        UI Designer aus München, Berlin oder Remote
+                    </h2>
 
-                <p class="text-lg md:text-xl text-gray-600 mb-12">
-                    Sie suchen einen
-                    <strong class="text-gray-900 font-semibold"
-                        >UX Designer in Berlin</strong
-                    >,
-                    <strong class="text-gray-900 font-semibold"
-                        >UI Designer in München</strong
-                    >
-                    oder einen
-                    <strong class="text-gray-900 font-semibold"
-                        >Webdesigner in der Schweiz</strong
-                    >? Als erfahrener
-                    <strong class="text-gray-900 font-semibold"
-                        >Remote Designer Deutschland</strong
-                    >-weit verfügbar, kenne ich die typischen Herausforderungen
-                    von
-                    <strong class="text-gray-900 font-semibold"
-                        >B2B Software UX</strong
-                    >
-                    und
-                    <strong class="text-gray-900 font-semibold"
-                        >Mobile First Design</strong
-                    >.
-                </p>
-
-                <div class="grid grid-cols-1 gap-8 my-12">
-                    <div
-                        class="grid md:grid-cols-2 gap-8 p-8 bg-white rounded-2xl shadow-sm"
-                        v-for="item in problemSolutions"
-                        :key="item.id"
-                    >
-                        <div
-                            class="pr-0 md:pr-8 border-b md:border-b-0 md:border-r-2 border-gray-200 pb-4 md:pb-0"
+                    <p class="text-lg md:text-xl text-gray-600 mb-12">
+                        Sie suchen einen
+                        <strong class="text-gray-900 font-semibold"
+                            >UX Designer in Berlin</strong
+                        >,
+                        <strong class="text-gray-900 font-semibold"
+                            >UI Designer in München</strong
                         >
-                            <h3 class="text-lg font-semibold text-red-600 mb-2">
-                                {{ item.problem }}
-                            </h3>
-                            <p class="text-gray-600">{{ item.problemDesc }}</p>
-                        </div>
-                        <div>
-                            <h3
-                                class="text-lg font-semibold text-green-700 mb-2"
+                        oder einen
+                        <strong class="text-gray-900 font-semibold"
+                            >Webdesigner in der Schweiz</strong
+                        >? Als erfahrener
+                        <strong class="text-gray-900 font-semibold"
+                            >Remote Designer Deutschland</strong
+                        >-weit verfügbar, kenne ich die typischen
+                        Herausforderungen von
+                        <strong class="text-gray-900 font-semibold"
+                            >B2B Software UX</strong
+                        >
+                        und
+                        <strong class="text-gray-900 font-semibold"
+                            >Mobile First Design</strong
+                        >.
+                    </p>
+
+                    <div class="grid grid-cols-1 gap-8 my-12">
+                        <div
+                            class="grid md:grid-cols-2 gap-8 p-8 bg-white rounded-2xl shadow-sm"
+                            v-for="item in problemSolutions"
+                            :key="item.id"
+                        >
+                            <div
+                                class="pr-0 md:pr-8 border-b md:border-b-0 md:border-r-2 border-gray-200 pb-4 md:pb-0"
                             >
-                                {{ item.solution }}
-                            </h3>
-                            <p class="text-gray-600">{{ item.solutionDesc }}</p>
+                                <h3
+                                    class="text-lg font-semibold text-red-600 mb-2"
+                                >
+                                    {{ item.problem }}
+                                </h3>
+                                <p class="text-gray-600">
+                                    {{ item.problemDesc }}
+                                </p>
+                            </div>
+                            <div>
+                                <h3
+                                    class="text-lg font-semibold text-green-700 mb-2"
+                                >
+                                    {{ item.solution }}
+                                </h3>
+                                <p class="text-gray-600">
+                                    {{ item.solutionDesc }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Testimonial -->
-                <blockquote
-                    class="my-12 p-8 bg-white border-l-4 border-blue-600 rounded-lg italic"
-                >
-                    <p class="text-gray-900 mb-4">
-                        "Wir suchten einen
-                        <strong>UI Designer in München</strong> und fanden mit
-                        [Name] so viel mehr. Als
-                        <strong>Remote Designer Deutschland</strong> hat er
-                        unser Dashboard revolutioniert. Support-Tickets -67%,
-                        Feature-Adoption +43%."
-                    </p>
-                    <cite
-                        class="block mt-4 not-italic font-semibold text-gray-900"
-                        >— Maria Schmidt, CPO, TechScale GmbH, München
-                        ⭐⭐⭐⭐⭐</cite
+                    <!-- Testimonial -->
+                    <blockquote
+                        class="my-12 p-8 bg-white border-l-4 border-blue-600 rounded-lg italic"
                     >
-                </blockquote>
-            </div>
+                        <p class="text-gray-900 mb-4">
+                            "Wir suchten einen
+                            <strong>UI Designer in München</strong> und fanden
+                            mit [Name] so viel mehr. Als
+                            <strong>Remote Designer Deutschland</strong> hat er
+                            unser Dashboard revolutioniert. Support-Tickets
+                            -67%, Feature-Adoption +43%."
+                        </p>
+                        <cite
+                            class="block mt-4 not-italic font-semibold text-gray-900"
+                            >— Maria Schmidt, CPO, TechScale GmbH, München
+                            ⭐⭐⭐⭐⭐</cite
+                        >
+                    </blockquote>
+                </div>
             </section>
 
             <!-- Services Section -->
             <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
-                >
-                    Spezialisierte Services von Ihrem Agile UX Designer und
-                    Design Sprint Facilitator
-                </h2>
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
+                    >
+                        Spezialisierte Services von Ihrem Agile UX Designer und
+                        Design Sprint Facilitator
+                    </h2>
 
-                <p class="text-lg md:text-xl text-gray-600 mb-12">
-                    Als erfahrener
-                    <strong class="text-gray-900 font-semibold"
-                        >Product Designer Freelance</strong
-                    >
-                    und
-                    <strong class="text-gray-900 font-semibold"
-                        >UX Consultant DACH</strong
-                    >
-                    biete ich maßgeschneiderte Lösungen. Vom
-                    <strong class="text-gray-900 font-semibold"
-                        >Design Sprint Remote Facilitator</strong
-                    >
-                    Workshop bis zum fertigen
-                    <strong class="text-gray-900 font-semibold"
-                        >Interface Designer B2B</strong
-                    >
-                    Projekt.
-                </p>
+                    <p class="text-lg md:text-xl text-gray-600 mb-12">
+                        Als erfahrener
+                        <strong class="text-gray-900 font-semibold"
+                            >Product Designer Freelance</strong
+                        >
+                        und
+                        <strong class="text-gray-900 font-semibold"
+                            >UX Consultant DACH</strong
+                        >
+                        biete ich maßgeschneiderte Lösungen. Vom
+                        <strong class="text-gray-900 font-semibold"
+                            >Design Sprint Remote Facilitator</strong
+                        >
+                        Workshop bis zum fertigen
+                        <strong class="text-gray-900 font-semibold"
+                            >Interface Designer B2B</strong
+                        >
+                        Projekt.
+                    </p>
 
-                <!-- Service Cards -->
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
-                >
-                    <article
-                        class="p-8 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                        v-for="service in services"
-                        :key="service.id"
+                    <!-- Service Cards -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
                     >
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                            {{ service.title }}
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            {{ service.description }}
-                        </p>
-                        <ul class="my-4 pl-6 list-disc text-gray-600">
-                            <li
-                                class="mb-2"
-                                v-for="feature in service.features"
-                                :key="feature"
+                        <article
+                            class="p-8 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                            v-for="service in services"
+                            :key="service.id"
+                        >
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-4"
                             >
-                                {{ feature }}
-                            </li>
-                        </ul>
-                        <div class="my-6 p-4 bg-gray-50 rounded-lg">
-                            <h4
-                                class="text-base font-semibold text-blue-600 mb-2"
-                            >
-                                Garantierte Ergebnisse:
-                            </h4>
-                            <ul class="list-none space-y-1">
+                                {{ service.title }}
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                {{ service.description }}
+                            </p>
+                            <ul class="my-4 pl-6 list-disc text-gray-600">
                                 <li
-                                    class="text-green-700 font-semibold"
-                                    v-for="result in service.results"
-                                    :key="result"
+                                    class="mb-2"
+                                    v-for="feature in service.features"
+                                    :key="feature"
                                 >
-                                    {{ result }}
+                                    {{ feature }}
                                 </li>
                             </ul>
-                        </div>
-                        <div
-                            class="flex justify-between items-center my-4 pt-4 border-t border-gray-200"
-                        >
-                            <span class="font-bold text-blue-600">{{
-                                service.price
-                            }}</span>
-                            <span class="text-gray-600 text-sm">{{
-                                service.duration
-                            }}</span>
-                        </div>
-                        <NuxtLink
-                            :to="service.link"
-                            class="block w-full text-center py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 no-underline"
-                        >
-                            {{ service.cta }} →
-                        </NuxtLink>
-                    </article>
-                </div>
-            </div>
-            </section>
-
-            <!-- Process Section -->
-            <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
-                >
-                    Mein bewährter Prozess als Design Sprint Remote Facilitator
-                </h2>
-
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
-                >
-                    <div
-                        class="relative p-8 bg-white rounded-2xl shadow-sm"
-                        v-for="(step, index) in processSteps"
-                        :key="step.id"
-                    >
-                        <div
-                            class="absolute -top-4 left-6 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold"
-                        >
-                            {{ index + 1 }}
-                        </div>
-                        <h3
-                            class="text-xl font-semibold text-gray-900 mb-2 mt-2"
-                        >
-                            {{ step.title }}
-                        </h3>
-                        <p class="text-gray-600 mb-4">{{ step.description }}</p>
-                        <ul class="my-4 pl-6 text-gray-600">
-                            <li
-                                class="mb-1"
-                                v-for="deliverable in step.deliverables"
-                                :key="deliverable"
-                            >
-                                {{ deliverable }}
-                            </li>
-                        </ul>
-                        <span
-                            class="inline-block mt-4 px-3 py-1 bg-gray-100 rounded-lg text-sm text-gray-600"
-                            >{{ step.duration }}</span
-                        >
-                    </div>
-                </div>
-            </div>
-            </section>
-
-            <!-- Portfolio Section -->
-            <section class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
-                >
-                    Portfolio: Enterprise UX Consultant DACH mit
-                    Branchen-Expertise
-                </h2>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-                    <article
-                        class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                        v-for="project in portfolio"
-                        :key="project.id"
-                    >
-                        <img
-                            :src="project.image"
-                            :alt="project.imageAlt"
-                            width="600"
-                            height="400"
-                            loading="lazy"
-                            class="w-full h-auto"
-                        />
-                        <div class="p-6">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span
-                                    v-for="tag in project.tags"
-                                    :key="tag"
-                                    class="inline-block px-3 py-1 bg-gray-100 rounded-lg text-xs text-gray-600 font-medium"
-                                    >{{ tag }}</span
+                            <div class="my-6 p-4 bg-gray-50 rounded-lg">
+                                <h4
+                                    class="text-base font-semibold text-blue-600 mb-2"
                                 >
-                            </div>
-                            <h3
-                                class="text-2xl font-semibold text-gray-900 mb-4"
-                            >
-                                {{ project.title }}
-                            </h3>
-                            <div class="mb-3">
-                                <strong class="text-gray-900"
-                                    >Challenge:</strong
-                                >
-                                <span class="text-gray-600">
-                                    {{ project.challenge }}</span
-                                >
-                            </div>
-                            <div class="mb-3">
-                                <strong class="text-gray-900">Solution:</strong>
-                                <span class="text-gray-600">
-                                    {{ project.solution }}</span
-                                >
-                            </div>
-                            <div class="mb-4">
-                                <strong class="text-gray-900">Results:</strong>
-                                <ul class="list-disc pl-5 mt-2 text-gray-600">
+                                    Garantierte Ergebnisse:
+                                </h4>
+                                <ul class="list-none space-y-1">
                                     <li
-                                        v-for="result in project.results"
+                                        class="text-green-700 font-semibold"
+                                        v-for="result in service.results"
                                         :key="result"
                                     >
                                         {{ result }}
                                     </li>
                                 </ul>
                             </div>
-                            <NuxtLink
-                                :to="project.link"
-                                class="inline-block mt-4 text-blue-600 font-semibold hover:underline"
+                            <div
+                                class="flex justify-between items-center my-4 pt-4 border-t border-gray-200"
                             >
-                                Case Study lesen →
+                                <span class="font-bold text-blue-600">{{
+                                    service.price
+                                }}</span>
+                                <span class="text-gray-600 text-sm">{{
+                                    service.duration
+                                }}</span>
+                            </div>
+                            <NuxtLink
+                                :to="service.link"
+                                class="block w-full text-center py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 no-underline"
+                            >
+                                {{ service.cta }} →
                             </NuxtLink>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Client Logos -->
-                <div class="mt-16 text-center">
-                    <p class="text-lg font-semibold text-gray-900 mb-8">
-                        Vertraut von führenden Unternehmen:
-                    </p>
-                    <div
-                        class="flex justify-center items-center flex-wrap gap-8 p-8 bg-white rounded-2xl"
-                    >
-                        <img
-                            v-for="logo in clientLogos"
-                            :key="logo.name"
-                            :src="logo.src"
-                            :alt="`${logo.name} Logo`"
-                            width="150"
-                            height="60"
-                            loading="lazy"
-                            class="h-auto"
-                        />
+                        </article>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="py-20 bg-gray-50">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
+                    >
+                        Mein bewährter Prozess als Design Sprint Remote
+                        Facilitator
+                    </h2>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+                    >
+                        <div
+                            class="relative p-8 bg-white rounded-2xl shadow-sm"
+                            v-for="(step, index) in processSteps"
+                            :key="step.id"
+                        >
+                            <div
+                                class="absolute -top-4 left-6 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold"
+                            >
+                                {{ index + 1 }}
+                            </div>
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2 mt-2"
+                            >
+                                {{ step.title }}
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                {{ step.description }}
+                            </p>
+                            <ul class="my-4 pl-6 text-gray-600">
+                                <li
+                                    class="mb-1"
+                                    v-for="deliverable in step.deliverables"
+                                    :key="deliverable"
+                                >
+                                    {{ deliverable }}
+                                </li>
+                            </ul>
+                            <span
+                                class="inline-block mt-4 px-3 py-1 bg-gray-100 rounded-lg text-sm text-gray-600"
+                                >{{ step.duration }}</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
+                    >
+                        Portfolio: Enterprise UX Consultant DACH mit
+                        Branchen-Expertise
+                    </h2>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
+                        <article
+                            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                            v-for="project in portfolio"
+                            :key="project.id"
+                        >
+                            <img
+                                :src="project.image"
+                                :alt="project.imageAlt"
+                                width="600"
+                                height="400"
+                                loading="lazy"
+                                class="w-full h-auto"
+                            />
+                            <div class="p-6">
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        v-for="tag in project.tags"
+                                        :key="tag"
+                                        class="inline-block px-3 py-1 bg-gray-100 rounded-lg text-xs text-gray-600 font-medium"
+                                        >{{ tag }}</span
+                                    >
+                                </div>
+                                <h3
+                                    class="text-2xl font-semibold text-gray-900 mb-4"
+                                >
+                                    {{ project.title }}
+                                </h3>
+                                <div class="mb-3">
+                                    <strong class="text-gray-900"
+                                        >Challenge:</strong
+                                    >
+                                    <span class="text-gray-600">
+                                        {{ project.challenge }}</span
+                                    >
+                                </div>
+                                <div class="mb-3">
+                                    <strong class="text-gray-900"
+                                        >Solution:</strong
+                                    >
+                                    <span class="text-gray-600">
+                                        {{ project.solution }}</span
+                                    >
+                                </div>
+                                <div class="mb-4">
+                                    <strong class="text-gray-900"
+                                        >Results:</strong
+                                    >
+                                    <ul
+                                        class="list-disc pl-5 mt-2 text-gray-600"
+                                    >
+                                        <li
+                                            v-for="result in project.results"
+                                            :key="result"
+                                        >
+                                            {{ result }}
+                                        </li>
+                                    </ul>
+                                </div>
+                                <NuxtLink
+                                    :to="project.link"
+                                    class="inline-block mt-4 text-blue-600 font-semibold hover:underline"
+                                >
+                                    Case Study lesen →
+                                </NuxtLink>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Client Logos -->
+                    <div class="mt-16 text-center">
+                        <p class="text-lg font-semibold text-gray-900 mb-8">
+                            Vertraut von führenden Unternehmen:
+                        </p>
+                        <div
+                            class="flex justify-center items-center flex-wrap gap-8 p-8 bg-white rounded-2xl"
+                        >
+                            <img
+                                v-for="logo in clientLogos"
+                                :key="logo.name"
+                                :src="logo.src"
+                                :alt="`${logo.name} Logo`"
+                                width="150"
+                                height="60"
+                                loading="lazy"
+                                class="h-auto"
+                            />
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- FAQ Section -->
             <section class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
-                >
-                    Häufige Fragen zu UX Research und Testing Service
-                </h2>
-
-                <div class="mt-8 space-y-4">
-                    <details
-                        v-for="faq in faqs"
-                        :key="faq.id"
-                        class="mb-4 bg-white rounded-lg overflow-hidden shadow-sm"
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
                     >
-                        <summary
-                            class="px-6 py-6 font-semibold cursor-pointer hover:bg-gray-50 transition-colors"
+                        Häufige Fragen zu UX Research und Testing Service
+                    </h2>
+
+                    <div class="mt-8 space-y-4">
+                        <details
+                            v-for="faq in faqs"
+                            :key="faq.id"
+                            class="mb-4 bg-white rounded-lg overflow-hidden shadow-sm"
                         >
-                            {{ faq.question }}
-                        </summary>
-                        <div
-                            class="px-6 pb-6 text-gray-600 leading-relaxed"
-                            v-html="faq.answer"
-                        ></div>
-                    </details>
+                            <summary
+                                class="px-6 py-6 font-semibold cursor-pointer hover:bg-gray-50 transition-colors"
+                            >
+                                {{ faq.question }}
+                            </summary>
+                            <div
+                                class="px-6 pb-6 text-gray-600 leading-relaxed"
+                                v-html="faq.answer"
+                            ></div>
+                        </details>
+                    </div>
                 </div>
-            </div>
             </section>
 
             <!-- CTA Section -->
             <section
-            class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white"
-        >
-            <div class="max-w-7xl mx-auto px-4">
-                <h2
-                    class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center text-white"
-                >
-                    Ihr UI/UX Designer Freelancer für SaaS, Dashboard &
-                    Corporate Design – Jetzt starten
-                </h2>
-
-                <!-- Availability Widget -->
-                <div
-                    class="bg-white/10 border-2 border-white/20 rounded-2xl p-8 my-8 backdrop-blur-md"
-                >
-                    <h3 class="text-2xl font-semibold text-white mb-4">
-                        🟢 AKTUELLE VERFÜGBARKEIT
-                    </h3>
-                    <ul class="list-none mb-4 space-y-2 text-white/90">
-                        <li>Februar 2025: 2 Projekt-Slots verfügbar</li>
-                        <li>Express-Service: Sofort für Landing Pages</li>
-                        <li>UX Audit: Nächste Woche möglich</li>
-                        <li>Dashboard Design: Ab März 2025</li>
-                    </ul>
-                    <p class="text-white/90 leading-relaxed">
-                        ✓ Remote Deutschland, Österreich, Schweiz<br />
-                        ✓ Antwort innerhalb 24 Stunden garantiert<br />
-                        ✓ Kostenloses 30-Min Erstgespräch
-                    </p>
-                </div>
-
-                <!-- Contact Options -->
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
-                >
-                    <div
-                        class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white"
+            >
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center text-white"
                     >
-                        <h3 class="text-xl font-semibold text-white mb-4">
-                            📅 Kostenloses Erstgespräch
-                        </h3>
-                        <p class="text-white/80 mb-6">
-                            30 Minuten unverbindlich über Ihr Projekt sprechen
-                        </p>
-                        <button
-                            @click="openCalendly"
-                            class="w-full px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-                        >
-                            Termin direkt buchen →
-                        </button>
-                    </div>
+                        Ihr UI/UX Designer Freelancer für SaaS, Dashboard &
+                        Corporate Design – Jetzt starten
+                    </h2>
 
+                    <!-- Availability Widget -->
                     <div
-                        class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                        class="bg-white/10 border-2 border-white/20 rounded-2xl p-8 my-8 backdrop-blur-md"
                     >
-                        <h3 class="text-xl font-semibold text-white mb-4">
-                            📝 Projekt-Anfrage senden
+                        <h3 class="text-2xl font-semibold text-white mb-4">
+                            🟢 AKTUELLE VERFÜGBARKEIT
                         </h3>
-                        <ContactForm />
-                    </div>
-
-                    <div
-                        class="bg-white/5 p-8 rounded-2xl border border-white/10"
-                    >
-                        <h3 class="text-xl font-semibold text-white mb-4">
-                            💬 Direkt-Kontakt
-                        </h3>
-                        <ul class="list-none text-white/90 space-y-2">
-                            <li>E-Mail: hello@ihr-name.de</li>
-                            <li>LinkedIn: /in/ihr-name</li>
-                            <li>Telefon: +49 (0) 123 456789</li>
-                            <li>WhatsApp: +49 (0) 123 456789</li>
+                        <ul class="list-none mb-4 space-y-2 text-white/90">
+                            <li>Februar 2025: 2 Projekt-Slots verfügbar</li>
+                            <li>Express-Service: Sofort für Landing Pages</li>
+                            <li>UX Audit: Nächste Woche möglich</li>
+                            <li>Dashboard Design: Ab März 2025</li>
                         </ul>
+                        <p class="text-white/90 leading-relaxed">
+                            ✓ Remote Deutschland, Österreich, Schweiz<br />
+                            ✓ Antwort innerhalb 24 Stunden garantiert<br />
+                            ✓ Kostenloses 30-Min Erstgespräch
+                        </p>
+                    </div>
+
+                    <!-- Contact Options -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+                    >
+                        <div
+                            class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                        >
+                            <h3 class="text-xl font-semibold text-white mb-4">
+                                📅 Kostenloses Erstgespräch
+                            </h3>
+                            <p class="text-white/80 mb-6">
+                                30 Minuten unverbindlich über Ihr Projekt
+                                sprechen
+                            </p>
+                            <button
+                                @click="openCalendly"
+                                class="w-full px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+                            >
+                                Termin direkt buchen →
+                            </button>
+                        </div>
+
+                        <div
+                            class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                        >
+                            <h3 class="text-xl font-semibold text-white mb-4">
+                                📝 Projekt-Anfrage senden
+                            </h3>
+                            <ContactForm />
+                        </div>
+
+                        <div
+                            class="bg-white/5 p-8 rounded-2xl border border-white/10"
+                        >
+                            <h3 class="text-xl font-semibold text-white mb-4">
+                                💬 Direkt-Kontakt
+                            </h3>
+                            <ul class="list-none text-white/90 space-y-2">
+                                <li>E-Mail: hello@ihr-name.de</li>
+                                <li>LinkedIn: /in/ihr-name</li>
+                                <li>Telefon: +49 (0) 123 456789</li>
+                                <li>WhatsApp: +49 (0) 123 456789</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
             </section>
         </main>
 
