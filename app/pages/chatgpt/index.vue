@@ -6,7 +6,7 @@
     >
         <a
             href="#content"
-            class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden focus:left-0 focus:top-0 focus:w-auto focus:h-auto focus:p-4 focus:bg-white focus:text-black focus:z-[999] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400"
+            class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:px-4 focus:py-3 focus:rounded-lg focus:bg-white focus:text-[#0b0c10] focus:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400"
             >Zum Inhalt springen</a
         >
 
@@ -561,7 +561,7 @@
                 </div>
 
                 <ul
-                    class="flex flex-wrap justify-center gap-6 mt-8 p-0 list-none opacity-40"
+                    class="flex flex-wrap justify-center gap-6 mt-8 p-0 list-none"
                     aria-label="Kundenlogos"
                 >
                     <li
