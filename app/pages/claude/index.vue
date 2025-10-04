@@ -1,7 +1,18 @@
 <template>
     <div class="bg-gradient-to-br from-white to-gray-50">
-        <!-- Hero Section -->
-        <section class="min-h-screen flex flex-col justify-center pt-8">
+        <a
+            href="#content"
+            class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden focus:left-4 focus:top-4 focus:w-auto focus:h-auto focus:p-4 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-800"
+        >
+            Zum Inhalt springen
+        </a>
+
+        <header class="relative">
+            <!-- Hero Section -->
+            <section
+                class="min-h-screen flex flex-col justify-center pt-8"
+                aria-labelledby="hero-title"
+            >
             <!-- Verfügbarkeits-Widget -->
             <div
                 class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm mb-8 text-sm font-medium mx-auto"
@@ -17,6 +28,7 @@
 
             <div class="max-w-7xl mx-auto px-4">
                 <h1
+                    id="hero-title"
                     class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent"
                 >
                     UI/UX Designer Freelancer für SaaS, Corporate & Dashboard
@@ -57,22 +69,30 @@
                 </p>
 
                 <!-- Trust Badges -->
-                <div class="flex flex-wrap gap-4 mb-12">
+                <div
+                    class="flex flex-wrap gap-4 mb-12"
+                    role="list"
+                    aria-label="Vertrauensmerkmale"
+                >
                     <span
                         class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                        role="listitem"
                         >✓ 25+ Jahre Freelance UX Designer Remote</span
                     >
                     <span
                         class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                        role="listitem"
                         >✓ 200+ Projekte in Deutschland, Österreich,
                         Schweiz</span
                     >
                     <span
                         class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                        role="listitem"
                         >✓ Spezialist für Corporate Webdesign Freelancer</span
                     >
                     <span
                         class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
+                        role="listitem"
                         >✓ UX Audit Deutschland mit Ø +73% Conversion</span
                     >
                 </div>
@@ -162,8 +182,9 @@
             />
         </section>
 
-        <!-- Problem/Solution Section -->
-        <section class="py-20 bg-gray-50">
+        <main id="content" class="focus:outline-none" role="main">
+            <!-- Problem/Solution Section -->
+            <section class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4">
                 <h2
                     class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
@@ -213,7 +234,7 @@
                         </div>
                         <div>
                             <h3
-                                class="text-lg font-semibold text-green-600 mb-2"
+                                class="text-lg font-semibold text-green-700 mb-2"
                             >
                                 {{ item.solution }}
                             </h3>
@@ -241,10 +262,10 @@
                     >
                 </blockquote>
             </div>
-        </section>
+            </section>
 
-        <!-- Services Section -->
-        <section class="py-20 bg-white">
+            <!-- Services Section -->
+            <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4">
                 <h2
                     class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
@@ -305,7 +326,7 @@
                             </h4>
                             <ul class="list-none space-y-1">
                                 <li
-                                    class="text-green-600 font-semibold"
+                                    class="text-green-700 font-semibold"
                                     v-for="result in service.results"
                                     :key="result"
                                 >
@@ -332,10 +353,10 @@
                     </article>
                 </div>
             </div>
-        </section>
+            </section>
 
-        <!-- Process Section -->
-        <section class="py-20 bg-gray-50">
+            <!-- Process Section -->
+            <section class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4">
                 <h2
                     class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
@@ -378,10 +399,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
 
-        <!-- Portfolio Section -->
-        <section class="py-20 bg-white">
+            <!-- Portfolio Section -->
+            <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4">
                 <h2
                     class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
@@ -474,10 +495,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
 
-        <!-- FAQ Section -->
-        <section class="py-20 bg-gray-50">
+            <!-- FAQ Section -->
+            <section class="py-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4">
                 <h2
                     class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
@@ -503,10 +524,10 @@
                     </details>
                 </div>
             </div>
-        </section>
+            </section>
 
-        <!-- CTA Section -->
-        <section
+            <!-- CTA Section -->
+            <section
             class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white"
         >
             <div class="max-w-7xl mx-auto px-4">
@@ -582,10 +603,11 @@
                     </div>
                 </div>
             </div>
-        </section>
+            </section>
+        </main>
 
         <!-- Footer -->
-        <footer class="bg-gray-900 text-white py-16">
+        <footer class="bg-gray-900 text-white py-16" role="contentinfo">
             <div class="max-w-7xl mx-auto px-4">
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"

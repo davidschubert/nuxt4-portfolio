@@ -6,7 +6,7 @@
     >
         <a
             href="#content"
-            class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden focus:left-0 focus:top-0 focus:w-auto focus:h-auto focus:p-4 focus:bg-white focus:text-black focus:z-[999]"
+            class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden focus:left-0 focus:top-0 focus:w-auto focus:h-auto focus:p-4 focus:bg-white focus:text-black focus:z-[999] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400"
             >Zum Inhalt springen</a
         >
 
@@ -44,13 +44,13 @@
                 <div class="flex flex-wrap gap-2 mb-2">
                     <a
                         href="#contact"
-                        class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-transparent no-underline font-semibold bg-gradient-to-br from-emerald-400 to-blue-400 text-[#0b0c10] hover:-translate-y-0.5 transition-transform duration-150"
+                        class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-transparent no-underline font-semibold bg-gradient-to-br from-emerald-400 to-blue-400 text-[#0b0c10] hover:-translate-y-0.5 transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0c10] focus-visible:ring-offset-border"
                         aria-describedby="cta-note"
                         >UX Designer buchen</a
                     >
                     <a
                         href="#portfolio"
-                        class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-[#1f2230] no-underline font-semibold text-[#e6e6e6] bg-transparent hover:-translate-y-0.5 transition-transform duration-150"
+                        class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-[#1f2230] no-underline font-semibold text-[#e6e6e6] bg-transparent hover:-translate-y-0.5 transition-transform duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0c10] focus-visible:ring-offset-border"
                         >Portfolio & Case Studies</a
                     >
                 </div>
@@ -565,25 +565,25 @@
                     aria-label="Kundenlogos"
                 >
                     <li
-                        class="w-20 h-10 bg-[#1f2230] rounded flex items-center justify-center text-xs text-[#a8adb7]"
+                        class="w-20 h-10 bg-[#000000] rounded flex items-center justify-center text-xs text-[#ffffff]"
                         aria-hidden="true"
                     >
                         Logo
                     </li>
                     <li
-                        class="w-20 h-10 bg-[#1f2230] rounded flex items-center justify-center text-xs text-[#a8adb7]"
+                        class="w-20 h-10 bg-[#000000] rounded flex items-center justify-center text-xs text-[#ffffff]"
                         aria-hidden="true"
                     >
                         Logo
                     </li>
                     <li
-                        class="w-20 h-10 bg-[#1f2230] rounded flex items-center justify-center text-xs text-[#a8adb7]"
+                        class="w-20 h-10 bg-[#000000] rounded flex items-center justify-center text-xs text-[#ffffff]"
                         aria-hidden="true"
                     >
                         Logo
                     </li>
                     <li
-                        class="w-20 h-10 bg-[#1f2230] rounded flex items-center justify-center text-xs text-[#a8adb7]"
+                        class="w-20 h-10 bg-[#000000] rounded flex items-center justify-center text-xs text-[#ffffff]"
                         aria-hidden="true"
                     >
                         Logo
@@ -948,7 +948,7 @@
                         <p class="mb-4">
                             <a
                                 href="#!"
-                                class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-transparent no-underline font-semibold bg-gradient-to-br from-emerald-400 to-blue-400 text-[#0b0c10] hover:-translate-y-0.5 transition-transform duration-150 w-full justify-center"
+                                class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-transparent no-underline font-semibold bg-gradient-to-br from-emerald-400 to-blue-400 text-[#0b0c10] hover:-translate-y-0.5 transition-transform duration-150 w-full justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0c10] focus-visible:ring-offset-border"
                                 rel="nofollow"
                                 >Kalender öffnen &amp; Termin wählen</a
                             >
@@ -1073,7 +1073,7 @@
                             >
                         </div>
                         <button
-                            class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-transparent no-underline font-semibold bg-gradient-to-br from-emerald-400 to-blue-400 text-[#0b0c10] hover:-translate-y-0.5 transition-transform duration-150 w-full justify-center"
+                            class="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-transparent no-underline font-semibold bg-gradient-to-br from-emerald-400 to-blue-400 text-[#0b0c10] hover:-translate-y-0.5 transition-transform duration-150 w-full justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0b0c10] focus-visible:ring-offset-border"
                             type="submit"
                         >
                             Nachricht senden
@@ -1114,7 +1114,7 @@
         <!-- FOOTER -->
         <footer
             id="footer"
-            class="border-t border-[#1f2230] py-8 bg-[#0a0b10]"
+            class="border-t border-[#1f2230] py-8 bg-[#000000]"
             aria-labelledby="footer-title"
         >
             <div class="max-w-[1100px] mx-auto px-4 md:px-8">
@@ -1294,7 +1294,7 @@
                             >Datenschutz</a
                         >
                     </p>
-                    <p class="text-center text-[#666] text-xs">
+                    <p class="text-center text-[#ffffff] text-xs">
                         © {{ year }} {{ name }} – Freiberuflicher UI/UX Designer
                     </p>
                 </div>
