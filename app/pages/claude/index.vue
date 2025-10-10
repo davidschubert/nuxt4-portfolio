@@ -2,7 +2,7 @@
     <div class="bg-gradient-to-br from-white to-gray-50">
         <a
             href="#content"
-            class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden focus:left-4 focus:top-4 focus:w-auto focus:h-auto focus:p-4 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-800"
+            class="absolute -left-[9999px] top-auto w-px h-px overflow-hidden focus:left-4 focus:top-4 focus:w-auto focus:h-auto focus:p-4 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-800"
         >
             Zum Inhalt springen
         </a>
@@ -894,7 +894,7 @@
                     class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8"
                 >
                     <p class="text-white/50 text-sm">
-                        © 2025 [Ihr Name] – UI/UX Designer Freelancer DACH
+                        © 2025 David Schubert – UI/UX Designer Freelancer DACH
                     </p>
                     <nav class="flex gap-8">
                         <NuxtLink
@@ -946,7 +946,7 @@ useHead({
                 "Senior UI/UX Designer mit 25+ Jahren Erfahrung. Spezialisiert auf SaaS, Dashboards & Corporate Design. Remote verfügbar im DACH-Raum.",
         },
         { property: "og:image", content: "/og-image.jpg" },
-        { property: "og:url", content: "https://ihr-domain.de" },
+        { property: "og:url", content: "https://davidschubert.com" },
         { property: "og:type", content: "website" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "UI/UX Designer Freelancer DACH" },
@@ -971,22 +971,22 @@ useHead({
         {
             rel: "alternate",
             hreflang: "de-DE",
-            href: "https://ihr-domain.de/de/",
+            href: "https://davidschubert.com/de/",
         },
         {
             rel: "alternate",
             hreflang: "de-AT",
-            href: "https://ihr-domain.de/at/",
+            href: "https://davidschubert.com/at/",
         },
         {
             rel: "alternate",
             hreflang: "de-CH",
-            href: "https://ihr-domain.de/ch/",
+            href: "https://davidschubert.com/ch/",
         },
         {
             rel: "alternate",
             hreflang: "x-default",
-            href: "https://ihr-domain.de/",
+            href: "https://davidschubert.com/",
         },
     ],
     script: [
@@ -995,12 +995,12 @@ useHead({
             innerHTML: JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "Person",
-                name: "[Ihr Name]",
+                name: "David Schubert",
                 jobTitle: "Senior UI/UX Designer Freelancer",
                 description:
                     "UI/UX Designer mit 25+ Jahren Erfahrung, spezialisiert auf SaaS UI Design, Dashboard UX Design und Corporate Webdesign im DACH-Raum",
-                url: "https://ihr-domain.de",
-                image: "https://ihr-domain.de/images/profile.jpg",
+                url: "https://davidschubert.com",
+                image: "https://davidschubert.com/images/profile.jpg",
                 address: {
                     "@type": "PostalAddress",
                     addressRegion: "DACH",

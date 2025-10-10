@@ -1,2 +1,3 @@
 User-Agent: *
 Disallow:
+Sitemap: https://pukalani.studio/sitemap.xml
