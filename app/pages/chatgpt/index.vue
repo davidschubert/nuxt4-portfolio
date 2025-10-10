@@ -1337,9 +1337,7 @@
 
 <script setup lang="ts">
 const name = "David Schubert";
-const email = computed(() =>
-    atob("bWFpbEBkYXZpZHNjaHViZXJ0LmNvbQ==")
-);
+const email = computed(() => atob("bWFpbEBkYXZpZHNjaHViZXJ0LmNvbQ=="));
 const phoneHuman = "+1 808 866 0676";
 const phoneTel = "+18088660676";
 
