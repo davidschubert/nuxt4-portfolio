@@ -89,7 +89,7 @@
                             <a
                                 href="#locations"
                                 class="text-[#a8adb7] no-underline border-b border-dashed border-[#1f2230] hover:text-white hover:border-white"
-                                >UX Designer Berlin</a
+                                >Standort: UX Berlin</a
                             >
                         </li>
                         <li>
@@ -148,18 +148,20 @@
                     </h2>
 
                     <img
-                        src="https://picsum.photos/1280/720"
-                        alt="Senior UI UX Designer präsentiert ein Figma SaaS Dashboard an Kundenteam aus DACH"
+                        src="https://pukalani.studio/images/case-studies/ux-audit-dashboard.jpg"
+                        alt="Senior UX Designer präsentiert ein SaaS Dashboard Redesign in Figma"
                         width="1280"
                         height="720"
                         loading="lazy"
                         class="w-full h-auto rounded-2xl border border-[#1f2230] shadow-lg mb-6"
                     />
 
-                    <ul class="grid gap-4 grid-cols-1 mt-4 p-0 list-none">
-                        <li>
-                            <h3 class="text-white text-base md:text-lg my-1">
-                                Viele Besucher, aber wenig Conversions?
+                    <div class="grid gap-6 grid-cols-1 mt-4">
+                        <article
+                            class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6"
+                        >
+                            <h3 class="text-white text-xl mb-3">
+                                Conversion &amp; Wachstum
                             </h3>
                             <p class="my-2 text-[#a8adb7]">
                                 UX-Audits mit Conversion-Optimierung (CRO)
@@ -177,11 +179,6 @@
                                     >Nielsen Norman Group</a
                                 >.
                             </p>
-                        </li>
-                        <li>
-                            <h3 class="text-white text-base md:text-lg my-1">
-                                Komplexe SaaS-Dashboards &amp; B2B-Software?
-                            </h3>
                             <p class="my-2 text-[#a8adb7]">
                                 Information Architecture, aufgabenorientierte
                                 Flows, Design Tokens und Component Library
@@ -197,10 +194,12 @@
                                     >Design Systems Handbook</a
                                 >.
                             </p>
-                        </li>
-                        <li>
-                            <h3 class="text-white text-base md:text-lg my-1">
-                                Veraltetes Design, schlechte Mobile-UX?
+                        </article>
+                        <article
+                            class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6"
+                        >
+                            <h3 class="text-white text-xl mb-3">
+                                Erlebnis &amp; Vertrauen
                             </h3>
                             <p class="my-2 text-[#a8adb7]">
                                 Mobile-first Layouts, PageSpeed-Optimierung,
@@ -210,11 +209,6 @@
                                 Je nach Bedarf führe ich schnelle Prototypen mit
                                 Nutzerfeedback zusammen.
                             </p>
-                        </li>
-                        <li>
-                            <h3 class="text-white text-base md:text-lg my-1">
-                                Agentur zu teuer, Freelancer unsicher?
-                            </h3>
                             <p class="my-2 text-[#a8adb7]">
                                 Freelancer vs. Agentur bedeutet direkter Zugang
                                 ohne Overhead. Mein Prozess ist klar
@@ -223,26 +217,25 @@
                                 erweiterbar und transparent in Budget und
                                 Kommunikation.
                             </p>
-                        </li>
-                    </ul>
+                        </article>
+                    </div>
 
                     <figure
                         class="mt-8 bg-gradient-to-br from-[#111217] to-[#0d0e13] border border-[#1f2230] rounded-2xl p-6 shadow-lg"
                         aria-label="Kundenstimme"
                     >
                         <blockquote class="text-lg italic text-white mb-2">
-                            „+73% Conversion in 6 Wochen. Verbindet UX‑Design,
-                            Technik und Business‑KPIs – genau das, was wir
+                            „+73% Conversion in 6 Wochen. Verbindet UX-Design,
+                            Technik und Business-KPIs – genau das, was wir
                             brauchten."
                         </blockquote>
                         <figcaption class="text-[#a8adb7] text-sm">
-                            — Co‑Founder, SaaS‑Startup (Berlin)
+                            — Co-Founder, SaaS-Startup (Berlin)
                         </figcaption>
                     </figure>
                 </div>
             </section>
 
-            <!-- LEISTUNGEN -->
             <section
                 id="services"
                 class="py-10 md:py-20 border-t border-[#1f2230] services bg-gray-900"
@@ -253,76 +246,59 @@
                         id="services-title"
                         class="text-2xl md:text-3xl lg:text-4xl mb-4"
                     >
-                        UI/UX Leistungen: SaaS Design · Corporate Webdesign ·
-                        Landingpages
+                        Leistungen im Überblick
                     </h2>
 
-                    <ul
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 list-none p-0"
-                    >
-                        <li
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <article
                             class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6 hover:border-[#2f3340] transition-colors"
                         >
                             <h3 class="text-white text-lg md:text-xl mb-3">
-                                SaaS &amp; B2B‑Software UX
+                                SaaS &amp; B2B UX
                             </h3>
-                            <ul
-                                class="space-y-1 mb-4 text-[#a8adb7] list-disc list-inside"
-                            >
-                                <li>User Research, Personas</li>
-                                <li>IA &amp; User Flows, Onboarding</li>
-                                <li>Dashboard‑Design, Datenvisualisierung</li>
-                                <li>Designsysteme, <em>Design Tokens</em></li>
-                            </ul>
+                            <p class="text-[#a8adb7]">
+                                User Research, Personas, IA &amp; Flows,
+                                Dashboard-Design, Komponentenbibliotheken.
+                            </p>
                             <p
                                 class="mt-4 pt-4 border-t border-[#1f2230] text-sm text-emerald-400 font-medium"
                             >
-                                +43% Feature‑Adoption · −67% Supporttickets
+                                +43% Feature-Adoption · −67% Supporttickets
                             </p>
-                        </li>
-
-                        <li
+                        </article>
+                        <article
                             class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6 hover:border-[#2f3340] transition-colors"
                         >
                             <h3 class="text-white text-lg md:text-xl mb-3">
-                                Corporate Websites (KMU)
+                                Corporate Websites
                             </h3>
-                            <ul
-                                class="space-y-1 mb-4 text-[#a8adb7] list-disc list-inside"
-                            >
-                                <li>Content‑Strategie &amp; Web‑IA</li>
-                                <li>Mobile‑First, Performance</li>
-                                <li>WCAG 2.1 AA Accessiblity</li>
-                                <li>SEO‑Ready, Headless/CMS‑Ready</li>
-                            </ul>
+                            <p class="text-[#a8adb7]">
+                                Content-Strategie, Web-IA, Mobile-first,
+                                Performance, WCAG, SEO-Ready.
+                            </p>
                             <p
                                 class="mt-4 pt-4 border-t border-[#1f2230] text-sm text-emerald-400 font-medium"
                             >
                                 +54% qualifizierte Leads · PageSpeed 90+
                             </p>
-                        </li>
-
-                        <li
+                        </article>
+                        <article
                             class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6 hover:border-[#2f3340] transition-colors"
                         >
                             <h3 class="text-white text-lg md:text-xl mb-3">
-                                Landingpage Design &amp; CRO
+                                Landingpage &amp; CRO
                             </h3>
-                            <ul
-                                class="space-y-1 mb-4 text-[#a8adb7] list-disc list-inside"
-                            >
-                                <li>Conversion‑Fokus &amp; Psychologie</li>
-                                <li>A/B‑Tests, Social Proof</li>
-                                <li>LCP &lt; 2.5s, INP &lt; 200ms</li>
-                                <li>Integrationen: HubSpot, Mailchimp</li>
-                            </ul>
+                            <p class="text-[#a8adb7]">
+                                Conversion-Fokus, A/B-Tests, Social Proof, LCP
+                                &lt; 2.5s, Integrationen.
+                            </p>
                             <p
                                 class="mt-4 pt-4 border-t border-[#1f2230] text-sm text-emerald-400 font-medium"
                             >
                                 Ø +73% Conversion nach Redesign
                             </p>
-                        </li>
-                    </ul>
+                        </article>
+                    </div>
 
                     <div
                         class="mt-8 bg-[#111217] border border-[#1f2230] rounded-2xl p-6"
@@ -1264,35 +1240,35 @@
                                     <a
                                         href="#locations"
                                         class="text-[#a8adb7] hover:text-white transition-colors text-sm"
-                                        >UX Designer Berlin</a
+                                        >Berlin UX Projekte</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#locations"
                                         class="text-[#a8adb7] hover:text-white transition-colors text-sm"
-                                        >UX Designer München</a
+                                        >München UX Projekte</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#locations"
                                         class="text-[#a8adb7] hover:text-white transition-colors text-sm"
-                                        >UX Designer Zürich</a
+                                        >Zürich UX Projekte</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#locations"
                                         class="text-[#a8adb7] hover:text-white transition-colors text-sm"
-                                        >Österreich & Schweiz</a
+                                        >Österreich &amp; Schweiz</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         href="#locations"
                                         class="text-[#a8adb7] hover:text-white transition-colors text-sm"
-                                        >Remote UX Designer</a
+                                        >Remote UX Beratung</a
                                     >
                                 </li>
                             </ul>
@@ -1393,7 +1369,7 @@ useHead({
         {
             name: "description",
             content:
-                "Senior UI/UX Freelancer in DACH: SaaS UX, Corporate Websites, Landingpage CRO, Designsysteme (Figma), WCAG-Accessibility. Remote aus Berlin, München, Zürich, AT & CH.",
+                "UI/UX Freelancer für SaaS, Corporate Websites und Landingpages in DACH. Designsysteme, WCAG, Remote aus Berlin, München, Zürich sowie AT/CH.",
         },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
@@ -1412,7 +1388,7 @@ useHead({
             content:
                 "Senior UI/UX Designer: SaaS UX, Corporate Webdesign, Landingpage CRO, Designsysteme, Barrierefreiheit. Remote Berlin · München · Zürich · AT · CH.",
         },
-        { property: "og:url", content: "https://pukalani.studio/" },
+        { property: "og:url", content: "https://pukalani.studio/chatgpt/" },
         {
             property: "og:image",
             content:
@@ -1438,27 +1414,31 @@ useHead({
         { name: "twitter:creator", content: "@davidschubert" },
     ],
     link: [
-        { rel: "canonical", href: "https://pukalani.studio/" },
-        { rel: "alternate", hreflang: "de", href: "https://pukalani.studio/" },
+        { rel: "canonical", href: "https://pukalani.studio/chatgpt/" },
+        {
+            rel: "alternate",
+            hreflang: "de",
+            href: "https://pukalani.studio/chatgpt/",
+        },
         {
             rel: "alternate",
             hreflang: "de-DE",
-            href: "https://pukalani.studio/de/",
+            href: "https://pukalani.studio/de/chatgpt/",
         },
         {
             rel: "alternate",
             hreflang: "de-AT",
-            href: "https://pukalani.studio/de-at/",
+            href: "https://pukalani.studio/de-at/chatgpt/",
         },
         {
             rel: "alternate",
             hreflang: "de-CH",
-            href: "https://pukalani.studio/de-ch/",
+            href: "https://pukalani.studio/de-ch/chatgpt/",
         },
         {
             rel: "alternate",
             hreflang: "x-default",
-            href: "https://pukalani.studio/",
+            href: "https://pukalani.studio/chatgpt/",
         },
         {
             rel: "icon",
@@ -1494,7 +1474,7 @@ useHead({
                 "@type": "Person",
                 name: name,
                 jobTitle: "Senior UI/UX Designer & Freelance Consultant",
-                url: "https://pukalani.studio/",
+                url: "https://pukalani.studio/chatgpt/",
                 image: "https://pukalani.studio/images/profile-photo.jpg",
                 sameAs: [
                     "https://www.linkedin.com/in/yourprofile",
@@ -1551,7 +1531,7 @@ useHead({
                 "@type": "ProfessionalService",
                 name: "Freelance UI/UX Design",
                 serviceType: "UI/UX Design Beratung",
-                url: "https://pukalani.studio/",
+                url: "https://pukalani.studio/chatgpt/",
                 image: "https://pukalani.studio/images/profile-photo.jpg",
                 areaServed: [
                     {
@@ -1584,7 +1564,7 @@ useHead({
                     itemReviewed: {
                         "@type": "ProfessionalService",
                         name: "Freelance UI/UX Design",
-                        url: "https://pukalani.studio/",
+                        url: "https://pukalani.studio/chatgpt/",
                     },
                 },
             }),
