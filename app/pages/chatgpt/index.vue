@@ -26,9 +26,8 @@
                     id="hero-title"
                     class="text-3xl md:text-4xl lg:text-5xl leading-tight my-2 mb-4"
                 >
-                    UI/UX Designer
-                    <span class="text-emerald-400">Freelancer DACH</span> –
-                    SaaS, Corporate Webdesign & Landingpage Design
+                    <span class="text-emerald-400">UI/UX Freelancer DACH</span>
+                    – SaaS & Corporate Design
                 </h1>
                 <p class="text-lg max-w-[72ch] mb-4">
                     25+ Jahre Erfahrung in SaaS UX, Corporate Websites und
@@ -253,9 +252,11 @@
                         <article
                             class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6 hover:border-[#2f3340] transition-colors"
                         >
-                            <h3 class="text-white text-lg md:text-xl mb-3">
+                            <p
+                                class="text-white text-lg md:text-xl font-semibold mb-3"
+                            >
                                 SaaS &amp; B2B UX
-                            </h3>
+                            </p>
                             <p class="text-[#a8adb7]">
                                 User Research, Personas, IA &amp; Flows,
                                 Dashboard-Design, Komponentenbibliotheken.
@@ -269,9 +270,11 @@
                         <article
                             class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6 hover:border-[#2f3340] transition-colors"
                         >
-                            <h3 class="text-white text-lg md:text-xl mb-3">
+                            <p
+                                class="text-white text-lg md:text-xl font-semibold mb-3"
+                            >
                                 Corporate Websites
-                            </h3>
+                            </p>
                             <p class="text-[#a8adb7]">
                                 Content-Strategie, Web-IA, Mobile-first,
                                 Performance, WCAG, SEO-Ready.
@@ -285,9 +288,11 @@
                         <article
                             class="bg-[#111217] border border-[#1f2230] rounded-2xl p-6 hover:border-[#2f3340] transition-colors"
                         >
-                            <h3 class="text-white text-lg md:text-xl mb-3">
+                            <p
+                                class="text-white text-lg md:text-xl font-semibold mb-3"
+                            >
                                 Landingpage &amp; CRO
-                            </h3>
+                            </p>
                             <p class="text-[#a8adb7]">
                                 Conversion-Fokus, A/B-Tests, Social Proof, LCP
                                 &lt; 2.5s, Integrationen.
@@ -1332,7 +1337,9 @@
 
 <script setup lang="ts">
 const name = "David Schubert";
-const email = "mail@davidschubert.com";
+const email = computed(() =>
+    atob("bWFpbEBkYXZpZHNjaHViZXJ0LmNvbQ==")
+);
 const phoneHuman = "+1 808 866 0676";
 const phoneTel = "+18088660676";
 
@@ -1360,6 +1367,11 @@ const today = new Date().toLocaleDateString("de-DE", {
 });
 const year = new Date().getFullYear();
 const prefersReducedMotion = false;
+const requestURL = useRequestURL();
+const canonicalUrl = computed(() => {
+    const base = `${requestURL.origin}${requestURL.pathname}`;
+    return base.endsWith("/") ? base : `${base}/`;
+});
 
 // --- SEO: Head tags & JSON-LD ---
 useHead({
@@ -1369,7 +1381,7 @@ useHead({
         {
             name: "description",
             content:
-                "UI/UX Freelancer für SaaS, Corporate Websites und Landingpages in DACH. Designsysteme, WCAG, Remote aus Berlin, München, Zürich sowie AT/CH.",
+                "UI/UX Freelancer DACH: SaaS, Corporate Websites & Landingpages. Designsysteme, WCAG 2.1 AA. Remote Berlin, München, Zürich.",
         },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
@@ -1414,7 +1426,7 @@ useHead({
         { name: "twitter:creator", content: "@davidschubert" },
     ],
     link: [
-        { rel: "canonical", href: "https://pukalani.studio/chatgpt/" },
+        { rel: "canonical", href: canonicalUrl },
         {
             rel: "alternate",
             hreflang: "de",

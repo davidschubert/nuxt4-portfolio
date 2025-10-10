@@ -3,10 +3,19 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
     compatibilityDate: "2025-07-15",
     devtools: { enabled: true },
-    modules: ["@nuxt/image"],
+    modules: ["@nuxt/image", "@nuxtjs/sitemap"],
     css: ["~/assets/css/main.css"],
+    site: {
+        url: "https://pukalani.studio",
+    },
     experimental: {
         inlineSSRStyles: true,
+    },
+    nitro: {
+        prerender: {
+            crawlLinks: true,
+            routes: ["/", "/chatgpt", "/claude"],
+        },
     },
     app: {
         head: {
@@ -50,5 +59,13 @@ export default defineNuxtConfig({
     },
     vite: {
         plugins: [tailwindcss()],
+        build: {
+            cssCodeSplit: true,
+        },
+    },
+    router: {
+        options: {
+            strict: true,
+        },
     },
 });
