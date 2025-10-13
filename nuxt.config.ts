@@ -22,7 +22,34 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: "de",
             },
+            link: [
+                {
+                    rel: "icon",
+                    type: "image/svg+xml",
+                    href: "/icon.svg",
+                },
+                {
+                    rel: "apple-touch-icon",
+                    href: "/apple-touch-icon.svg",
+                },
+                {
+                    rel: "manifest",
+                    href: "/site.webmanifest",
+                },
+            ],
             meta: [
+                {
+                    name: "theme-color",
+                    content: "#10b981",
+                },
+                {
+                    name: "apple-mobile-web-app-capable",
+                    content: "yes",
+                },
+                {
+                    name: "apple-mobile-web-app-status-bar-style",
+                    content: "black-translucent",
+                },
                 {
                     "http-equiv": "Content-Security-Policy",
                     content:
@@ -52,7 +79,7 @@ export default defineNuxtConfig({
                 {
                     "http-equiv": "Content-Security-Policy",
                     content:
-                        "require-trusted-types-for 'script'; trusted-types default;",
+                        "require-trusted-types-for 'script'; trusted-types default vue;",
                 },
             ],
         },

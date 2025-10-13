@@ -147,7 +147,7 @@
                     </h2>
 
                     <img
-                        src="https://pukalani.studio/images/case-studies/ux-audit-dashboard.jpg"
+                        src="https://picsum.photos/1280/720"
                         alt="Senior UX Designer präsentiert ein SaaS Dashboard Redesign in Figma"
                         width="1280"
                         height="720"
