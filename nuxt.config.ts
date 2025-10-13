@@ -44,7 +44,7 @@ export default defineNuxtConfig({
                     content: "#10b981",
                 },
                 {
-                    name: "apple-mobile-web-app-capable",
+                    name: "mobile-web-app-capable",
                     content: "yes",
                 },
                 {
