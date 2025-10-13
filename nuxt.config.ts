@@ -5,6 +5,18 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: ["@nuxt/image", "nuxt-site-config", "@nuxtjs/sitemap"],
     css: ["~/assets/css/main.css"],
+    image: {
+        formats: ["webp", "avif", "jpg"],
+        quality: 85,
+        screens: {
+            xs: 320,
+            sm: 640,
+            md: 768,
+            lg: 1024,
+            xl: 1280,
+            xxl: 1536,
+        },
+    },
     site: {
         url: "https://pukalani.studio",
         name: "My Awesome Website",
@@ -16,6 +28,19 @@ export default defineNuxtConfig({
         prerender: {
             crawlLinks: true,
             routes: ["/", "/chatgpt", "/claude"],
+        },
+        compressPublicAssets: true,
+        routeRules: {
+            "/_ipx/**": {
+                headers: {
+                    "cache-control": "public, max-age=31536000, immutable",
+                },
+            },
+            "/images/**": {
+                headers: {
+                    "cache-control": "public, max-age=31536000, immutable",
+                },
+            },
         },
     },
     app: {
@@ -89,6 +114,14 @@ export default defineNuxtConfig({
         plugins: [tailwindcss()],
         build: {
             cssCodeSplit: true,
+            minify: "esbuild",
+            rollupOptions: {
+                output: {
+                    manualChunks: {
+                        vendor: ["vue", "vue-router"],
+                    },
+                },
+            },
         },
     },
     router: {

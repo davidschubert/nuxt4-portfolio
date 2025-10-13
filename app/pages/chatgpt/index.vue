@@ -146,12 +146,16 @@
                         Schlechtes UX kostet Conversions – hier ist die Lösung
                     </h2>
 
-                    <img
-                        src="https://picsum.photos/1280/720"
+                    <NuxtImg
+                        src="/images/chatgpt-hero.jpg"
                         alt="Senior UX Designer präsentiert ein SaaS Dashboard Redesign in Figma"
                         width="1280"
                         height="720"
-                        loading="lazy"
+                        loading="eager"
+                        fetchpriority="high"
+                        format="webp"
+                        quality="85"
+                        sizes="xs:100vw sm:100vw md:100vw lg:1100px"
                         class="w-full h-auto rounded-2xl border border-[#1f2230] shadow-lg mb-6"
                     />
 

@@ -192,12 +192,16 @@
                 </div>
 
                 <!-- Hero Image with optimized loading -->
-                <img
-                    src="https://picsum.photos/1920/1080"
+                <NuxtImg
+                    src="/images/claude-hero.jpg"
                     alt="UI UX Designer Freelancer arbeitet remote an SaaS Dashboard Design in Figma mit Design System Komponenten für DACH-Kunden"
                     width="1920"
                     height="1080"
                     loading="eager"
+                    fetchpriority="high"
+                    format="webp"
+                    quality="85"
+                    sizes="xs:100vw sm:100vw md:100vw lg:100vw"
                     class="w-full h-auto"
                 />
             </section>
@@ -449,12 +453,15 @@
                             v-for="project in portfolio"
                             :key="project.id"
                         >
-                            <img
+                            <NuxtImg
                                 :src="project.image"
                                 :alt="project.imageAlt"
                                 width="600"
                                 height="400"
                                 loading="lazy"
+                                format="webp"
+                                quality="85"
+                                sizes="xs:100vw sm:100vw md:50vw lg:33vw"
                                 class="w-full h-auto"
                             />
                             <div class="p-6">
@@ -624,7 +631,7 @@
                             <h3 class="text-xl font-semibold text-white mb-4">
                                 📝 Projekt-Anfrage senden
                             </h3>
-                            <ContactForm />
+                            <LazyContactForm />
                         </div>
 
                         <div
@@ -1194,7 +1201,7 @@ const portfolio = ref([
     {
         id: 1,
         title: "FinTech Trading Platform",
-        image: "https://picsum.photos/seed/fintech/600/400",
+        image: "/images/portfolio-fintech.jpg",
         imageAlt: "FinTech Dashboard Design für 50.000+ Trader",
         tags: ["B2B SaaS", "Dashboard", "Data Viz"],
         challenge: "50.000+ Trader, komplexe Real-Time Daten",
@@ -1210,7 +1217,7 @@ const portfolio = ref([
     {
         id: 2,
         title: "Healthcare Patientenportal",
-        image: "https://picsum.photos/seed/healthcare/600/400",
+        image: "/images/portfolio-healthcare.jpg",
         imageAlt: "Barrierefreies Healthcare Portal WCAG 2.1",
         tags: ["Healthcare", "WCAG", "Multi-Language"],
         challenge: "Strenge Compliance, diverse Nutzergruppen (18-90 Jahre)",
@@ -1225,7 +1232,7 @@ const portfolio = ref([
     {
         id: 3,
         title: "Fashion E-Commerce Platform",
-        image: "https://picsum.photos/seed/ecommerce/600/400",
+        image: "/images/portfolio-fashion.jpg",
         imageAlt: "E-Commerce Conversion Optimierung Mobile-First",
         tags: ["E-Commerce", "Mobile", "CRO"],
         challenge: "Nur 1.8% Conversion, 78% Mobile Cart Abandonment",
@@ -1240,7 +1247,7 @@ const portfolio = ref([
     {
         id: 4,
         title: "PropTech SaaS MVP",
-        image: "https://picsum.photos/seed/proptech/600/400",
+        image: "/images/portfolio-proptech.jpg",
         imageAlt: "B2B SaaS MVP Design für Series A Funding",
         tags: ["Startup", "MVP", "PropTech"],
         challenge: "12 Wochen bis Series A, kein Design-Team",
