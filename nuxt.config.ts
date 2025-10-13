@@ -3,13 +3,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
     compatibilityDate: "2025-07-15",
     devtools: { enabled: true },
-    modules: ["@nuxt/image", "@nuxtjs/sitemap"],
+    modules: ["@nuxt/image", "nuxt-site-config", "@nuxtjs/sitemap"],
     css: ["~/assets/css/main.css"],
     site: {
         url: "https://pukalani.studio",
+        name: "My Awesome Website",
     },
-    experimental: {
-        inlineSSRStyles: true,
+    features: {
+        inlineStyles: true,
     },
     nitro: {
         prerender: {
