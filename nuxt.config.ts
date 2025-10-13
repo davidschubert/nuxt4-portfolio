@@ -31,6 +31,19 @@ export default defineNuxtConfig({
         },
         compressPublicAssets: true,
         routeRules: {
+            "/**": {
+                headers: {
+                    "Content-Security-Policy":
+                        "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+                    "Strict-Transport-Security":
+                        "max-age=31536000; includeSubDomains; preload",
+                    "X-Frame-Options": "DENY",
+                    "X-Content-Type-Options": "nosniff",
+                    "Referrer-Policy": "strict-origin-when-cross-origin",
+                    "Permissions-Policy":
+                        "geolocation=(), microphone=(), camera=(), fullscreen=(self)",
+                },
+            },
             "/_ipx/**": {
                 headers: {
                     "cache-control": "public, max-age=31536000, immutable",
@@ -75,32 +88,6 @@ export default defineNuxtConfig({
                 {
                     name: "apple-mobile-web-app-status-bar-style",
                     content: "black-translucent",
-                },
-                {
-                    "http-equiv": "Content-Security-Policy",
-                    content:
-                        "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
-                },
-                {
-                    "http-equiv": "Strict-Transport-Security",
-                    content: "max-age=31536000; includeSubDomains; preload",
-                },
-                {
-                    "http-equiv": "Cross-Origin-Opener-Policy",
-                    content: "same-origin",
-                },
-                {
-                    "http-equiv": "Cross-Origin-Embedder-Policy",
-                    content: "require-corp",
-                },
-                {
-                    "http-equiv": "Cross-Origin-Resource-Policy",
-                    content: "same-origin",
-                },
-                {
-                    "http-equiv": "Permissions-Policy",
-                    content:
-                        "geolocation=(), microphone=(), camera=(), fullscreen=(self)",
                 },
             ],
         },
