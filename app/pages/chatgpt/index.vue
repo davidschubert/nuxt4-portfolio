@@ -1313,13 +1313,13 @@
                     <div class="border-t border-[#1f2230] pt-6">
                         <p class="text-center text-[#a8adb7] text-sm mb-2">
                             <a
-                                href="/impressum"
+                                href="#impressum"
                                 class="hover:text-white transition-colors"
                                 >Impressum</a
                             >
                             ·
                             <a
-                                href="/datenschutz"
+                                href="#datenschutz"
                                 class="hover:text-white transition-colors"
                                 >Datenschutz</a
                             >
