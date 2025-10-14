@@ -13,16 +13,18 @@ export const useOptimizedImage = () => {
             width?: number;
             height?: number;
             quality?: number;
-            format?: "webp" | "avif" | "jpg" | "png";
+            format?: "avif" | "webp" | "jpg" | "png";
             loading?: "lazy" | "eager";
+            sizes?: string;
         } = {}
     ) => {
         const {
             width,
             height,
-            quality = 80,
-            format = "webp",
+            quality = 75,
+            format = "avif",
             loading = "lazy",
+            sizes,
         } = options;
 
         return {
@@ -32,6 +34,8 @@ export const useOptimizedImage = () => {
             quality,
             format,
             loading,
+            sizes,
+            densities: "1x 2x",
         };
     };
 

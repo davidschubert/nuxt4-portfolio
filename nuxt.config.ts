@@ -6,8 +6,8 @@ export default defineNuxtConfig({
     modules: ["@nuxt/image", "nuxt-site-config", "@nuxtjs/sitemap"],
     css: ["~/assets/css/main.css"],
     image: {
-        formats: ["webp", "avif", "jpg"],
-        quality: 85,
+        formats: ["avif", "webp", "jpg"],
+        quality: 75,
         screens: {
             xs: 320,
             sm: 640,
@@ -16,6 +16,7 @@ export default defineNuxtConfig({
             xl: 1280,
             xxl: 1536,
         },
+        densities: [1, 2],
     },
     site: {
         url: "https://pukalani.studio",
@@ -30,29 +31,27 @@ export default defineNuxtConfig({
             routes: ["/", "/chatgpt", "/claude"],
         },
         compressPublicAssets: true,
-        routeRules: {
-            "/**": {
-                headers: {
-                    "Content-Security-Policy":
-                        "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
-                    "Strict-Transport-Security":
-                        "max-age=31536000; includeSubDomains; preload",
-                    "X-Frame-Options": "DENY",
-                    "X-Content-Type-Options": "nosniff",
-                    "Referrer-Policy": "strict-origin-when-cross-origin",
-                    "Permissions-Policy":
-                        "geolocation=(), microphone=(), camera=(), fullscreen=(self)",
-                },
+    },
+    routeRules: {
+        "/_ipx/**": {
+            headers: {
+                "cache-control": "public, max-age=31536000, immutable",
             },
-            "/_ipx/**": {
-                headers: {
-                    "cache-control": "public, max-age=31536000, immutable",
-                },
+        },
+        "/images/**": {
+            headers: {
+                "cache-control": "public, max-age=31536000, immutable",
             },
-            "/images/**": {
-                headers: {
-                    "cache-control": "public, max-age=31536000, immutable",
-                },
+        },
+        "/**": {
+            headers: {
+                "Strict-Transport-Security":
+                    "max-age=31536000; includeSubDomains; preload",
+                "X-Frame-Options": "DENY",
+                "X-Content-Type-Options": "nosniff",
+                "Referrer-Policy": "strict-origin-when-cross-origin",
+                "Permissions-Policy":
+                    "geolocation=(), microphone=(), camera=(), fullscreen=(self)",
             },
         },
     },
@@ -105,6 +104,19 @@ export default defineNuxtConfig({
                 },
             },
         },
+        optimizeDeps: {
+            include: ["vue", "vue-router"],
+        },
+        // Reduce forced reflows by optimizing CSS handling
+        css: {
+            devSourcemap: false,
+        },
+    },
+    experimental: {
+        // Enable optimizations
+        payloadExtraction: true,
+        renderJsonPayloads: true,
+        viewTransition: false, // Disable to prevent reflow issues
     },
     router: {
         options: {

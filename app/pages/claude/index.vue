@@ -199,15 +199,21 @@
                     height="1080"
                     loading="eager"
                     fetchpriority="high"
-                    format="webp"
-                    quality="85"
+                    format="avif"
+                    quality="70"
                     sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+                    densities="1x 2x"
                     class="w-full h-auto"
                 />
             </section>
         </header>
 
-        <main id="content" class="focus:outline-none" role="main">
+        <main
+            id="main-content"
+            class="focus:outline-none"
+            tabindex="-1"
+            role="main"
+        >
             <!-- Problem/Solution Section -->
             <section class="py-20 bg-gray-50">
                 <div class="max-w-7xl mx-auto px-4">
@@ -459,9 +465,10 @@
                                 width="600"
                                 height="400"
                                 loading="lazy"
-                                format="webp"
-                                quality="85"
+                                format="avif"
+                                quality="75"
                                 sizes="xs:100vw sm:100vw md:50vw lg:33vw"
+                                densities="1x 2x"
                                 class="w-full h-auto"
                             />
                             <div class="p-6">
@@ -618,8 +625,10 @@
                                 sprechen
                             </p>
                             <button
+                                type="button"
                                 @click="openCalendly"
-                                class="w-full px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
+                                class="w-full px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-500 focus-visible:ring-offset-2 transition-all duration-300"
+                                aria-label="Kalendar öffnen und 30-Minuten Erstgespräch buchen"
                             >
                                 Termin direkt buchen →
                             </button>
@@ -903,7 +912,7 @@
                     <p class="text-white/50 text-sm">
                         © 2025 David Schubert – UI/UX Designer Freelancer DACH
                     </p>
-                    <nav class="flex gap-8">
+                    <nav aria-label="Footer-Links" class="flex gap-8">
                         <NuxtLink
                             to="#impressum"
                             class="text-white/50 hover:text-white transition-colors no-underline text-sm"
@@ -1358,34 +1367,10 @@ const openCalendly = () => {
 };
 
 // Performance optimizations
+const { observeElements } = usePerformantAnimations();
+
 onMounted(() => {
-    // Lazy load images
-    if ("loading" in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        images.forEach((img) => {
-            const dataSrc = img.dataset.src;
-            if (dataSrc) {
-                img.src = dataSrc;
-            }
-        });
-    }
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate-in");
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
-    });
+    // Animate sections on scroll without causing forced reflows
+    observeElements("section");
 });
 </script>

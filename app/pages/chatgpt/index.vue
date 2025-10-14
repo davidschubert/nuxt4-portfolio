@@ -131,7 +131,7 @@
             </div>
         </header>
 
-        <main id="content" tabindex="-1">
+        <main id="main-content" tabindex="-1" role="main">
             <!-- PROBLEM / LÖSUNG -->
             <section
                 id="problems"
@@ -153,9 +153,10 @@
                         height="720"
                         loading="eager"
                         fetchpriority="high"
-                        format="webp"
-                        quality="85"
+                        format="avif"
+                        quality="70"
                         sizes="xs:100vw sm:100vw md:100vw lg:1100px"
+                        densities="1x 2x"
                         class="w-full h-auto rounded-2xl border border-[#1f2230] shadow-lg mb-6"
                     />
 
@@ -1138,7 +1139,9 @@
                             </span>
                         </p>
                         <ClientOnly>
-                            <p class="text-[#a8adb7] text-sm">Stand: {{ today }}</p>
+                            <p class="text-[#a8adb7] text-sm">
+                                Stand: {{ today }}
+                            </p>
                         </ClientOnly>
                     </aside>
                 </div>

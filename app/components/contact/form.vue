@@ -1,167 +1,203 @@
 <template>
-    <form @submit.prevent="handleSubmit" class="contact-form">
+    <form
+        @submit.prevent="handleSubmit"
+        class="contact-form"
+        aria-label="Projekt-Anfrage Formular"
+    >
         <!-- Project Type -->
-        <div class="form-group">
-            <label for="projectType">Projekttyp *</label>
-            <select
-                id="projectType"
-                v-model="form.projectType"
-                required
-                class="form-select"
-            >
-                <option value="">Bitte wählen...</option>
-                <option value="saas-dashboard">SaaS Dashboard Design</option>
-                <option value="corporate-webdesign">Corporate Webdesign</option>
-                <option value="landing-page">Landing Page Design</option>
-                <option value="ux-audit">UX Audit</option>
-                <option value="design-system">Design System</option>
-                <option value="mobile-app">Mobile App Design</option>
-                <option value="barrierefreiheit">
-                    Barrierefreies Design WCAG
-                </option>
-                <option value="andere">Andere</option>
-            </select>
-        </div>
-
-        <!-- Name -->
-        <div class="form-row">
-            <div class="form-group">
-                <label for="firstName">Vorname *</label>
-                <input
-                    id="firstName"
-                    v-model="form.firstName"
-                    type="text"
-                    required
-                    class="form-input"
-                    placeholder="Max"
-                />
-            </div>
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Projektinformationen</legend>
 
             <div class="form-group">
-                <label for="lastName">Nachname *</label>
-                <input
-                    id="lastName"
-                    v-model="form.lastName"
-                    type="text"
-                    required
-                    class="form-input"
-                    placeholder="Mustermann"
-                />
-            </div>
-        </div>
-
-        <!-- Company & Position -->
-        <div class="form-row">
-            <div class="form-group">
-                <label for="company">Firma/Organisation</label>
-                <input
-                    id="company"
-                    v-model="form.company"
-                    type="text"
-                    class="form-input"
-                    placeholder="TechScale GmbH"
-                />
-            </div>
-
-            <div class="form-group">
-                <label for="position">Position</label>
-                <input
-                    id="position"
-                    v-model="form.position"
-                    type="text"
-                    class="form-input"
-                    placeholder="CEO, Product Owner, etc."
-                />
-            </div>
-        </div>
-
-        <!-- Contact Details -->
-        <div class="form-row">
-            <div class="form-group">
-                <label for="email">E-Mail *</label>
-                <input
-                    id="email"
-                    v-model="form.email"
-                    type="email"
-                    required
-                    class="form-input"
-                    placeholder="max@techscale.de"
-                />
-            </div>
-
-            <div class="form-group">
-                <label for="phone">Telefon</label>
-                <input
-                    id="phone"
-                    v-model="form.phone"
-                    type="tel"
-                    class="form-input"
-                    placeholder="+49 123 456789"
-                />
-            </div>
-        </div>
-
-        <!-- Budget & Timeline -->
-        <div class="form-row">
-            <div class="form-group">
-                <label for="budget">Budget-Range *</label>
+                <label for="projectType">Projekttyp *</label>
                 <select
-                    id="budget"
-                    v-model="form.budget"
+                    id="projectType"
+                    v-model="form.projectType"
                     required
                     class="form-select"
+                    aria-required="true"
                 >
                     <option value="">Bitte wählen...</option>
-                    <option value="under-5k">&lt; €5.000 (Quick Wins)</option>
-                    <option value="5-15k">€5.000 - €15.000 (Standard)</option>
-                    <option value="15-35k">€15.000 - €35.000 (Komplex)</option>
-                    <option value="over-35k">&gt; €35.000 (Enterprise)</option>
-                    <option value="unclear">Noch unklar (Beratung)</option>
+                    <option value="saas-dashboard">
+                        SaaS Dashboard Design
+                    </option>
+                    <option value="corporate-webdesign">
+                        Corporate Webdesign
+                    </option>
+                    <option value="landing-page">Landing Page Design</option>
+                    <option value="ux-audit">UX Audit</option>
+                    <option value="design-system">Design System</option>
+                    <option value="mobile-app">Mobile App Design</option>
+                    <option value="barrierefreiheit">
+                        Barrierefreies Design WCAG
+                    </option>
+                    <option value="andere">Andere</option>
                 </select>
+            </div>
+        </fieldset>
+
+        <!-- Personal Information -->
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Persönliche Daten</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">Vorname *</label>
+                    <input
+                        id="firstName"
+                        v-model="form.firstName"
+                        type="text"
+                        required
+                        class="form-input"
+                        placeholder="Max"
+                        aria-required="true"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Nachname *</label>
+                    <input
+                        id="lastName"
+                        v-model="form.lastName"
+                        type="text"
+                        required
+                        class="form-input"
+                        placeholder="Mustermann"
+                        aria-required="true"
+                    />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="company">Firma/Organisation</label>
+                    <input
+                        id="company"
+                        v-model="form.company"
+                        type="text"
+                        class="form-input"
+                        placeholder="TechScale GmbH"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <input
+                        id="position"
+                        v-model="form.position"
+                        type="text"
+                        class="form-input"
+                        placeholder="CEO, Product Owner, etc."
+                    />
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Contact Information -->
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Kontaktinformationen</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">E-Mail *</label>
+                    <input
+                        id="email"
+                        v-model="form.email"
+                        type="email"
+                        required
+                        class="form-input"
+                        placeholder="max@techscale.de"
+                        aria-required="true"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input
+                        id="phone"
+                        v-model="form.phone"
+                        type="tel"
+                        class="form-input"
+                        placeholder="+49 123 456789"
+                    />
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Project Details -->
+        <fieldset class="form-fieldset">
+            <legend class="form-legend">Projektdetails</legend>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="budget">Budget-Range *</label>
+                    <select
+                        id="budget"
+                        v-model="form.budget"
+                        required
+                        class="form-select"
+                        aria-required="true"
+                    >
+                        <option value="">Bitte wählen...</option>
+                        <option value="under-5k">
+                            &lt; €5.000 (Quick Wins)
+                        </option>
+                        <option value="5-15k">
+                            €5.000 - €15.000 (Standard)
+                        </option>
+                        <option value="15-35k">
+                            €15.000 - €35.000 (Komplex)
+                        </option>
+                        <option value="over-35k">
+                            &gt; €35.000 (Enterprise)
+                        </option>
+                        <option value="unclear">Noch unklar (Beratung)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeline">Timeline *</label>
+                    <select
+                        id="timeline"
+                        v-model="form.timeline"
+                        required
+                        class="form-select"
+                        aria-required="true"
+                    >
+                        <option value="">Bitte wählen...</option>
+                        <option value="asap">ASAP (Express +30%)</option>
+                        <option value="4-weeks">Innerhalb 4 Wochen</option>
+                        <option value="2-months">Innerhalb 2 Monaten</option>
+                        <option value="flexible">Flexibel</option>
+                    </select>
+                </div>
             </div>
 
             <div class="form-group">
-                <label for="timeline">Timeline *</label>
-                <select
-                    id="timeline"
-                    v-model="form.timeline"
+                <label for="message">Projektbeschreibung *</label>
+                <textarea
+                    id="message"
+                    v-model="form.message"
                     required
-                    class="form-select"
-                >
-                    <option value="">Bitte wählen...</option>
-                    <option value="asap">ASAP (Express +30%)</option>
-                    <option value="4-weeks">Innerhalb 4 Wochen</option>
-                    <option value="2-months">Innerhalb 2 Monaten</option>
-                    <option value="flexible">Flexibel</option>
+                    rows="6"
+                    class="form-textarea"
+                    placeholder="Beschreiben Sie Ihr Projekt, Ihre Herausforderungen und Ziele. Je mehr Details, desto besser kann ich Ihnen helfen..."
+                    aria-required="true"
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="source">Wie haben Sie von mir erfahren?</label>
+                <select id="source" v-model="form.source" class="form-select">
+                    <option value="">Bitte wählen (optional)</option>
+                    <option value="google">Google Suche</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="recommendation">Empfehlung</option>
+                    <option value="blog">Blog/Artikel</option>
+                    <option value="other">Andere</option>
                 </select>
             </div>
-        </div>
-
-        <!-- Project Description -->
-        <div class="form-group">
-            <label for="message">Projektbeschreibung *</label>
-            <textarea
-                id="message"
-                v-model="form.message"
-                required
-                rows="6"
-                class="form-textarea"
-                placeholder="Beschreiben Sie Ihr Projekt, Ihre Herausforderungen und Ziele. Je mehr Details, desto besser kann ich Ihnen helfen..."
-            ></textarea>
-        </div>
-
-        <!-- How did you hear -->
-        <div class="form-group">
-            <label for="source">Wie haben Sie von mir erfahren?</label>
-            <select id="source" v-model="form.source" class="form-select">
-                <option value="">Bitte wählen (optional)</option>
-                <option value="google">Google Suche</option>
-                <option value="linkedin">LinkedIn</option>
-                <option value="recommendation">Empfehlung</option>
-                <option value="blog">Blog/Artikel</option>
-                <option value="other">Andere</option>
-            </select>
-        </div>
+        </fieldset>
 
         <!-- Privacy & Newsletter -->
         <div class="form-checkboxes">
@@ -198,11 +234,21 @@
 
         <!-- Submit Button -->
         <div class="form-actions">
-            <button type="submit" class="submit-btn" :disabled="isSubmitting">
+            <button
+                type="submit"
+                class="submit-btn"
+                :disabled="isSubmitting"
+                :aria-busy="isSubmitting"
+                :aria-label="
+                    isSubmitting
+                        ? 'Anfrage wird gesendet'
+                        : 'Anfrage an UI/UX Designer Freelancer senden'
+                "
+            >
                 <span v-if="!isSubmitting">
                     Anfrage an UI/UX Designer Freelancer senden →
                 </span>
-                <span v-else> Wird gesendet... </span>
+                <span v-else aria-live="polite"> Wird gesendet... </span>
             </button>
 
             <p class="form-note">
@@ -213,12 +259,24 @@
         </div>
 
         <!-- Success/Error Messages -->
-        <div v-if="showSuccess" class="alert alert-success">
+        <div
+            v-if="showSuccess"
+            role="alert"
+            aria-live="polite"
+            aria-atomic="true"
+            class="alert alert-success"
+        >
             ✅ Vielen Dank für Ihre Anfrage! Ich melde mich innerhalb von 24
             Stunden bei Ihnen.
         </div>
 
-        <div v-if="showError" class="alert alert-error">
+        <div
+            v-if="showError"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+            class="alert alert-error"
+        >
             ❌ Es gab einen Fehler. Bitte versuchen Sie es erneut oder
             kontaktieren Sie mich direkt per E-Mail.
         </div>
@@ -226,7 +284,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 // Form data
 const form = ref({
@@ -249,6 +307,22 @@ const form = ref({
 const isSubmitting = ref(false);
 const showSuccess = ref(false);
 const showError = ref(false);
+
+// Focus Management
+const { focusNewContent } = useFocusManagement();
+
+// Watch for success/error and focus on them
+watch(showSuccess, (newVal) => {
+    if (newVal) {
+        focusNewContent(".alert-success", { delay: 200 });
+    }
+});
+
+watch(showError, (newVal) => {
+    if (newVal) {
+        focusNewContent(".alert-error", { delay: 200 });
+    }
+});
 
 // Handle form submission
 const handleSubmit = async () => {
@@ -467,6 +541,21 @@ const handleSubmit = async () => {
     }
 }
 
+/* Fieldset styling */
+.form-fieldset {
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: var(--radius, 8px);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-legend {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary, #111827);
+    padding: 0 0.5rem;
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     .form-input,
@@ -478,6 +567,14 @@ const handleSubmit = async () => {
     }
 
     .form-group label {
+        color: #f3f4f6;
+    }
+
+    .form-fieldset {
+        border-color: #374151;
+    }
+
+    .form-legend {
         color: #f3f4f6;
     }
 }

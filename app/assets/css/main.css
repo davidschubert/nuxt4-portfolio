@@ -1,1 +1,203 @@
 @import "tailwindcss";
+
+/* Performance optimizations to prevent forced reflows */
+* {
+    /* Prevent layout shifts during animations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize image rendering and reduce repaints */
+img,
+picture,
+video {
+    /* Content visibility for better performance */
+    content-visibility: auto;
+    /* Reserve space to prevent layout shifts */
+    contain-intrinsic-size: auto 300px;
+}
+
+/* GPU acceleration for smooth animations */
+@media (prefers-reduced-motion: no-preference) {
+    section {
+        /* Enable GPU compositing for animations */
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+}
+
+/* Optimize heavy sections with containment */
+section {
+    /* Isolate layout calculations */
+    contain: layout style paint;
+}
+
+/* Prevent layout thrashing on scroll */
+html {
+    /* Smooth scrolling without triggering layout */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Optimize rendering performance */
+    contain: layout style;
+}
+
+/* ========================================
+   ACCESSIBILITY: Keyboard Focus Indicators
+   ======================================== */
+
+/* Global focus styles for keyboard navigation */
+*:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+*:focus-visible {
+    outline: 2px solid #10b981;
+    /* emerald-500 */
+    outline-offset: 2px;
+    transition: outline-offset 0.2s ease;
+}
+
+/* Enhanced focus for interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 3px solid #10b981;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Dark mode focus indicators */
+.bg-gray-900 *:focus-visible,
+.bg-\[\#0b0c10\] *:focus-visible,
+.bg-\[\#111217\] *:focus-visible {
+    outline-color: #34d399;
+    /* emerald-400 */
+    box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.15);
+}
+
+/* Skip link visibility on focus */
+.sr-only:focus,
+.sr-only:focus-visible {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+}
+
+/* Remove focus for mouse users (only show for keyboard) */
+*:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    *:focus-visible {
+        outline-width: 4px;
+        outline-offset: 4px;
+    }
+}
+
+/* Reduce motion for focus transitions */
+@media (prefers-reduced-motion: reduce) {
+    *:focus-visible {
+        transition: none;
+    }
+}
+
+/* Custom interactive elements */
+[role="button"],
+[role="link"] {
+    cursor: pointer;
+    user-select: none;
+}
+
+[role="button"]:not([disabled]),
+[role="link"] {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Disabled state */
+[disabled],
+[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Focus within (for forms and containers) */
+form:focus-within {
+    outline: none;
+}
+
+/* ========================================
+   ACCESSIBILITY: Interactive Element States
+   ======================================== */
+
+/* Ensure all interactive elements have proper positioning context */
+a,
+button,
+[role="button"],
+[role="link"] {
+    position: relative;
+}
+
+/* Disabled state visual indicators */
+button:disabled,
+[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Loading/Busy state indicators */
+[aria-busy="true"] {
+    opacity: 0.7;
+    cursor: wait;
+    pointer-events: none;
+}
+
+/* Hover states only for devices that support hover */
+@media (hover: hover) {
+
+    a:hover:not([aria-disabled="true"]),
+    button:hover:not(:disabled):not([aria-disabled="true"]) {
+        /* Hover feedback already handled by component styles */
+    }
+}
+
+/* Active/Pressed states */
+button:active:not(:disabled),
+[role="button"]:active:not([aria-disabled="true"]) {
+    transform: scale(0.98);
+}
+
+/* ========================================
+   ACCESSIBILITY: Screen Reader Only
+   ======================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
