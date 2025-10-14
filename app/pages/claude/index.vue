@@ -192,13 +192,13 @@
                 <NuxtImg
                     src="/images/claude-hero.jpg"
                     alt="UI UX Designer Freelancer arbeitet remote an SaaS Dashboard Design in Figma mit Design System Komponenten für DACH-Kunden"
-                    width="1920"
-                    height="1080"
+                    width="1600"
+                    height="900"
                     loading="eager"
                     fetchpriority="high"
                     format="avif"
-                    quality="70"
-                    sizes="xs:100vw sm:100vw md:100vw lg:1400px"
+                    quality="65"
+                    sizes="xs:100vw sm:100vw md:100vw lg:1600px"
                     densities="1x 2x"
                     class="w-full h-auto rounded-2xl shadow-2xl"
                 />
