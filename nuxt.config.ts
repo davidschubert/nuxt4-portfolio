@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
     compatibilityDate: "2025-07-15",
-    devtools: { enabled: true },
+    devtools: { enabled: false },
     modules: ["@nuxt/image", "nuxt-site-config", "@nuxtjs/sitemap"],
     css: ["~/assets/css/main.css"],
     image: {
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         preset: "node-server", // Optimiert für VPS/Dedicated Server
         prerender: {
             crawlLinks: true,
-            routes: ["/", "/chatgpt", "/claude"],
+            routes: ["/", "/chatgpt", "/claude", "/best"],
         },
         compressPublicAssets: true,
         // Performance: Statische Assets werden von Nginx ausgeliefert
@@ -56,6 +56,12 @@ export default defineNuxtConfig({
             },
         },
         "/claude": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/best": {
             prerender: true,
             headers: {
                 "cache-control": "public, max-age=3600, must-revalidate",

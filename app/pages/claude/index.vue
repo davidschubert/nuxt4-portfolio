@@ -1,5 +1,8 @@
 <template>
-    <div class="bg-gradient-to-br from-white to-gray-50">
+    <div
+        class="bg-gradient-to-br from-white to-gray-50"
+        :class="{ 'motion-reduce': prefersReducedMotion }"
+    >
         <a href="#content" tabindex="0" class="skip-to-content">
             Zum Inhalt springen
         </a>
@@ -16,6 +19,7 @@
                 >
                     <span
                         class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+                        aria-hidden="true"
                     ></span>
                     <span
                         >VERFÜGBAR ab Februar 2025 | Express-Projekte sofort |
@@ -76,25 +80,35 @@
                         <span
                             class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
                             role="listitem"
-                            >✓ 25+ Jahre Freelance UX Designer Remote</span
+                            aria-label="25+ Jahre Freelance UX Designer Remote"
                         >
+                            <span aria-hidden="true">✓</span>
+                            <span>25+ Jahre Freelance UX Designer Remote</span>
+                        </span>
                         <span
                             class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
                             role="listitem"
-                            >✓ 200+ Projekte in Deutschland, Österreich,
-                            Schweiz</span
+                            aria-label="200+ Projekte in Deutschland, Österreich, Schweiz"
                         >
+                            <span aria-hidden="true">✓</span>
+                            <span>200+ Projekte in Deutschland, Österreich, Schweiz</span>
+                        </span>
                         <span
                             class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
                             role="listitem"
-                            >✓ Spezialist für Corporate Webdesign
-                            Freelancer</span
+                            aria-label="Spezialist für Corporate Webdesign Freelancer"
                         >
+                            <span aria-hidden="true">✓</span>
+                            <span>Spezialist für Corporate Webdesign Freelancer</span>
+                        </span>
                         <span
                             class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600"
                             role="listitem"
-                            >✓ UX Audit Deutschland mit Ø +73% Conversion</span
+                            aria-label="UX Audit Deutschland mit Ø +73% Conversion"
                         >
+                            <span aria-hidden="true">✓</span>
+                            <span>UX Audit Deutschland mit Ø +73% Conversion</span>
+                        </span>
                     </div>
 
                     <h2
@@ -106,7 +120,7 @@
                     <!-- Value Propositions -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                         <div
-                            class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                        class="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
                         >
                             <h3
                                 class="text-xl font-semibold text-blue-600 mb-3"
@@ -212,9 +226,10 @@
             role="main"
         >
             <!-- Problem/Solution Section -->
-            <section class="py-20 bg-gray-50">
+            <section class="py-20 bg-gray-50" role="region" aria-labelledby="problem-title">
                 <div class="max-w-7xl mx-auto px-4">
                     <h2
+                        id="problem-title"
                         class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
                     >
                         Digitale Herausforderungen lösen – mit einem erfahrenen
@@ -246,7 +261,10 @@
                         >.
                     </p>
 
-                    <div class="grid grid-cols-1 gap-8 my-12">
+                    <div
+                        class="grid grid-cols-1 gap-8 my-12"
+                        aria-label="Problem-Lösung-Karten"
+                    >
                         <div
                             class="grid md:grid-cols-2 gap-8 p-8 bg-white rounded-2xl shadow-sm"
                             v-for="item in problemSolutions"
@@ -299,9 +317,10 @@
             </section>
 
             <!-- Services Section -->
-            <section class="py-20 bg-white">
+            <section class="py-20 bg-white" role="region" aria-labelledby="services-title">
                 <div class="max-w-7xl mx-auto px-4">
                     <h2
+                        id="services-title"
                         class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 text-gray-900"
                     >
                         Spezialisierte Services von Ihrem Agile UX Designer und
@@ -331,6 +350,7 @@
                     <!-- Service Cards -->
                     <div
                         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+                        aria-label="Service-Angebote"
                     >
                         <article
                             class="p-8 bg-white rounded-2xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
@@ -392,9 +412,10 @@
             </section>
 
             <!-- Process Section -->
-            <section class="py-20 bg-gray-50">
+            <section class="py-20 bg-gray-50" role="region" aria-labelledby="process-title">
                 <div class="max-w-7xl mx-auto px-4">
                     <h2
+                        id="process-title"
                         class="text-3xl md:text-4xl lg:text-5xl font-bold mb-12 text-gray-900"
                     >
                         Mein bewährter Prozess als Design Sprint Remote
@@ -909,7 +930,7 @@
                     class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8"
                 >
                     <p class="text-white/50 text-sm">
-                        © 2025 David Schubert – UI/UX Designer Freelancer DACH
+                        © {{ year }} David Schubert – UI/UX Designer Freelancer DACH
                     </p>
                     <nav aria-label="Footer-Links" class="flex gap-8">
                         <NuxtLink
@@ -935,7 +956,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 
 // SEO Meta Tags
 useHead({
@@ -1395,6 +1416,8 @@ const openCalendly = () => {
 
 // Performance optimizations
 const { observeElements } = usePerformantAnimations();
+const { prefersReducedMotion } = useAccessibility();
+const year = computed(() => new Date().getFullYear());
 
 onMounted(() => {
     // Animate sections on scroll without causing forced reflows

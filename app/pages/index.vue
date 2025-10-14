@@ -5,15 +5,21 @@
             <nav aria-label="Hauptnavigation" class="flex gap-6">
                 <NuxtLink
                     to="/chatgpt"
-                    class="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors font-medium focus-visible:ring-4 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                    class="px-6 py-3 bg-emerald-800 text-white rounded-lg hover:bg-emerald-600 transition-colors font-medium focus-visible:ring-4 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
                 >
                     ChatGPT
                 </NuxtLink>
                 <NuxtLink
                     to="/claude"
-                    class="px-6 py-3 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition-colors font-medium focus-visible:ring-4 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                    class="px-6 py-3 bg-emerald-800 text-white rounded-lg hover:bg-emerald-600 transition-colors font-medium focus-visible:ring-4 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
                 >
                     Claude
+                </NuxtLink>
+                <NuxtLink
+                    to="/best"
+                    class="px-6 py-3 bg-emerald-800 text-white rounded-lg hover:bg-emerald-600 transition-colors font-medium focus-visible:ring-4 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                >
+                    Best
                 </NuxtLink>
             </nav>
         </main>

@@ -1373,7 +1373,7 @@ const today = new Date().toLocaleDateString("de-DE", {
     day: "2-digit",
 });
 const year = new Date().getFullYear();
-const prefersReducedMotion = false;
+const { prefersReducedMotion } = useAccessibility();
 const requestURL = useRequestURL();
 const canonicalUrl = computed(() => {
     const base = `${requestURL.origin}${requestURL.pathname}`;
