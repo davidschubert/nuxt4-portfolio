@@ -14,9 +14,26 @@ export default defineNuxtPlugin(() => {
     }
 
     try {
+        // Helper function to safely create policy
+        const createPolicySafely = (
+            name: string,
+            config: {
+                createHTML?: (input: string) => string;
+                createScript?: (input: string) => string;
+                createScriptURL?: (input: string) => string;
+            }
+        ) => {
+            try {
+                return window.trustedTypes!.createPolicy(name, config);
+            } catch (e) {
+                // Policy already exists, ignore
+                return null;
+            }
+        };
+
         // Policy für Vue/Nuxt Framework
         if (!window.trustedTypes.defaultPolicy) {
-            window.trustedTypes.createPolicy("default", {
+            createPolicySafely("default", {
                 createHTML: (input: string) => {
                     // Erlaubt Vue's Template-Syntax
                     // In Production: Strikte Validierung
@@ -88,23 +105,19 @@ export default defineNuxtPlugin(() => {
         }
 
         // Vue-spezifische Policy
-        if (!window.trustedTypes.getPolicy("vue-html")) {
-            window.trustedTypes.createPolicy("vue-html", {
-                createHTML: (input: string) => {
-                    // Vue's v-html Direktive
-                    return input;
-                },
-            });
-        }
+        createPolicySafely("vue-html", {
+            createHTML: (input: string) => {
+                // Vue's v-html Direktive
+                return input;
+            },
+        });
 
         // Nuxt-spezifische Policy
-        if (!window.trustedTypes.getPolicy("nuxt-app")) {
-            window.trustedTypes.createPolicy("nuxt-app", {
-                createHTML: (input: string) => input,
-                createScript: (input: string) => input,
-                createScriptURL: (input: string) => input,
-            });
-        }
+        createPolicySafely("nuxt-app", {
+            createHTML: (input: string) => input,
+            createScript: (input: string) => input,
+            createScriptURL: (input: string) => input,
+        });
 
         console.log("✅ Trusted Types policies initialized");
     } catch (error) {
@@ -125,7 +138,6 @@ declare global {
                 }
             ) => TrustedTypePolicy;
             defaultPolicy: TrustedTypePolicy | null;
-            getPolicy: (name: string) => TrustedTypePolicy | null;
         };
     }
 

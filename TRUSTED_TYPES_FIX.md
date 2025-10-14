@@ -25,6 +25,37 @@ script.src = userInput;
 -   Script-URL-Injection über `<script src="">`
 -   Chrome DevTools Warnung: "No Trusted Types directive found"
 
+## ⚠️ Bekannte Probleme & Fixes
+
+### Problem: `window.trustedTypes.getPolicy is not a function`
+
+**Symptom:** JavaScript Fehler beim Initialisieren der Trusted Types Policies.
+
+**Root Cause:** Die `getPolicy()` Methode ist nicht Teil der Standard Trusted Types API in allen Browsern.
+
+**Fix (✅ Implementiert):**
+
+```typescript
+// ❌ Falsch (verursacht Fehler)
+if (!window.trustedTypes.getPolicy("vue-html")) {
+    window.trustedTypes.createPolicy("vue-html", { ... });
+}
+
+// ✅ Korrekt (mit error handling)
+const createPolicySafely = (name: string, config: PolicyConfig) => {
+    try {
+        return window.trustedTypes!.createPolicy(name, config);
+    } catch (e) {
+        // Policy already exists or browser doesn't support it, ignore
+        return null;
+    }
+};
+
+createPolicySafely("vue-html", { createHTML: (input) => input });
+```
+
+---
+
 ## Implementierte Lösung
 
 ### 1. **Trusted Types CSP Direktive** (`server/plugins/csp.ts`)
@@ -118,8 +149,8 @@ const cleanInput = sanitizeUserInput(dangerousInput);
 element.innerHTML = userInput; // ❌ XSS möglich
 
 // Nachher: SICHER mit Trusted Types
-const policy = window.trustedTypes.getPolicy("default");
-const safeHTML = policy.createHTML(userInput);
+const { sanitizeHTML } = useSafeHTML();
+const safeHTML = sanitizeHTML(userInput);
 element.innerHTML = safeHTML; // ✅ Automatisch validiert
 ```
 
@@ -153,28 +184,21 @@ Trusted Types schützt diese gefährlichen APIs:
 
 ### 1. **Default Policy** (Automatisch)
 
-Für allgemeine DOM-Operationen:
+Für allgemeine DOM-Operationen - wird automatisch vom Plugin erstellt:
 
 ```typescript
-const policy = window.trustedTypes.getPolicy("default");
-const safe = policy.createHTML("<p>Safe content</p>");
+// ✅ Nutze das Composable statt direktem Policy-Zugriff
+const { sanitizeHTML } = useSafeHTML();
+const safe = sanitizeHTML("<p>Safe content</p>");
 ```
 
 ### 2. **Vue Policy** (Framework)
 
-Für Vue's `v-html` Direktive:
-
-```typescript
-const vuePolicy = window.trustedTypes.getPolicy("vue-html");
-```
+Für Vue's `v-html` Direktive - wird automatisch vom Plugin erstellt.
 
 ### 3. **Nuxt Policy** (SSR/Hydration)
 
-Für Nuxt's interne Operationen:
-
-```typescript
-const nuxtPolicy = window.trustedTypes.getPolicy("nuxt-app");
-```
+Für Nuxt's interne Operationen - wird automatisch vom Plugin erstellt.
 
 ### 4. **DOMPurify Policy** (Optional)
 
