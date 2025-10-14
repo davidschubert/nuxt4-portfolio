@@ -6,24 +6,20 @@
 import { randomBytes } from "crypto";
 
 export default defineNitroPlugin((nitroApp) => {
-    nitroApp.hooks.hook("render:html", (html, { event }) => {
-        // Generiere kryptographisch sicheren Nonce für jede Request
-        const nonce = randomBytes(16).toString("base64");
-
-        // Speichere Nonce im Event-Context für späteren Zugriff
-        event.context.cspNonce = nonce;
-
-        // CSP Policy mit Nonce
+    // Funktion zum Generieren der CSP-Direktiven
+    const generateCSP = (nonce?: string) => {
         const isDev = process.dev;
 
         const cspDirectives = [
             "default-src 'self'",
-            // Scripts: nur self und mit Nonce, unsafe-eval nur in Dev für HMR
-            `script-src 'self' 'nonce-${nonce}'${
-                isDev ? " 'unsafe-eval'" : ""
-            }`,
-            // Styles: nur self und mit Nonce
-            `style-src 'self' 'nonce-${nonce}'`,
+            // Scripts: mit Nonce für SSR, sonst nur self
+            nonce
+                ? `script-src 'self' 'nonce-${nonce}'${
+                      isDev ? " 'unsafe-eval'" : ""
+                  }`
+                : `script-src 'self'${isDev ? " 'unsafe-eval'" : ""}`,
+            // Styles: mit Nonce für SSR, sonst nur self
+            nonce ? `style-src 'self' 'nonce-${nonce}'` : "style-src 'self'",
             // Images: self, data URIs und HTTPS
             "img-src 'self' data: https:",
             // Fonts: self und data URIs
@@ -43,18 +39,27 @@ export default defineNitroPlugin((nitroApp) => {
             // Objects: keine (Flash, Java, etc.)
             "object-src 'none'",
             // Trusted Types: Schutz gegen DOM-based XSS
-            // Erlaubt Vue/Nuxt interne Policies + custom policies
             // IMMER aktiv, auch in Development für besseren Schutz
-            "trusted-types default vue-html nuxt-app dompurify",
+            "trusted-types default vue vue-html nuxt-app dompurify sanitizer",
             // Erzwingt Trusted Types für gefährliche DOM APIs
-            // In Production: Enforcement Mode
-            // In Development: Auch aktiv für Tests (HMR benötigt unsafe-eval, aber nicht für DOM)
             "require-trusted-types-for 'script'",
             // Upgrade insecure requests in Production
             ...(isDev ? [] : ["upgrade-insecure-requests"]),
         ];
 
-        const cspHeader = cspDirectives.join("; ");
+        return cspDirectives.join("; ");
+    };
+
+    // Hook für SSR-Requests mit Nonce-basierter CSP
+    nitroApp.hooks.hook("render:html", (html, { event }) => {
+        // Generiere kryptographisch sicheren Nonce für jede Request
+        const nonce = randomBytes(16).toString("base64");
+
+        // Speichere Nonce im Event-Context für späteren Zugriff
+        event.context.cspNonce = nonce;
+
+        // CSP Policy mit Nonce (überschreibt die grundlegende CSP)
+        const cspHeader = generateCSP(nonce);
 
         // Setze CSP Header
         event.node.res.setHeader("Content-Security-Policy", cspHeader);

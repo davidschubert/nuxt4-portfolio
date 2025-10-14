@@ -104,7 +104,14 @@ export default defineNuxtPlugin(() => {
             });
         }
 
-        // Vue-spezifische Policy
+        // Vue-spezifische Policies
+        createPolicySafely("vue", {
+            createHTML: (input: string) => {
+                // Vue's interne HTML-Operationen
+                return input;
+            },
+        });
+
         createPolicySafely("vue-html", {
             createHTML: (input: string) => {
                 // Vue's v-html Direktive
@@ -117,6 +124,16 @@ export default defineNuxtPlugin(() => {
             createHTML: (input: string) => input,
             createScript: (input: string) => input,
             createScriptURL: (input: string) => input,
+        });
+
+        // Sanitizer Policy für useSafeHTML Composable
+        createPolicySafely("sanitizer", {
+            createHTML: (html: string) => {
+                // Einfache Sanitization
+                const temp = document.createElement("div");
+                temp.textContent = html;
+                return temp.innerHTML;
+            },
         });
 
         console.log("✅ Trusted Types policies initialized");

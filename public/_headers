@@ -1,0 +1,24 @@
+## CSP Headers für statische Seiten (Netlify/Vercel/Cloudflare Pages)
+## Diese werden nur für statische Deployments verwendet
+## Für SSR-Deployments wird der CSP vom Server-Plugin mit Nonces gesetzt
+
+/*
+  # Content Security Policy mit Trusted Types Enforcement
+  # Trusted Types schützt gegen DOM-based XSS, auch ohne strikte script-src
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; manifest-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; trusted-types default vue vue-html nuxt-app dompurify sanitizer; require-trusted-types-for 'script'; upgrade-insecure-requests
+  
+  # Andere Security Header
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), fullscreen=(self)
+
+# Cache für Bilder
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache für IPX-optimierte Bilder  
+/_ipx/*
+  Cache-Control: public, max-age=31536000, immutable
+
