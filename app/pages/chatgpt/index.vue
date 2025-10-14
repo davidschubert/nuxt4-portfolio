@@ -3,9 +3,7 @@
         class="bg-[#0b0c10] text-[#e6e6e6] font-sans text-base leading-relaxed"
         :class="{ sr: prefersReducedMotion }"
     >
-        <a
-            href="#content"
-            class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[999] focus:px-4 focus:py-3 focus:rounded-lg focus:bg-white focus:text-[#0b0c10] focus:shadow-lg focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-emerald-400"
+        <a href="#content" tabindex="0" class="skip-to-content"
             >Zum Inhalt springen</a
         >
 
@@ -1642,3 +1640,60 @@ useHead({
     ],
 });
 </script>
+
+<style scoped>
+/* Skip Link - fokussierbar und barrierefrei */
+.skip-to-content {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    z-index: 9999;
+    background: white;
+    color: #0b0c10;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skip-to-content:focus,
+.skip-to-content:focus-visible {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+    overflow: visible;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    width: auto;
+    height: auto;
+    outline: 3px solid #10b981;
+    outline-offset: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.skip-to-content:hover {
+    background: #f3f4f6;
+}
+
+@media (prefers-contrast: high) {
+    .skip-to-content:focus,
+    .skip-to-content:focus-visible {
+        outline-width: 4px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skip-to-content:focus,
+    .skip-to-content:focus-visible {
+        transition: none;
+    }
+}
+</style>
