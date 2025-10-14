@@ -1137,7 +1137,9 @@
                                 UX‑Audits laufend
                             </span>
                         </p>
-                        <p class="text-[#a8adb7] text-sm">Stand: {{ today }}</p>
+                        <ClientOnly>
+                            <p class="text-[#a8adb7] text-sm">Stand: {{ today }}</p>
+                        </ClientOnly>
                     </aside>
                 </div>
             </section>
@@ -1328,10 +1330,12 @@
                                 >Datenschutz</a
                             >
                         </p>
-                        <p class="text-center text-[#ffffff] text-xs">
-                            © {{ year }} {{ name }} – Freiberuflicher UI/UX
-                            Designer
-                        </p>
+                        <ClientOnly>
+                            <p class="text-center text-[#ffffff] text-xs">
+                                © {{ year }} {{ name }} – Freiberuflicher UI/UX
+                                Designer
+                            </p>
+                        </ClientOnly>
                     </div>
                 </div>
             </footer>
