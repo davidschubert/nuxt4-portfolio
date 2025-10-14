@@ -198,9 +198,9 @@
                     fetchpriority="high"
                     format="avif"
                     quality="70"
-                    sizes="xs:100vw sm:100vw md:100vw lg:100vw"
+                    sizes="xs:100vw sm:100vw md:100vw lg:1400px"
                     densities="1x 2x"
-                    class="w-full h-auto"
+                    class="w-full h-auto rounded-2xl shadow-2xl"
                 />
             </section>
         </header>
@@ -531,16 +531,18 @@
                         <div
                             class="flex justify-center items-center flex-wrap gap-8 p-8 bg-white rounded-2xl"
                         >
-                            <img
+                            <div
                                 v-for="logo in clientLogos"
                                 :key="logo.name"
-                                :src="logo.src"
-                                :alt="`${logo.name} Logo`"
-                                width="150"
-                                height="60"
-                                loading="lazy"
-                                class="h-auto"
-                            />
+                                :style="{
+                                    backgroundColor: logo.color,
+                                    color: logo.textColor,
+                                }"
+                                :aria-label="`${logo.name} Logo`"
+                                class="flex items-center justify-center px-4 py-3 rounded-lg font-bold text-sm min-w-[150px] h-[60px]"
+                            >
+                                {{ logo.name }}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1270,27 +1272,33 @@ const portfolio = ref([
 const clientLogos = ref([
     {
         name: "TechScale",
-        src: "https://placehold.co/150x60/2563eb/ffffff?text=TechScale",
+        color: "#2563eb",
+        textColor: "#ffffff",
     },
     {
         name: "DataFlow",
-        src: "https://placehold.co/150x60/10b981/ffffff?text=DataFlow",
+        color: "#10b981",
+        textColor: "#ffffff",
     },
     {
         name: "HealthPlus",
-        src: "https://placehold.co/150x60/8b5cf6/ffffff?text=HealthPlus",
+        color: "#8b5cf6",
+        textColor: "#ffffff",
     },
     {
         name: "ShopMax",
-        src: "https://placehold.co/150x60/f59e0b/ffffff?text=ShopMax",
+        color: "#f59e0b",
+        textColor: "#ffffff",
     },
     {
         name: "PropInvest",
-        src: "https://placehold.co/150x60/ec4899/ffffff?text=PropInvest",
+        color: "#ec4899",
+        textColor: "#ffffff",
     },
     {
         name: "FinanceHub",
-        src: "https://placehold.co/150x60/06b6d4/ffffff?text=FinanceHub",
+        color: "#06b6d4",
+        textColor: "#ffffff",
     },
 ]);
 
