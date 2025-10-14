@@ -2,7 +2,7 @@
 module.exports = {
     apps: [
         {
-            name: "nuxt4-portfolio",
+            name: "pukalanistudio",
             script: ".output/server/index.mjs",
             env: {
                 NODE_ENV: "production",
