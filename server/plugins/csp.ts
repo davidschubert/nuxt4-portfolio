@@ -44,9 +44,12 @@ export default defineNitroPlugin((nitroApp) => {
             "object-src 'none'",
             // Trusted Types: Schutz gegen DOM-based XSS
             // Erlaubt Vue/Nuxt interne Policies + custom policies
+            // IMMER aktiv, auch in Development für besseren Schutz
             "trusted-types default vue-html nuxt-app dompurify",
-            // Erzwingt Trusted Types für gefährliche DOM APIs (nur Production)
-            ...(isDev ? [] : ["require-trusted-types-for 'script'"]),
+            // Erzwingt Trusted Types für gefährliche DOM APIs
+            // In Production: Enforcement Mode
+            // In Development: Auch aktiv für Tests (HMR benötigt unsafe-eval, aber nicht für DOM)
+            "require-trusted-types-for 'script'",
             // Upgrade insecure requests in Production
             ...(isDev ? [] : ["upgrade-insecure-requests"]),
         ];

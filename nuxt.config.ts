@@ -52,6 +52,9 @@ export default defineNuxtConfig({
                 "Referrer-Policy": "strict-origin-when-cross-origin",
                 "Permissions-Policy":
                     "geolocation=(), microphone=(), camera=(), fullscreen=(self)",
+                // Grundlegende CSP für statische Seiten (wird bei SSR durch Server-Plugin überschrieben)
+                "Content-Security-Policy":
+                    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; manifest-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; trusted-types default vue-html nuxt-app dompurify; require-trusted-types-for 'script'; upgrade-insecure-requests",
             },
         },
     },

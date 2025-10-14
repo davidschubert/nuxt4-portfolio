@@ -26,18 +26,32 @@ export const useSafeHTML = () => {
         // Wenn Trusted Types verfügbar, nutze Policy
         if (window.trustedTypes) {
             try {
-                const policy =
-                    window.trustedTypes.getPolicy("default") ||
-                    window.trustedTypes.createPolicy("sanitizer", {
-                        createHTML: (html: string) => {
-                            // Einfache Sanitization
-                            const temp = document.createElement("div");
-                            temp.textContent = html;
-                            return temp.innerHTML;
-                        },
-                    });
+                // Verwende existierende defaultPolicy oder erstelle neue Policy
+                let policy = window.trustedTypes.defaultPolicy;
 
-                return policy.createHTML(input);
+                if (!policy) {
+                    // Versuche sanitizer Policy zu erstellen
+                    try {
+                        policy = window.trustedTypes.createPolicy("sanitizer", {
+                            createHTML: (html: string) => {
+                                // Einfache Sanitization
+                                const temp = document.createElement("div");
+                                temp.textContent = html;
+                                return temp.innerHTML;
+                            },
+                        });
+                    } catch (e) {
+                        // Policy existiert bereits oder kann nicht erstellt werden
+                        console.warn("Could not create sanitizer policy:", e);
+                    }
+                }
+
+                if (policy && policy.createHTML) {
+                    return policy.createHTML(input);
+                }
+
+                // Fallback wenn keine Policy verfügbar
+                return escapeHTML(input);
             } catch (error) {
                 console.error("Trusted Types sanitization failed:", error);
                 // Fallback: Escape HTML
@@ -67,7 +81,7 @@ export const useSafeHTML = () => {
         }
 
         try {
-            const policy = window.trustedTypes.getPolicy("default");
+            const policy = window.trustedTypes.defaultPolicy;
             if (policy?.createScriptURL) {
                 return policy.createScriptURL(url);
             }
