@@ -192,13 +192,13 @@
                 <NuxtImg
                     src="/images/claude-hero.jpg"
                     alt="UI UX Designer Freelancer arbeitet remote an SaaS Dashboard Design in Figma mit Design System Komponenten für DACH-Kunden"
-                    width="1600"
-                    height="900"
+                    width="1560"
+                    height="878"
                     loading="eager"
                     fetchpriority="high"
                     format="avif"
-                    quality="65"
-                    sizes="xs:100vw sm:100vw md:100vw lg:1600px"
+                    quality="60"
+                    sizes="xs:100vw sm:100vw md:100vw lg:1560px"
                     densities="1x 2x"
                     class="w-full h-auto rounded-2xl shadow-2xl"
                 />
@@ -975,8 +975,30 @@ useHead({
         { name: "author", content: "David Schubert" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { "http-equiv": "Content-Type", content: "text/html; charset=utf-8" },
+        // PWA & Mobile
+        { name: "theme-color", content: "#10b981" },
+        { name: "mobile-web-app-capable", content: "yes" },
+        {
+            name: "apple-mobile-web-app-status-bar-style",
+            content: "black-translucent",
+        },
     ],
     link: [
+        // Favicons & Manifest
+        {
+            rel: "icon",
+            type: "image/svg+xml",
+            href: "/icon.svg",
+        },
+        {
+            rel: "apple-touch-icon",
+            href: "/apple-touch-icon.svg",
+        },
+        {
+            rel: "manifest",
+            href: "/site.webmanifest",
+        },
+        // SEO
         { rel: "canonical", href: "https://davidschubert.com/" },
         {
             rel: "alternate",
