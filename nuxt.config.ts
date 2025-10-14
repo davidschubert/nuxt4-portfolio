@@ -26,13 +26,42 @@ export default defineNuxtConfig({
         inlineStyles: true,
     },
     nitro: {
+        preset: "node-server", // Optimiert für VPS/Dedicated Server
         prerender: {
             crawlLinks: true,
             routes: ["/", "/chatgpt", "/claude"],
         },
         compressPublicAssets: true,
+        // Performance: Statische Assets werden von Nginx ausgeliefert
+        publicAssets: [
+            {
+                baseURL: "images",
+                dir: "public/images",
+                maxAge: 31536000, // 1 Jahr
+            },
+        ],
     },
     routeRules: {
+        // Prerendered Seiten mit kurzer Revalidierung
+        "/": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/chatgpt": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/claude": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        // Optimierte Bilder - lange Cache-Zeit
         "/_ipx/**": {
             headers: {
                 "cache-control": "public, max-age=31536000, immutable",
@@ -43,6 +72,7 @@ export default defineNuxtConfig({
                 "cache-control": "public, max-age=31536000, immutable",
             },
         },
+        // Global Security Headers
         "/**": {
             headers: {
                 "Strict-Transport-Security":
@@ -94,13 +124,17 @@ export default defineNuxtConfig({
     vite: {
         plugins: [tailwindcss()],
         build: {
-            cssCodeSplit: true,
+            cssCodeSplit: true, // CSS-Code-Splitting aktiviert
             minify: "esbuild",
             rollupOptions: {
                 output: {
                     manualChunks: {
                         vendor: ["vue", "vue-router"],
                     },
+                    // Kleinere Chunk-Größen für besseres Caching
+                    chunkFileNames: "_nuxt/[name]-[hash].js",
+                    entryFileNames: "_nuxt/[name]-[hash].js",
+                    assetFileNames: "_nuxt/[name]-[hash].[ext]",
                 },
             },
         },
