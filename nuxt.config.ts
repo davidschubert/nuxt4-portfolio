@@ -22,9 +22,6 @@ export default defineNuxtConfig({
         url: "https://pukalani.studio",
         name: "My Awesome Website",
     },
-    features: {
-        inlineStyles: true,
-    },
     nitro: {
         preset: "node-server", // Optimiert für VPS/Dedicated Server
         prerender: {
@@ -140,46 +137,14 @@ export default defineNuxtConfig({
     },
     vite: {
         plugins: [tailwindcss()],
-        build: {
-            target: "es2020", // Moderne Browser (stabiler als esnext)
-            cssCodeSplit: true, // CSS-Code-Splitting aktiviert
-            minify: "esbuild",
-            cssMinify: "esbuild", // Aggressive CSS Minification
-        },
-        esbuild: {
-            legalComments: "none", // Entfernt Kommentare
-        },
-        optimizeDeps: {
-            include: ["vue", "vue-router"],
-        },
-        // Reduce forced reflows by optimizing CSS handling
-        css: {
-            devSourcemap: false,
-        },
     },
     experimental: {
-        // Enable optimizations
         viewTransition: false, // Disable to prevent reflow issues
-        inlineStyles: true, // Inline kritisches CSS
     },
     router: {
         options: {
             strict: true,
             scrollBehaviorType: "smooth", // Smooth scrolling für bfcache
-        },
-    },
-    // Performance-Optimierungen
-    hooks: {
-        "build:manifest": (manifest) => {
-            // Entferne unused CSS aus dem Manifest
-            for (const key in manifest) {
-                const file = manifest[key];
-                if (file.css) {
-                    file.css = file.css.filter(
-                        (css: string) => !css.includes("unused")
-                    );
-                }
-            }
         },
     },
 });
