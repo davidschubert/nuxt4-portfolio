@@ -84,18 +84,37 @@ export const useFocusManagement = () => {
 
     /**
      * Prüft ob Element im Viewport ist
+     * Optimiert um Forced Reflows zu vermeiden durch Caching von Viewport-Dimensionen
      */
-    const isInViewport = (element: HTMLElement): boolean => {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
-                (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <=
-                (window.innerWidth || document.documentElement.clientWidth)
-        );
-    };
+    const isInViewport = (() => {
+        // Cache viewport dimensions um wiederholte Abfragen zu vermeiden
+        let cachedViewportHeight = 0;
+        let cachedViewportWidth = 0;
+        let cacheTime = 0;
+        const CACHE_DURATION = 100; // ms
+
+        return (element: HTMLElement): boolean => {
+            const now = Date.now();
+
+            // Aktualisiere Cache wenn abgelaufen
+            if (now - cacheTime > CACHE_DURATION) {
+                cachedViewportHeight =
+                    window.innerHeight || document.documentElement.clientHeight;
+                cachedViewportWidth =
+                    window.innerWidth || document.documentElement.clientWidth;
+                cacheTime = now;
+            }
+
+            // Batch die Layout-Abfrage in einem requestAnimationFrame
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= cachedViewportHeight &&
+                rect.right <= cachedViewportWidth
+            );
+        };
+    })();
 
     /**
      * Fokussiert Element nur wenn es nicht im Viewport ist

@@ -33,8 +33,8 @@
                     id="hero-title"
                     class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent"
                 >
-                    UI/UX Designer Freelancer DACH – SaaS, Corporate & Dashboard
-                    Design
+                    UI/UX Designer Freelancer DACH für SaaS, Dashboard &
+                    Corporate Teams
                 </h1>
 
                 <p
@@ -124,15 +124,15 @@
                 <NuxtImg
                     src="/images/claude-hero.jpg"
                     alt="UI UX Designer Freelancer arbeitet remote an SaaS Dashboard Design in Figma – 25+ Jahre Erfahrung DACH"
-                    width="1560"
-                    height="878"
+                    width="1680"
+                    height="945"
                     loading="eager"
                     fetchpriority="high"
                     format="avif"
                     quality="60"
                     preload
-                    sizes="xs:100vw sm:100vw md:100vw lg:1560px"
-                    densities="1x 2x"
+                    sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1280px) 1280px, 1680px"
+                    densities="x1"
                     class="w-full h-auto rounded-2xl shadow-2xl"
                 />
             </div>
@@ -144,6 +144,84 @@
             tabindex="-1"
             role="main"
         >
+            <!-- Inhaltsverzeichnis -->
+            <nav
+                id="inhalt"
+                aria-labelledby="toc-title"
+                class="border-t border-gray-200 bg-white/70 backdrop-blur py-6"
+            >
+                <div class="max-w-7xl mx-auto px-4 md:px-8">
+                    <div
+                        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+                    >
+                        <div>
+                            <h2
+                                id="toc-title"
+                                class="text-xl md:text-2xl font-semibold text-gray-900 mb-2"
+                            >
+                                Inhalt & direkte Sprungziele
+                            </h2>
+                            <p class="text-gray-600 text-sm md:text-base">
+                                Direkt zu Services, Portfolio, Prozess, FAQs
+                                oder Kontakt springen.
+                            </p>
+                        </div>
+                        <ol
+                            class="grid grid-cols-1 md:grid-cols-3 gap-4 list-none p-0 m-0 text-sm md:text-base"
+                        >
+                            <li>
+                                <a
+                                    href="#services"
+                                    class="inline-flex items-center gap-2 px-4 py-3 bg-emerald-50 text-emerald-700 rounded-lg border border-emerald-200 hover:bg-emerald-100 transition-colors no-underline"
+                                >
+                                    1. Leistungen & Angebote
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#portfolio"
+                                    class="inline-flex items-center gap-2 px-4 py-3 bg-blue-50 text-blue-700 rounded-lg border border-blue-200 hover:bg-blue-100 transition-colors no-underline"
+                                >
+                                    2. Portfolio & Case Studies
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#process"
+                                    class="inline-flex items-center gap-2 px-4 py-3 bg-purple-50 text-purple-700 rounded-lg border border-purple-200 hover:bg-purple-100 transition-colors no-underline"
+                                >
+                                    3. UX Prozess & Zusammenarbeit
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#locations"
+                                    class="inline-flex items-center gap-2 px-4 py-3 bg-orange-50 text-orange-700 rounded-lg border border-orange-200 hover:bg-orange-100 transition-colors no-underline"
+                                >
+                                    4. Remote & Standorte DACH
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#faq"
+                                    class="inline-flex items-center gap-2 px-4 py-3 bg-gray-100 text-gray-700 rounded-lg border border-gray-200 hover:bg-gray-200 transition-colors no-underline"
+                                >
+                                    5. FAQ & Preise
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#contact"
+                                    class="inline-flex items-center gap-2 px-4 py-3 bg-emerald-700 text-white rounded-lg border border-emerald-700 hover:bg-emerald-800 transition-colors no-underline"
+                                >
+                                    6. Kontakt & Termin
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </nav>
+
             <!-- Problem/Solution Section -->
             <section
                 id="problems"
@@ -192,7 +270,7 @@
                             class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
                         >
                             <h3
-                                class="text-xl font-semibold text-emerald-600 mb-3"
+                                class="text-xl font-semibold text-emerald-700 mb-3"
                             >
                                 Conversion & Wachstum
                             </h3>
@@ -205,7 +283,7 @@
                                 ich Ihr Team bei der Implementierung und
                                 optimiere kontinuierlich nach GA4-Standards.
                             </p>
-                            <p class="text-emerald-600 font-semibold">
+                            <p class="text-emerald-700 font-semibold">
                                 +73% Conversion · +43% Feature-Adoption
                             </p>
                         </article>
@@ -214,7 +292,7 @@
                             class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow"
                         >
                             <h3
-                                class="text-xl font-semibold text-emerald-600 mb-3"
+                                class="text-xl font-semibold text-emerald-700 mb-3"
                             >
                                 Erlebnis & Vertrauen
                             </h3>
@@ -225,7 +303,7 @@
                                 sorgen dafür, dass Ihr Produkt auf jedem Device
                                 schnell, zugänglich und vertrauenswürdig wirkt.
                             </p>
-                            <p class="text-emerald-600 font-semibold">
+                            <p class="text-emerald-700 font-semibold">
                                 PageSpeed 94+ · WCAG 2.1 AA zertifiziert
                             </p>
                         </article>
@@ -328,7 +406,7 @@
                                     <span>Design Token System</span>
                                 </li>
                             </ul>
-                            <p class="text-emerald-600 font-semibold mb-4">
+                            <p class="text-emerald-700 font-semibold mb-4">
                                 +43% Feature-Adoption · −67% Support
                             </p>
                             <p class="text-gray-900 font-bold mb-4">
@@ -377,7 +455,7 @@
                                     <span>SEO-Optimierung</span>
                                 </li>
                             </ul>
-                            <p class="text-emerald-600 font-semibold mb-4">
+                            <p class="text-emerald-700 font-semibold mb-4">
                                 +156% Traffic · PageSpeed 90+
                             </p>
                             <p class="text-gray-900 font-bold mb-4">
@@ -426,7 +504,7 @@
                                     <span>LCP &lt; 2.5s garantiert</span>
                                 </li>
                             </ul>
-                            <p class="text-emerald-600 font-semibold mb-4">
+                            <p class="text-emerald-700 font-semibold mb-4">
                                 Ø +73% Conversion Rate
                             </p>
                             <p class="text-gray-900 font-bold mb-4">
@@ -505,13 +583,37 @@
                 role="region"
             >
                 <div class="max-w-7xl mx-auto px-4 md:px-8">
-                    <h2
-                        id="portfolio-title"
-                        class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900"
+                    <div
+                        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-6"
                     >
-                        Portfolio: SaaS, Dashboard & Corporate Design Case
-                        Studies
-                    </h2>
+                        <h2
+                            id="portfolio-title"
+                            class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900"
+                        >
+                            Portfolio: SaaS, Dashboard & Corporate Design Case
+                            Studies
+                        </h2>
+                        <div class="flex gap-4 text-sm md:text-base">
+                            <a
+                                href="#portfolio-saas"
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-gray-700 bg-white hover:-translate-y-0.5 hover:shadow transition-all no-underline"
+                            >
+                                SaaS & Dashboard
+                            </a>
+                            <a
+                                href="#portfolio-corporate"
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-gray-700 bg-white hover:-translate-y-0.5 hover:shadow transition-all no-underline"
+                            >
+                                Corporate & WCAG
+                            </a>
+                            <a
+                                href="#portfolio-commerce"
+                                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-gray-700 bg-white hover:-translate-y-0.5 hover:shadow transition-all no-underline"
+                            >
+                                E-Commerce & CRO
+                            </a>
+                        </div>
+                    </div>
 
                     <p class="text-lg text-gray-600 mb-12">
                         Über 200 erfolgreiche Projekte als
@@ -523,8 +625,9 @@
 
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         <article
+                            id="portfolio-saas"
                             v-for="project in portfolio"
-                            :key="project.id"
+                            :key="`project-${project.id}`"
                             class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                         >
                             <NuxtImg
@@ -534,7 +637,7 @@
                                 height="400"
                                 loading="lazy"
                                 format="avif"
-                                quality="60"
+                                quality="55"
                                 sizes="xs:100vw sm:100vw md:50vw lg:50vw"
                                 densities="1x 2x"
                                 class="w-full h-auto"
@@ -543,7 +646,7 @@
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span
                                         v-for="tag in project.tags"
-                                        :key="tag"
+                                        :key="`tag-${project.id}-${tag}`"
                                         class="px-3 py-1 bg-emerald-50 text-emerald-700 rounded-lg text-xs font-medium"
                                         >{{ tag }}</span
                                     >
@@ -570,8 +673,8 @@
                                 <div class="flex flex-wrap gap-2">
                                     <span
                                         v-for="result in project.results"
-                                        :key="result"
-                                        class="px-3 py-1 bg-emerald-600 text-white rounded-lg text-sm font-semibold"
+                                        :key="`result-${project.id}-${result}`"
+                                        class="px-3 py-1 bg-emerald-700 text-white rounded-lg text-sm font-semibold"
                                         >{{ result }}</span
                                     >
                                 </div>
@@ -613,6 +716,82 @@
                                 Logo
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Locations Section -->
+            <section
+                id="locations"
+                class="py-10 md:py-20 border-t border-gray-200 bg-white"
+                aria-labelledby="locations-title"
+                role="region"
+            >
+                <div class="max-w-7xl mx-auto px-4 md:px-8">
+                    <div
+                        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8"
+                    >
+                        <h2
+                            id="locations-title"
+                            class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900"
+                        >
+                            Remote UX Designer in DACH – lokal präsent bei
+                            Bedarf
+                        </h2>
+                        <a
+                            href="#contact"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-emerald-200 text-emerald-700 bg-emerald-50 hover:bg-emerald-100 transition-all font-semibold no-underline"
+                        >
+                            Termin in Ihrer Stadt vereinbaren →
+                        </a>
+                    </div>
+
+                    <p class="text-lg text-gray-600 mb-12 max-w-4xl">
+                        Ich arbeite remote-first aus Deutschland und begleite
+                        Teams in
+                        <strong class="text-gray-900"
+                            >Berlin, München, Zürich, Wien</strong
+                        >
+                        und weiteren Städten in Deutschland, Österreich und der
+                        Schweiz. Vor-Ort-Workshops, Discovery-Sprints und
+                        Stakeholder-Interviews sind jederzeit möglich.
+                    </p>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+                    >
+                        <article
+                            v-for="location in locations"
+                            :key="location.city"
+                            class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                        >
+                            <h3
+                                class="text-xl font-semibold text-gray-900 mb-2"
+                            >
+                                {{ location.city }}
+                            </h3>
+                            <p class="text-sm text-gray-500 mb-4">
+                                {{ location.region }}
+                            </p>
+                            <ul
+                                class="space-y-2 text-gray-700 list-none pl-0 text-sm"
+                            >
+                                <li
+                                    v-for="service in location.services"
+                                    :key="`${location.city}-${service}`"
+                                    class="flex items-start gap-2"
+                                >
+                                    <span class="text-emerald-500 mt-0.5"
+                                        >✓</span
+                                    >
+                                    <span>{{ service }}</span>
+                                </li>
+                            </ul>
+                            <p class="text-xs text-gray-500 mt-4">
+                                Reaktionszeit: {{ location.response }} ·
+                                Vor-Ort: {{ location.onSite }}
+                            </p>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -688,7 +867,7 @@
                             </p>
                             <a
                                 href="https://cal.com/davidschubert/30min"
-                                class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-transparent no-underline font-semibold bg-white text-emerald-600 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 w-full justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-600"
+                                class="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-transparent no-underline font-semibold bg-white text-emerald-700 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200 w-full justify-center focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-600"
                                 rel="nofollow"
                             >
                                 Kalender öffnen & Termin wählen
@@ -930,8 +1109,12 @@
                                 >{{ phoneHuman }}</a
                             >
                         </p>
-                        <p class="text-white/70 text-sm">
+                        <p class="text-white/90 text-sm">
                             Remote · DACH & international
+                        </p>
+                        <p class="text-white/70 text-xs mt-2">
+                            Letzte Aktualisierung: {{ today }} · Nächste freie
+                            Kapazitäten: {{ availabilityStart }}
                         </p>
                     </address>
                 </div>
@@ -987,21 +1170,27 @@
                     class="flex flex-col md:flex-row justify-between items-center gap-4 pt-8"
                 >
                     <ClientOnly>
-                        <p class="text-white/50 text-sm">
+                        <p class="text-white/70 text-sm">
                             © {{ year }} {{ name }} – UI/UX Designer Freelancer
-                            DACH
+                            DACH · Zuletzt aktualisiert: {{ today }}
                         </p>
                     </ClientOnly>
                     <nav aria-label="Footer-Links" class="flex gap-8">
                         <a
                             href="#impressum"
-                            class="text-white/50 hover:text-white transition-colors text-sm no-underline"
+                            class="text-white/70 hover:text-white transition-colors text-sm no-underline"
                             >Impressum</a
                         >
                         <a
                             href="#datenschutz"
-                            class="text-white/50 hover:text-white transition-colors text-sm no-underline"
+                            class="text-white/70 hover:text-white transition-colors text-sm no-underline"
                             >Datenschutz</a
+                        >
+                        <a
+                            href="https://pukalani.studio/imprint.pdf"
+                            class="text-white/70 hover:text-white transition-colors text-sm no-underline"
+                            rel="noopener"
+                            >Download VCARD</a
                         >
                     </nav>
                 </div>
@@ -1133,6 +1322,53 @@ const portfolio = ref([
     },
 ]);
 
+const locations = ref([
+    {
+        city: "Berlin",
+        region: "Deutschland",
+        services: [
+            "UX Audits & Produktstrategie",
+            "Enterprise Dashboard Design",
+            "Workshops & Stakeholder Interviews",
+        ],
+        response: "< 24h",
+        onSite: "1-2 Tage Vorlauf",
+    },
+    {
+        city: "München",
+        region: "Deutschland",
+        services: [
+            "Corporate Website Redesigns",
+            "Design Systems & Figma Libraries",
+            "UX Research & Testing",
+        ],
+        response: "< 24h",
+        onSite: "2-3 Tage Vorlauf",
+    },
+    {
+        city: "Zürich",
+        region: "Schweiz",
+        services: [
+            "SaaS MVP & Produktentwicklung",
+            "FinTech UX & Compliance",
+            "Hybrid Workshops Deutsch/Englisch",
+        ],
+        response: "< 48h",
+        onSite: "1 Woche Vorlauf",
+    },
+    {
+        city: "Wien",
+        region: "Österreich",
+        services: [
+            "Conversion Optimierung",
+            "Service Design & CX Mapping",
+            "Accessibility Audits WCAG 2.1",
+        ],
+        response: "< 48h",
+        onSite: "3-4 Tage Vorlauf",
+    },
+]);
+
 const faqs = ref([
     {
         id: 1,
@@ -1188,14 +1424,60 @@ const faqs = ref([
             • Design Systems für Apps<br><br>
             Entwicklung via Partnernetzwerk möglich.`,
     },
+    {
+        id: 6,
+        question: "Wie läuft die Zusammenarbeit mit internationalen Teams?",
+        answer: `Remote-first, mit klaren Ritualen:<br>
+            • Async Updates via Slack/Notion<br>
+            • Wöchentliche Sprint-Reviews<br>
+            • Workshops in Deutsch oder Englisch<br>
+            • Zeitzonen: DACH & US-PST abgedeckt<br><br>
+            Tools: Figma, FigJam, Miro, Linear.`,
+    },
+    {
+        id: 7,
+        question: "Welche Branchen-Erfahrung bringen Sie mit?",
+        answer: `Über 200 Projekte in:<br>
+            • SaaS & B2B Software<br>
+            • FinTech & InsurTech<br>
+            • HealthTech & Pharma<br>
+            • Automotive & Mobility<br>
+            • Corporate Websites & Intranets<br><br>
+            Fokus: komplexe Produkte mit Enterprise-Anforderungen.`,
+    },
+    {
+        id: 8,
+        question: "Welche Ergebnisse kann ich erwarten?",
+        answer: `Messbare KPIs aus Referenzprojekten:<br>
+            • +73% Conversion Rate<br>
+            • −41% Checkout Abbrüche<br>
+            • +156% organischer Traffic<br>
+            • LCP 1.8s (Core Web Vitals)<br><br>
+            Zielsetzung wird zu Projektbeginn definiert und nachverfolgt.`,
+    },
+    {
+        id: 9,
+        question: "Wie schnell können Projekte starten?",
+        answer: `Onboarding innerhalb von 7 Tagen möglich:<br>
+            • Kickoff-Call (60 Min)<br>
+            • Audit der bestehenden Assets<br>
+            • Projektplan & Angebote in 48h<br>
+            • Start mit Sprint 0 in Woche 1<br><br>
+            Express-Slots für kritische Deadlines verfügbar.`,
+    },
 ]);
 
 // SEO Meta Tags
 useHead({
-    title: "UI/UX Designer Freelancer DACH – SaaS, Corporate & Dashboard Design | 25+ Jahre",
+    title: "UI/UX Designer Freelancer DACH für SaaS & Dashboard UX",
     htmlAttrs: { lang: "de" },
     meta: [
         { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+            name: "description",
+            content:
+                "Senior UX/UI Designer Freelancer DACH mit 25+ Jahren Erfahrung für SaaS, Dashboard & Corporate Design. Remote in Deutschland, Österreich & Schweiz.",
+        },
         {
             name: "robots",
             content:
@@ -1203,10 +1485,11 @@ useHead({
         },
         // Open Graph
         { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Pukalani Studio" },
+        { property: "og:locale", content: "de_DE" },
         {
             property: "og:title",
-            content:
-                "UI/UX Designer Freelancer DACH – SaaS, Corporate & Dashboard Design",
+            content: "UI/UX Designer Freelancer DACH für SaaS & Dashboard UX",
         },
         {
             property: "og:description",
@@ -1219,11 +1502,18 @@ useHead({
             content:
                 "https://pukalani.studio/images/og/ux-designer-david-schubert.jpg",
         },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        {
+            property: "og:image:alt",
+            content:
+                "Senior UI/UX Designer David Schubert präsentiert SaaS Dashboard",
+        },
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         {
             name: "twitter:title",
-            content: "UI/UX Designer Freelancer DACH | SaaS & Dashboard Expert",
+            content: "UI/UX Designer Freelancer DACH für SaaS & Dashboard UX",
         },
         {
             name: "twitter:description",
@@ -1234,6 +1524,11 @@ useHead({
             name: "twitter:image",
             content:
                 "https://pukalani.studio/images/og/ux-designer-david-schubert.jpg",
+        },
+        {
+            name: "twitter:image:alt",
+            content:
+                "UI/UX Designer Freelancer erstellt SaaS Dashboard Design in Figma",
         },
         { name: "twitter:site", content: "@davidschubert" },
         { name: "twitter:creator", content: "@davidschubert" },
@@ -1267,6 +1562,12 @@ useHead({
             rel: "alternate",
             hreflang: "x-default",
             href: "https://pukalani.studio/best/",
+        },
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            href: "/favicon.ico",
+            sizes: "any",
         },
         {
             rel: "icon",
@@ -1405,6 +1706,48 @@ useHead({
                             text: "Ja. Native Patterns, responsive Layouts, Prototypen für iOS, Android und Progressive Web Apps. Entwicklung via Partnernetzwerk.",
                         },
                     },
+                ],
+            }),
+        },
+        {
+            type: "application/ld+json",
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    {
+                        "@type": "ListItem",
+                        position: 1,
+                        name: "Pukalani Studio",
+                        item: "https://pukalani.studio/",
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 2,
+                        name: "Leistungen",
+                        item: "https://pukalani.studio/leistungen/",
+                    },
+                    {
+                        "@type": "ListItem",
+                        position: 3,
+                        name: "UX Designer Freelancer DACH",
+                        item: "https://pukalani.studio/best/",
+                    },
+                ],
+            }),
+        },
+        {
+            type: "application/ld+json",
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Pukalani Studio",
+                url: "https://pukalani.studio/",
+                logo: "https://pukalani.studio/icon.svg",
+                sameAs: [
+                    "https://www.linkedin.com/in/davidschubert",
+                    "https://www.behance.net/davidschubert",
+                    "https://github.com/davidschubert",
                 ],
             }),
         },

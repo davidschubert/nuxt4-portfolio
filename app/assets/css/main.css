@@ -23,6 +23,8 @@ video {
         /* Enable GPU compositing for animations */
         transform: translateZ(0);
         backface-visibility: hidden;
+        /* Optimize for transform/opacity changes */
+        will-change: transform, opacity;
     }
 }
 
@@ -30,6 +32,18 @@ video {
 section {
     /* Isolate layout calculations */
     contain: layout style paint;
+}
+
+/* Prevent forced reflows on dynamic elements */
+[style*="opacity"],
+[style*="transform"] {
+    /* Hint browser about upcoming changes */
+    will-change: opacity, transform;
+}
+
+/* Remove will-change after animation completes */
+.animation-complete {
+    will-change: auto;
 }
 
 /* Prevent layout thrashing on scroll */

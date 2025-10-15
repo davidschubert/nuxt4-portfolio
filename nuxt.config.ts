@@ -32,6 +32,17 @@ export default defineNuxtConfig({
             routes: ["/", "/chatgpt", "/claude", "/best"],
         },
         compressPublicAssets: true,
+        // Aktiviere Brotli und Gzip Kompression für HTML/CSS/JS
+        compress: {
+            brotli: {
+                enabled: true,
+                quality: 6, // 0-11, höher = bessere Kompression aber langsamer
+            },
+            gzip: {
+                enabled: true,
+                level: 9, // 0-9, höher = bessere Kompression
+            },
+        },
         // Performance: Statische Assets werden von Nginx ausgeliefert
         publicAssets: [
             {
@@ -130,19 +141,13 @@ export default defineNuxtConfig({
     vite: {
         plugins: [tailwindcss()],
         build: {
+            target: "es2020", // Moderne Browser (stabiler als esnext)
             cssCodeSplit: true, // CSS-Code-Splitting aktiviert
             minify: "esbuild",
-            rollupOptions: {
-                output: {
-                    manualChunks: {
-                        vendor: ["vue", "vue-router"],
-                    },
-                    // Kleinere Chunk-Größen für besseres Caching
-                    chunkFileNames: "_nuxt/[name]-[hash].js",
-                    entryFileNames: "_nuxt/[name]-[hash].js",
-                    assetFileNames: "_nuxt/[name]-[hash].[ext]",
-                },
-            },
+            cssMinify: "esbuild", // Aggressive CSS Minification
+        },
+        esbuild: {
+            legalComments: "none", // Entfernt Kommentare
         },
         optimizeDeps: {
             include: ["vue", "vue-router"],
@@ -154,13 +159,27 @@ export default defineNuxtConfig({
     },
     experimental: {
         // Enable optimizations
-        payloadExtraction: true,
-        renderJsonPayloads: true,
         viewTransition: false, // Disable to prevent reflow issues
+        inlineStyles: true, // Inline kritisches CSS
     },
     router: {
         options: {
             strict: true,
+            scrollBehaviorType: "smooth", // Smooth scrolling für bfcache
+        },
+    },
+    // Performance-Optimierungen
+    hooks: {
+        "build:manifest": (manifest) => {
+            // Entferne unused CSS aus dem Manifest
+            for (const key in manifest) {
+                const file = manifest[key];
+                if (file.css) {
+                    file.css = file.css.filter(
+                        (css: string) => !css.includes("unused")
+                    );
+                }
+            }
         },
     },
 });

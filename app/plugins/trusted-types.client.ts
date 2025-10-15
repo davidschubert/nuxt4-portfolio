@@ -8,6 +8,11 @@
  */
 
 export default defineNuxtPlugin(() => {
+    // Im Dev-Modus überspringen - Nuxt/Vite erstellen eigene Policies
+    if (import.meta.dev) {
+        return;
+    }
+
     // Nur im Browser und wenn Trusted Types unterstützt wird
     if (!import.meta.client || !window.trustedTypes) {
         return;

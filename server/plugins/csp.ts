@@ -6,20 +6,31 @@
 import { randomBytes } from "crypto";
 
 export default defineNitroPlugin((nitroApp) => {
+    // CSP nur in Production aktiv - Dev-Modus benötigt keine Einschränkungen
+    if (process.dev) {
+        return;
+    }
+
     // Funktion zum Generieren der CSP-Direktiven
     const generateCSP = (nonce?: string) => {
         const isDev = process.dev;
 
         const cspDirectives = [
             "default-src 'self'",
-            // Scripts: mit Nonce für SSR, sonst nur self
+            // Scripts: mit Nonce für SSR, im Dev mit unsafe-eval und unsafe-inline
             nonce
                 ? `script-src 'self' 'nonce-${nonce}'${
-                      isDev ? " 'unsafe-eval'" : ""
+                      isDev ? " 'unsafe-eval' 'unsafe-inline'" : ""
                   }`
-                : `script-src 'self'${isDev ? " 'unsafe-eval'" : ""}`,
-            // Styles: mit Nonce für SSR, sonst nur self
-            nonce ? `style-src 'self' 'nonce-${nonce}'` : "style-src 'self'",
+                : `script-src 'self'${
+                      isDev ? " 'unsafe-eval' 'unsafe-inline'" : ""
+                  }`,
+            // Styles: mit Nonce für SSR, im Dev mit unsafe-inline für Vite HMR
+            nonce
+                ? `style-src 'self' 'nonce-${nonce}'${
+                      isDev ? " 'unsafe-inline'" : ""
+                  }`
+                : `style-src 'self'${isDev ? " 'unsafe-inline'" : ""}`,
             // Images: self, data URIs und HTTPS
             "img-src 'self' data: https:",
             // Fonts: self und data URIs
@@ -38,11 +49,20 @@ export default defineNitroPlugin((nitroApp) => {
             "form-action 'self'",
             // Objects: keine (Flash, Java, etc.)
             "object-src 'none'",
-            // Trusted Types: Schutz gegen DOM-based XSS
-            // IMMER aktiv, auch in Development für besseren Schutz
-            "trusted-types default vue vue-html nuxt-app dompurify sanitizer",
-            // Erzwingt Trusted Types für gefährliche DOM APIs
-            "require-trusted-types-for 'script'",
+            // Trusted Types: Schutz gegen DOM-based XSS (nur in Production)
+            ...(isDev
+                ? []
+                : [
+                      "trusted-types default vue vue-html nuxt-app dompurify sanitizer",
+                      "require-trusted-types-for 'script'",
+                  ]),
+            // Dev-Modus: Lockere CSP für Vite HMR und Dev-Tools
+            ...(isDev
+                ? [
+                      "style-src-elem 'self' 'unsafe-inline'",
+                      "script-src-elem 'self' 'unsafe-inline'",
+                  ]
+                : []),
             // Upgrade insecure requests in Production
             ...(isDev ? [] : ["upgrade-insecure-requests"]),
         ];

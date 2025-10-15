@@ -48,6 +48,7 @@
                         v-model="form.firstName"
                         type="text"
                         required
+                        autocomplete="given-name"
                         class="form-input"
                         placeholder="Max"
                         aria-required="true"
@@ -61,6 +62,7 @@
                         v-model="form.lastName"
                         type="text"
                         required
+                        autocomplete="family-name"
                         class="form-input"
                         placeholder="Mustermann"
                         aria-required="true"
@@ -75,6 +77,7 @@
                         id="company"
                         v-model="form.company"
                         type="text"
+                        autocomplete="organization"
                         class="form-input"
                         placeholder="TechScale GmbH"
                     />
@@ -86,6 +89,7 @@
                         id="position"
                         v-model="form.position"
                         type="text"
+                        autocomplete="organization-title"
                         class="form-input"
                         placeholder="CEO, Product Owner, etc."
                     />
@@ -105,6 +109,7 @@
                         v-model="form.email"
                         type="email"
                         required
+                        autocomplete="email"
                         class="form-input"
                         placeholder="max@techscale.de"
                         aria-required="true"
@@ -117,6 +122,7 @@
                         id="phone"
                         v-model="form.phone"
                         type="tel"
+                        autocomplete="tel"
                         class="form-input"
                         placeholder="+49 123 456789"
                     />
