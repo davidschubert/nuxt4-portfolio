@@ -1219,11 +1219,8 @@ const today = computed(() =>
 );
 const year = computed(() => new Date().getFullYear());
 
-const requestURL = useRequestURL();
-const canonicalUrl = computed(() => {
-    const base = `${requestURL.origin}${requestURL.pathname}`;
-    return base.endsWith("/") ? base : `${base}/`;
-});
+// Fixed canonical URL to avoid hydration mismatch
+const canonicalUrl = "https://pukalani.studio/best/";
 
 // Data
 const processSteps = ref([
