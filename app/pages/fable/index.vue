@@ -144,21 +144,17 @@
                 </div>
 
                 <figure class="relative">
-                    <NuxtImg
-                        src="/images/claude-hero.jpg"
-                        alt="David Schubert, UI/UX Designer und Web Developer, arbeitet remote an einem SaaS-Dashboard-Design in Figma für Kunden in der DACH-Region"
-                        width="1920"
-                        height="1080"
-                        sizes="sm:100vw md:50vw lg:600px"
-                        format="avif"
-                        quality="70"
+                    <img
+                        src="/images/fable/hero-dashboard.svg"
+                        alt="Schematische Darstellung eines SaaS-Dashboards mit Kennzahlen-Karten, Liniendiagramm und Balkendiagramm im Design-Stil von Pukalani Studio"
+                        width="1280"
+                        height="720"
                         loading="eager"
                         fetchpriority="high"
                         class="w-full rounded-2xl shadow-xl ring-1 ring-gray-200 dark:ring-gray-800"
                     />
                     <figcaption class="sr-only">
-                        Arbeitsplatz von David Schubert: SaaS-Dashboard-Design in
-                        Figma
+                        Beispielhaftes SaaS-Dashboard-Design von Pukalani Studio
                     </figcaption>
                 </figure>
             </div>
@@ -386,14 +382,11 @@
                             :key="project.title"
                             class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg dark:border-gray-700 dark:bg-gray-900"
                         >
-                            <NuxtImg
+                            <img
                                 :src="project.image"
                                 :alt="project.alt"
                                 width="1280"
                                 height="720"
-                                sizes="sm:100vw md:50vw lg:560px"
-                                format="avif"
-                                quality="60"
                                 loading="lazy"
                                 class="aspect-video w-full object-cover"
                             />
@@ -1125,8 +1118,8 @@ const processSteps = [
 const caseStudies = [
     {
         title: "SaaS Analytics Dashboard",
-        image: "/images/portfolio-fintech.jpg",
-        alt: "Redesign eines SaaS-Analytics-Dashboards mit klarer Informationsarchitektur und Datenvisualisierung für über 50.000 Nutzer",
+        image: "/images/fable/case-saas-dashboard.svg",
+        alt: "Schematische Darstellung des Analytics-Dashboards: Kennzahlen-Karten, Liniendiagramm und Ringdiagramm im Dark Mode",
         tags: ["B2B SaaS", "Dashboard", "Design System"],
         challenge:
             "Komplexe Datenvisualisierung für 50.000+ Nutzer, hohe Supportlast durch unverständliche Features.",
@@ -1140,8 +1133,8 @@ const caseStudies = [
     },
     {
         title: "E-Commerce Checkout-Optimierung",
-        image: "/images/portfolio-fashion.jpg",
-        alt: "Mobile-First-Redesign eines E-Commerce-Checkouts: Reduktion von sieben auf drei Schritte mit Trust-Elementen",
+        image: "/images/fable/case-ecommerce-checkout.svg",
+        alt: "Schematische Darstellung des mobilen Checkout-Flows in drei Schritten: Warenkorb, Daten und Zahlung, Bestätigung",
         tags: ["E-Commerce", "CRO", "Mobile"],
         challenge:
             "Hohe Kaufabbruchrate im Warenkorb und schwache Mobile Conversion.",
@@ -1151,8 +1144,8 @@ const caseStudies = [
     },
     {
         title: "Corporate Website Relaunch",
-        image: "/images/portfolio-healthcare.jpg",
-        alt: "Barrierefreier Corporate-Website-Relaunch nach WCAG 2.1 AA mit Mobile-First-Design und PageSpeed 94",
+        image: "/images/fable/case-corporate-website.svg",
+        alt: "Schematische Darstellung der Corporate Website auf Desktop und Smartphone mit Hero-Bereich, Feature-Karten und WCAG-Badge",
         tags: ["Corporate", "WCAG 2.1 AA", "SEO"],
         challenge:
             "Veraltetes Design, mangelnde Barrierefreiheit, kaum organische Leads.",
@@ -1166,8 +1159,8 @@ const caseStudies = [
     },
     {
         title: "B2B SaaS MVP & Design System",
-        image: "/images/portfolio-proptech.jpg",
-        alt: "Design System und MVP-Design für ein B2B-SaaS-Start-up: developer-ready Figma Library in zwölf Wochen",
+        image: "/images/fable/case-design-system.svg",
+        alt: "Schematische Darstellung der Design-System-Bibliothek mit Farb-Tokens, Typografie, Buttons und Formular-Komponenten",
         tags: ["Start-up", "MVP", "Figma Library"],
         challenge:
             "Kein Design-Team, zwölf Wochen bis zum Investoren-Pitch.",
@@ -1288,7 +1281,7 @@ const pageTitle =
     "UI/UX Designer & Web Developer für DACH | David Schubert";
 const pageDescription =
     "Freelance Senior UI/UX Designer & Web Developer für DACH: SaaS-Dashboards, Corporate Websites, Design Systems. Design + Code aus einer Hand, Festpreise ab €2.500.";
-const ogImage = `${SITE_URL}/images/claude-hero.jpg`;
+const ogImage = `${SITE_URL}/images/fable/og-pukalani-studio.png`;
 
 const personId = `${SITE_URL}/#david-schubert`;
 const orgId = `${SITE_URL}/#pukalani-studio`;
@@ -1403,8 +1396,8 @@ const jsonLd = {
             primaryImageOfPage: {
                 "@type": "ImageObject",
                 url: ogImage,
-                width: 1920,
-                height: 1080,
+                width: 1200,
+                height: 630,
             },
             speakable: {
                 "@type": "SpeakableSpecification",
@@ -1474,12 +1467,12 @@ useHead({
         { property: "og:description", content: pageDescription },
         { property: "og:url", content: PAGE_URL },
         { property: "og:image", content: ogImage },
-        { property: "og:image:width", content: "1920" },
-        { property: "og:image:height", content: "1080" },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
         {
             property: "og:image:alt",
             content:
-                "David Schubert, UI/UX Designer und Web Developer, arbeitet an einem SaaS-Dashboard-Design in Figma",
+                "Pukalani Studio – UI/UX Design & Web Development für DACH: David Schubert, Senior Designer & Developer, mit SaaS-Dashboard-Mockup",
         },
         /* Twitter */
         { name: "twitter:card", content: "summary_large_image" },
@@ -1503,13 +1496,7 @@ useHead({
     ],
 });
 
-/* Sanfte Scroll-Reveals (respektiert prefers-reduced-motion) */
-const { observeElements } = usePerformantAnimations();
-const { prefersReducedMotion } = useAccessibility();
-
-onMounted(() => {
-    if (!prefersReducedMotion.value) {
-        observeElements("#main-content > section");
-    }
-});
+/* Bewusst KEIN JS-Scroll-Reveal: Inhalte sind ohne JavaScript und in jedem
+   Viewport sofort sichtbar – wichtig für Crawler, Screenshots und Robustheit.
+   Micro-Interactions laufen rein über CSS (hover/transition). */
 </script>

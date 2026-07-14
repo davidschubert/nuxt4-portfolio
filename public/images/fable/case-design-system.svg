@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Schematische Darstellung einer Design-System-Bibliothek mit Farben, Typografie und Komponenten">
+  <defs>
+    <linearGradient id="b4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#faf5ff"/>
+
+  <!-- Titelzeile -->
+  <rect x="80" y="64" width="220" height="20" rx="10" fill="#0f172a"/>
+  <rect x="80" y="96" width="320" height="10" rx="5" fill="#94a3b8"/>
+
+  <!-- Farb-Tokens -->
+  <g>
+    <rect x="80" y="150" width="560" height="160" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="104" y="172" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="104" y="206" width="72" height="72" rx="12" fill="#059669"/>
+    <rect x="192" y="206" width="72" height="72" rx="12" fill="#10b981"/>
+    <rect x="280" y="206" width="72" height="72" rx="12" fill="#34d399"/>
+    <rect x="368" y="206" width="72" height="72" rx="12" fill="#2563eb"/>
+    <rect x="456" y="206" width="72" height="72" rx="12" fill="#60a5fa"/>
+    <rect x="544" y="206" width="72" height="72" rx="12" fill="#0f172a"/>
+  </g>
+
+  <!-- Typografie -->
+  <g>
+    <rect x="672" y="150" width="528" height="160" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="696" y="172" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="696" y="204" width="340" height="26" rx="8" fill="#0f172a"/>
+    <rect x="696" y="242" width="260" height="16" rx="6" fill="#475569"/>
+    <rect x="696" y="270" width="420" height="10" rx="5" fill="#cbd5e1"/>
+  </g>
+
+  <!-- Buttons -->
+  <g>
+    <rect x="80" y="342" width="560" height="150" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="104" y="364" width="120" height="12" rx="6" fill="#475569"/>
+    <rect x="104" y="396" width="150" height="40" rx="20" fill="url(#b4)"/>
+    <rect x="140" y="410" width="78" height="12" rx="6" fill="#ffffff"/>
+    <rect x="270" y="396" width="150" height="40" rx="20" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect x="306" y="410" width="78" height="12" rx="6" fill="#059669"/>
+    <rect x="436" y="396" width="150" height="40" rx="20" fill="#f1f5f9"/>
+    <rect x="472" y="410" width="78" height="12" rx="6" fill="#94a3b8"/>
+    <rect x="104" y="448" width="90" height="24" rx="12" fill="#d1fae5"/>
+    <rect x="206" y="448" width="90" height="24" rx="12" fill="#dbeafe"/>
+    <rect x="308" y="448" width="90" height="24" rx="12" fill="#fee2e2"/>
+  </g>
+
+  <!-- Formular-Komponenten -->
+  <g>
+    <rect x="672" y="342" width="528" height="150" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="696" y="364" width="140" height="12" rx="6" fill="#475569"/>
+    <rect x="696" y="396" width="230" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="710" y="410" width="110" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="946" y="396" width="230" height="40" rx="10" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect x="960" y="410" width="110" height="10" rx="5" fill="#94a3b8"/>
+    <circle cx="712" cy="464" r="10" fill="#059669"/>
+    <rect x="734" y="458" width="90" height="10" rx="5" fill="#64748b"/>
+    <rect x="850" y="454" width="44" height="22" rx="11" fill="#059669"/>
+    <circle cx="882" cy="465" r="8" fill="#ffffff"/>
+    <rect x="920" y="458" width="90" height="10" rx="5" fill="#64748b"/>
+  </g>
+
+  <!-- Karten-Komponente -->
+  <g>
+    <rect x="80" y="524" width="1120" height="132" rx="16" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="104" y="546" width="150" height="12" rx="6" fill="#475569"/>
+    <rect x="104" y="578" width="250" height="56" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="122" y="594" width="44" height="24" rx="8" fill="#d1fae5"/>
+    <rect x="180" y="592" width="120" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="180" y="610" width="90" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="378" y="578" width="250" height="56" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="396" y="594" width="44" height="24" rx="8" fill="#dbeafe"/>
+    <rect x="454" y="592" width="120" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="454" y="610" width="90" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="652" y="578" width="250" height="56" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="670" y="594" width="44" height="24" rx="8" fill="#d1fae5"/>
+    <rect x="728" y="592" width="120" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="728" y="610" width="90" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="926" y="578" width="250" height="56" rx="12" fill="url(#b4)"/>
+    <rect x="944" y="594" width="44" height="24" rx="8" fill="#ffffff" opacity="0.35"/>
+    <rect x="1002" y="592" width="120" height="10" rx="5" fill="#ffffff"/>
+    <rect x="1002" y="610" width="90" height="8" rx="4" fill="#ffffff" opacity="0.5"/>
+  </g>
+</svg>

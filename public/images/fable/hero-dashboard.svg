@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Schematische Darstellung eines SaaS-Dashboard-Designs">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecfdf5"/>
+      <stop offset="1" stop-color="#eff6ff"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+
+  <!-- Browser-Fenster -->
+  <g>
+    <rect x="80" y="60" width="1120" height="600" rx="18" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="80" y="60" width="1120" height="48" rx="18" fill="#f9fafb"/>
+    <rect x="80" y="90" width="1120" height="18" fill="#f9fafb"/>
+    <circle cx="116" cy="84" r="7" fill="#f87171"/>
+    <circle cx="140" cy="84" r="7" fill="#fbbf24"/>
+    <circle cx="164" cy="84" r="7" fill="#34d399"/>
+    <rect x="480" y="72" width="320" height="24" rx="12" fill="#eef2f7"/>
+  </g>
+
+  <!-- Sidebar -->
+  <g>
+    <rect x="80" y="108" width="220" height="552" fill="#0f172a"/>
+    <rect x="104" y="140" width="120" height="16" rx="8" fill="url(#brand)"/>
+    <g fill="#334155">
+      <rect x="104" y="196" width="172" height="12" rx="6"/>
+      <rect x="104" y="232" width="140" height="12" rx="6"/>
+      <rect x="104" y="268" width="156" height="12" rx="6"/>
+      <rect x="104" y="304" width="128" height="12" rx="6"/>
+    </g>
+    <rect x="96" y="188" width="188" height="28" rx="8" fill="#1e293b"/>
+    <rect x="104" y="196" width="172" height="12" rx="6" fill="#34d399"/>
+  </g>
+
+  <!-- KPI-Karten -->
+  <g>
+    <rect x="332" y="140" width="264" height="110" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="356" y="164" width="96" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="356" y="188" width="140" height="22" rx="6" fill="#0f172a"/>
+    <rect x="356" y="222" width="64" height="12" rx="6" fill="#d1fae5"/>
+
+    <rect x="620" y="140" width="264" height="110" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="644" y="164" width="96" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="644" y="188" width="120" height="22" rx="6" fill="#0f172a"/>
+    <rect x="644" y="222" width="64" height="12" rx="6" fill="#dbeafe"/>
+
+    <rect x="908" y="140" width="264" height="110" rx="14" fill="url(#brand)"/>
+    <rect x="932" y="164" width="96" height="10" rx="5" fill="#ffffff" opacity="0.6"/>
+    <rect x="932" y="188" width="150" height="22" rx="6" fill="#ffffff"/>
+    <rect x="932" y="222" width="64" height="12" rx="6" fill="#ffffff" opacity="0.4"/>
+  </g>
+
+  <!-- Liniendiagramm -->
+  <g>
+    <rect x="332" y="282" width="552" height="250" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="356" y="306" width="150" height="12" rx="6" fill="#cbd5e1"/>
+    <g stroke="#f1f5f9" stroke-width="1.5">
+      <line x1="356" y1="360" x2="860" y2="360"/>
+      <line x1="356" y1="410" x2="860" y2="410"/>
+      <line x1="356" y1="460" x2="860" y2="460"/>
+    </g>
+    <path d="M356 480 L440 430 L520 452 L600 380 L680 400 L760 330 L860 300 L860 508 L356 508 Z" fill="url(#chartFill)"/>
+    <path d="M356 480 L440 430 L520 452 L600 380 L680 400 L760 330 L860 300" fill="none" stroke="#059669" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="760" cy="330" r="7" fill="#ffffff" stroke="#059669" stroke-width="4"/>
+  </g>
+
+  <!-- Balkendiagramm -->
+  <g>
+    <rect x="908" y="282" width="264" height="250" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="932" y="306" width="120" height="12" rx="6" fill="#cbd5e1"/>
+    <rect x="936" y="420" width="36" height="88" rx="6" fill="#93c5fd"/>
+    <rect x="988" y="380" width="36" height="128" rx="6" fill="#60a5fa"/>
+    <rect x="1040" y="440" width="36" height="68" rx="6" fill="#6ee7b7"/>
+    <rect x="1092" y="350" width="36" height="158" rx="6" fill="#10b981"/>
+  </g>
+
+  <!-- Tabelle -->
+  <g>
+    <rect x="332" y="564" width="840" height="72" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="372" cy="600" r="14" fill="#d1fae5"/>
+    <rect x="404" y="586" width="180" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="404" y="604" width="120" height="8" rx="4" fill="#e2e8f0"/>
+    <rect x="700" y="592" width="90" height="16" rx="8" fill="#d1fae5"/>
+    <rect x="820" y="592" width="90" height="16" rx="8" fill="#dbeafe"/>
+    <rect x="1040" y="590" width="108" height="20" rx="10" fill="url(#brand)"/>
+  </g>
+</svg>

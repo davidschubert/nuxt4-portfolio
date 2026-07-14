@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Schematische Darstellung eines mobilen Checkout-Flows in drei Schritten">
+  <defs>
+    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="#f0fdf4"/>
+
+  <!-- Fortschrittsleiste -->
+  <g>
+    <line x1="340" y1="80" x2="940" y2="80" stroke="#d1fae5" stroke-width="8" stroke-linecap="round"/>
+    <line x1="340" y1="80" x2="760" y2="80" stroke="#059669" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="340" cy="80" r="20" fill="#059669"/>
+    <circle cx="640" cy="80" r="20" fill="#059669"/>
+    <circle cx="940" cy="80" r="20" fill="#ffffff" stroke="#059669" stroke-width="4"/>
+    <path d="M331 80 l6 7 l13 -14" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M631 80 l6 7 l13 -14" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Drei Smartphone-Screens -->
+  <!-- Screen 1: Warenkorb -->
+  <g>
+    <rect x="200" y="140" width="256" height="520" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="292" y="158" width="72" height="10" rx="5" fill="#e5e7eb"/>
+    <rect x="224" y="196" width="120" height="14" rx="7" fill="#0f172a"/>
+    <g>
+      <rect x="224" y="232" width="208" height="72" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="236" y="244" width="48" height="48" rx="8" fill="#d1fae5"/>
+      <rect x="296" y="250" width="100" height="10" rx="5" fill="#94a3b8"/>
+      <rect x="296" y="272" width="60" height="10" rx="5" fill="#0f172a"/>
+      <rect x="224" y="316" width="208" height="72" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="236" y="328" width="48" height="48" rx="8" fill="#dbeafe"/>
+      <rect x="296" y="334" width="100" height="10" rx="5" fill="#94a3b8"/>
+      <rect x="296" y="356" width="60" height="10" rx="5" fill="#0f172a"/>
+    </g>
+    <rect x="224" y="560" width="208" height="44" rx="22" fill="url(#b2)"/>
+    <rect x="288" y="576" width="80" height="12" rx="6" fill="#ffffff"/>
+  </g>
+
+  <!-- Screen 2: Daten & Zahlung -->
+  <g>
+    <rect x="512" y="140" width="256" height="520" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="604" y="158" width="72" height="10" rx="5" fill="#e5e7eb"/>
+    <rect x="536" y="196" width="140" height="14" rx="7" fill="#0f172a"/>
+    <rect x="536" y="232" width="208" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="536" y="284" width="208" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="536" y="336" width="100" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="644" y="336" width="100" height="40" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+    <rect x="536" y="400" width="208" height="52" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+    <circle cx="560" cy="426" r="8" fill="#059669"/>
+    <rect x="580" y="420" width="90" height="11" rx="5" fill="#065f46"/>
+    <rect x="536" y="464" width="208" height="52" rx="12" fill="#f8fafc" stroke="#e2e8f0"/>
+    <circle cx="560" cy="490" r="8" fill="#cbd5e1"/>
+    <rect x="580" y="484" width="90" height="11" rx="5" fill="#94a3b8"/>
+    <rect x="536" y="560" width="208" height="44" rx="22" fill="url(#b2)"/>
+    <rect x="600" y="576" width="80" height="12" rx="6" fill="#ffffff"/>
+  </g>
+
+  <!-- Screen 3: Bestätigung -->
+  <g>
+    <rect x="824" y="140" width="256" height="520" rx="28" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+    <rect x="916" y="158" width="72" height="10" rx="5" fill="#e5e7eb"/>
+    <circle cx="952" cy="300" r="52" fill="#d1fae5"/>
+    <path d="M928 300 l16 18 l32 -36" stroke="#059669" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="884" y="386" width="136" height="14" rx="7" fill="#0f172a"/>
+    <rect x="868" y="416" width="168" height="10" rx="5" fill="#94a3b8"/>
+    <rect x="868" y="436" width="168" height="10" rx="5" fill="#cbd5e1"/>
+    <rect x="848" y="560" width="208" height="44" rx="22" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <rect x="908" y="576" width="88" height="12" rx="6" fill="#059669"/>
+  </g>
+
+  <!-- Trust-Badges -->
+  <g>
+    <rect x="480" y="686" width="90" height="18" rx="9" fill="#d1fae5"/>
+    <rect x="590" y="686" width="90" height="18" rx="9" fill="#dbeafe"/>
+    <rect x="700" y="686" width="90" height="18" rx="9" fill="#d1fae5"/>
+  </g>
+</svg>
