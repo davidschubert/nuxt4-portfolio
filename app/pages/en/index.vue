@@ -65,7 +65,8 @@
                         id="en-title"
                         class="text-4xl font-extrabold leading-tight tracking-tight md:text-5xl"
                     >
-                        Freelance UI/UX Designer &amp; Nuxt Developer for the
+                        Freelance Senior UI/UX Designer &amp; Creative
+                        Technologist for the
                         <span
                             class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-blue-400"
                             >German-speaking market (DACH)</span
@@ -76,14 +77,17 @@
                         id="en-answer"
                         class="mt-6 text-lg leading-relaxed text-gray-600 dark:text-gray-300"
                     >
-                        David Schubert is a freelance senior UI/UX designer and
-                        web developer with 25+ years of experience, working
-                        under the brand Pukalani Studio. He designs and builds
-                        SaaS dashboards, corporate websites, and design systems
-                        for clients in Germany, Austria, and Switzerland –
-                        working remotely, in German or English, at fixed
-                        project prices. His edge: design and code from one
-                        person, no hand-off friction.
+                        David Schubert is a freelance senior UI/UX designer,
+                        trained media designer, and creative technologist with
+                        25+ years in design and advertising, working under the
+                        brand Pukalani Studio. He crafts design concepts,
+                        digital brand design, websites, and digital products –
+                        including hands-on technical implementation and content
+                        production (photography, video) – for mid-sized
+                        companies and agencies in Germany, Austria, and
+                        Switzerland. In agency and freelance projects he has
+                        designed for brands such as Astra, E WIE EINFACH, GEMA,
+                        Holsten, Lamborghini, NEFF, Telekom, and T-Systems.
                     </p>
 
                     <ul class="mt-6 flex flex-wrap gap-2" aria-label="Key facts">
@@ -320,7 +324,7 @@
                     </div>
                     <ul class="space-y-2 text-sm" aria-label="Links">
                         <li>
-                            <a href="https://www.linkedin.com/in/davidschubert" target="_blank" rel="noopener me" class="hover:text-white hover:underline underline-offset-4">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/davidschubert-uiux/" target="_blank" rel="noopener me" class="hover:text-white hover:underline underline-offset-4">LinkedIn</a>
                         </li>
                         <li>
                             <a href="https://github.com/davidschubert" target="_blank" rel="noopener me" class="hover:text-white hover:underline underline-offset-4">GitHub</a>
@@ -351,13 +355,18 @@ const email = atob("bWFpbEBkYXZpZHNjaHViZXJ0LmNvbQ==");
 
 const badges = [
     "25+ years of experience",
-    "Design + code, one person",
+    "Trained media designer",
+    "Concept, design & build",
     "Fixed project prices",
     "German & English",
-    "WCAG 2.1 AA",
 ];
 
 const serviceRows = [
+    {
+        service: "Design concept & digital brand design",
+        price: "fixed price by scope",
+        timeline: "per project",
+    },
     {
         service: "UX audit & conversion analysis",
         price: "€2,500 – €5,000",
@@ -377,6 +386,11 @@ const serviceRows = [
         service: "SaaS product & dashboard design",
         price: "from €25,000",
         timeline: "from 8 weeks",
+    },
+    {
+        service: "Content production (photo, video, ad assets)",
+        price: "fixed price by scope",
+        timeline: "per project",
     },
 ];
 
@@ -429,9 +443,9 @@ const faqs = [
 /* ============ SEO / JSON-LD ============ */
 
 const pageTitle =
-    "Freelance UI/UX Designer & Nuxt Developer for DACH | David Schubert";
+    "Freelance Senior UI/UX Designer for DACH | David Schubert";
 const pageDescription =
-    "David Schubert – freelance senior UI/UX designer & Nuxt developer for Germany, Austria & Switzerland. SaaS dashboards, corporate websites, design systems. Fixed prices from €2,500. German & English.";
+    "David Schubert – freelance senior UI/UX designer & creative technologist for Germany, Austria & Switzerland. Design concepts, brand design, websites, content production. 25+ years, brands like Astra, GEMA, Telekom. Fixed prices.";
 const ogImage = `${SITE_URL}/images/fable/og-pukalani-studio.png`;
 const personId = `${SITE_URL}/#david-schubert`;
 
@@ -442,16 +456,16 @@ const jsonLd = {
             "@type": "Person",
             "@id": personId,
             name: "David Schubert",
-            jobTitle: "Senior UI/UX Designer & Web Developer",
+            jobTitle: "Senior UI/UX Designer & Creative Technologist",
             description:
-                "Freelance senior UI/UX designer and web developer (Nuxt, Vue, TypeScript) with 25+ years of experience, serving the DACH market remotely at fixed project prices.",
+                "Freelance senior UI/UX designer, trained media designer, and creative technologist with 25+ years in design and advertising. Design concepts, digital brand design, websites, and content production for the DACH market – remote, at fixed project prices. Agency and freelance work for brands such as Astra, E WIE EINFACH, GEMA, Holsten, Lamborghini, NEFF, Telekom, and T-Systems.",
             url: PAGE_URL,
             email: `mailto:${email}`,
             knowsLanguage: ["de", "en"],
             sameAs: [
-                "https://www.linkedin.com/in/davidschubert",
+                "https://www.linkedin.com/in/davidschubert-uiux/",
                 "https://github.com/davidschubert",
-                "https://www.behance.net/davidschubert",
+                "https://www.instagram.com/davidschubert/",
             ],
             address: {
                 "@type": "PostalAddress",

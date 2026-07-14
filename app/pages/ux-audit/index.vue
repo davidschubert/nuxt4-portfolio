@@ -38,7 +38,7 @@
                         Festpreis, dauert ein bis zwei Wochen und liefert eine
                         priorisierte Maßnahmenliste – von Quick Wins bis zur
                         Conversion-Roadmap. Durchgeführt von David Schubert,
-                        Senior UI/UX Designer und Web Developer mit über 25
+                        Senior UI/UX Designer und Creative Technologist mit über 25
                         Jahren Erfahrung.
                     </p>
 
@@ -480,12 +480,12 @@ const jsonLd = {
             "@type": "Person",
             "@id": personId,
             name: "David Schubert",
-            jobTitle: "Senior UI/UX Designer & Web Developer",
+            jobTitle: "Senior UI/UX Designer & Creative Technologist",
             url: `${SITE_URL}/fable/`,
             sameAs: [
-                "https://www.linkedin.com/in/davidschubert",
+                "https://www.linkedin.com/in/davidschubert-uiux/",
                 "https://github.com/davidschubert",
-                "https://www.behance.net/davidschubert",
+                "https://www.instagram.com/davidschubert/",
             ],
         },
         {

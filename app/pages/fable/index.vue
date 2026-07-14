@@ -43,10 +43,10 @@
                         id="hero-title"
                         class="text-4xl font-extrabold leading-tight tracking-tight md:text-5xl"
                     >
-                        UI/UX Designer &amp; Web Developer für
+                        Senior UI/UX Designer (Freelancer) für
                         <span
                             class="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-blue-400"
-                            >SaaS, Dashboards &amp; Corporate Websites</span
+                            >Mittelstand &amp; Agenturen</span
                         >
                     </h1>
 
@@ -54,12 +54,25 @@
                         id="hero-answer"
                         class="mt-6 max-w-xl text-lg leading-relaxed text-gray-600 dark:text-gray-300"
                     >
-                        Ich bin David Schubert, Freelance Senior UI/UX Designer und
-                        Web Developer mit über 25 Jahren Erfahrung. Unter der Marke
-                        Pukalani Studio gestalte und entwickle ich SaaS-Dashboards,
-                        Corporate Websites und Design Systems – remote für Teams in
-                        Deutschland, Österreich und der Schweiz. Design und Code aus
-                        einer Hand, zu festen Projektpreisen.
+                        Ich bin David Schubert, Senior UI/UX Designer und
+                        ausgebildeter Mediengestalter mit über 25 Jahren
+                        Erfahrung in Design und Werbung. Ich erarbeite mit
+                        Ihnen Designkonzepte, Strategien und digitales Brand
+                        Design, gestalte Websites und digitale Produkte – und
+                        setze sie auf Wunsch technisch um. Remote für
+                        Unternehmen und Agenturen in Deutschland, Österreich
+                        und der Schweiz, zu festen Projektpreisen.
+                    </p>
+
+                    <p
+                        class="mt-5 text-sm text-gray-500 dark:text-gray-400"
+                    >
+                        In Agentur- und Freelance-Projekten verantwortlich für
+                        Konzepte und Gestaltung für Marken wie
+                        <strong class="font-semibold text-gray-700 dark:text-gray-200"
+                            >Astra, E&nbsp;WIE&nbsp;EINFACH, GEMA, Holsten,
+                            Lamborghini, NEFF, Telekom und T-Systems</strong
+                        >.
                     </p>
 
                     <ul
@@ -153,34 +166,77 @@
             </section>
 
             <!-- ============================================================
+                 ZIELGRUPPEN
+                 ============================================================ -->
+            <section
+                id="fuer-wen"
+                aria-labelledby="fuer-wen-title"
+                class="border-t border-gray-200 dark:border-gray-800"
+            >
+                <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
+                    <h2
+                        id="fuer-wen-title"
+                        class="text-3xl font-bold tracking-tight md:text-4xl"
+                    >
+                        Für wen ich arbeite
+                    </h2>
+                    <p class="mt-4 max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+                        Meine Kunden sind mittelständische Unternehmen, die einen
+                        erfahrenen Design-Partner ohne Agentur-Overhead suchen –
+                        und Agenturen, die punktuell Senior-Verstärkung brauchen.
+                        Viele kommen über Empfehlungen ehemaliger Kolleginnen und
+                        Kollegen.
+                    </p>
+
+                    <div class="mt-10 grid gap-6 md:grid-cols-3">
+                        <div
+                            v-for="audience in audiences"
+                            :key="audience.title"
+                            class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-900"
+                        >
+                            <h3 class="text-lg font-semibold">
+                                {{ audience.title }}
+                            </h3>
+                            <p
+                                class="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300"
+                            >
+                                {{ audience.description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
                  LEISTUNGEN & PREISE
                  ============================================================ -->
             <section
                 id="leistungen"
                 aria-labelledby="leistungen-title"
-                class="border-t border-gray-200 dark:border-gray-800"
+                class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-900"
             >
                 <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
                     <h2
                         id="leistungen-title"
                         class="text-3xl font-bold tracking-tight md:text-4xl"
                     >
-                        Leistungen &amp; Preise: UX-Audit, Landingpage, Corporate
-                        Website, SaaS-Design
+                        Leistungen &amp; Preise: von der Idee bis zur fertigen
+                        Website
                     </h2>
                     <p class="mt-4 max-w-3xl text-lg text-gray-600 dark:text-gray-300">
-                        Pukalani Studio bietet vier klar definierte Leistungspakete
-                        mit festen Projektpreisen – vom UX-Audit ab €2.500 bis zum
-                        kompletten SaaS-Produkt-Design ab €25.000. Jedes Paket
-                        enthält definierte Ergebnisse, einen fixen Zeitrahmen und
-                        einen direkten Senior-Ansprechpartner.
+                        Alles aus einer Hand: Designkonzept, Gestaltung,
+                        technische Umsetzung und Content. Klar definierte
+                        Leistungen mit festen Projektpreisen – vom UX-Audit ab
+                        €2.500 bis zum kompletten Produkt-Design ab €25.000.
+                        Sie wissen vor Projektstart, was Sie bekommen und was
+                        es kostet.
                         <a
                             href="https://www.nngroup.com/articles/"
                             target="_blank"
                             rel="noopener external"
                             class="underline decoration-emerald-500 underline-offset-2 hover:text-emerald-700 dark:hover:text-emerald-400"
-                            >Gute UX zahlt messbar auf Conversion und Umsatz ein
-                            (Nielsen Norman Group)</a
+                            >Gutes Design zahlt messbar auf Anfragen und Umsatz
+                            ein (Nielsen Norman Group)</a
                         >.
                     </p>
 
@@ -258,7 +314,7 @@
             <section
                 id="prozess"
                 aria-labelledby="prozess-title"
-                class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-900"
+                class="border-t border-gray-200 dark:border-gray-800"
             >
                 <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
                     <h2
@@ -308,7 +364,7 @@
             <section
                 id="referenzen"
                 aria-labelledby="referenzen-title"
-                class="border-t border-gray-200 dark:border-gray-800"
+                class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-900"
             >
                 <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
                     <h2
@@ -421,22 +477,24 @@
             <section
                 id="ueber-mich"
                 aria-labelledby="ueber-mich-title"
-                class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-900"
+                class="border-t border-gray-200 dark:border-gray-800"
             >
                 <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
                     <h2
                         id="ueber-mich-title"
                         class="text-3xl font-bold tracking-tight md:text-4xl"
                     >
-                        Über mich: David Schubert – Design + Code seit den 1990ern
+                        Über mich: vom Mediengestalter zum Creative Technologist
                     </h2>
                     <p class="mt-4 max-w-3xl text-lg text-gray-600 dark:text-gray-300">
-                        David Schubert ist Creative Technologist mit über 25 Jahren
-                        Erfahrung an der Schnittstelle von Design, Technologie und
-                        Business. Er arbeitet solo unter der Marke Pukalani Studio
-                        – Sie arbeiten also immer direkt mit ihm, ohne Agentur-
-                        Overhead. Sein Alleinstellungsmerkmal: Er gestaltet nicht
-                        nur, er entwickelt auch.
+                        David Schubert ist Senior UI/UX Designer und Creative
+                        Technologist mit über 25 Jahren Erfahrung in Design und
+                        Werbung – ausgebildeter Mediengestalter, langjähriger
+                        Art Director und Senior Designer in Hamburger Agenturen,
+                        heute selbstständig unter der Marke Pukalani Studio.
+                        Sie arbeiten immer direkt mit ihm: von der kreativen
+                        Leitidee über das Design bis zur technischen Umsetzung
+                        und Content-Produktion.
                     </p>
 
                     <div class="mt-10 grid gap-10 lg:grid-cols-2">
@@ -522,7 +580,7 @@
             <section
                 id="remote-dach"
                 aria-labelledby="remote-dach-title"
-                class="border-t border-gray-200 dark:border-gray-800"
+                class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-900"
             >
                 <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
                     <h2
@@ -773,16 +831,16 @@ const phoneTel = "+18088660676";
 const calLink = "https://cal.com/davidschubert/30min";
 
 const socialProfiles = [
-    "https://www.linkedin.com/in/davidschubert",
+    "https://www.linkedin.com/in/davidschubert-uiux/",
     "https://github.com/davidschubert",
-    "https://www.behance.net/davidschubert",
+    "https://www.instagram.com/davidschubert/",
 ];
 
 const trustBadges = [
     "25+ Jahre Erfahrung",
-    "Design + Code aus einer Hand",
+    "Ausgebildeter Mediengestalter",
+    "Konzept, Design & Umsetzung",
     "Festpreise statt Tagessätze",
-    "WCAG 2.1 AA",
     "Antwort in 24 h",
 ];
 
@@ -790,19 +848,27 @@ const keyFacts = [
     { label: "Name", value: "David Schubert" },
     {
         label: "Rolle",
-        value: "Freelance Senior UI/UX Designer & Web Developer",
+        value: "Senior UI/UX Designer & Creative Technologist (Freelancer)",
     },
     {
-        label: "Studio",
-        value: "Pukalani Studio (Solo-Studio – Sie arbeiten direkt mit mir)",
+        label: "Ausbildung",
+        value: "Mediengestalter Digital & Print · Bachelor Professional in Digital Media (IHK)",
     },
     {
-        label: "Schwerpunkte",
-        value: "SaaS- & Dashboard-UX, Corporate Websites, Design Systems, Landingpages & CRO",
+        label: "Erfahrung",
+        value: "25+ Jahre in Design & Werbung, davon viele Jahre in Hamburger Agenturen (zuletzt Senior UI/UX Designer bei Philipp und Keuntje)",
     },
     {
-        label: "Tech-Stack",
-        value: "Figma, Nuxt 4 (Vue 3), TypeScript, Tailwind CSS 4, Appwrite",
+        label: "Leistungen",
+        value: "Designkonzepte & Strategie, digitales Brand Design, Websites & digitale Produkte, technische Umsetzung, Content-Produktion (Foto, Video, Werbemittel)",
+    },
+    {
+        label: "Kunden & Marken",
+        value: "Astra, E WIE EINFACH, GEMA, Holsten, Lamborghini, NEFF, Telekom, T-Systems u. v. m. (Agentur- & Freelance-Projekte)",
+    },
+    {
+        label: "Zielgruppen",
+        value: "Mittelständische Unternehmen sowie Werbe-, Marketing- & Digitalagenturen",
     },
     {
         label: "Region",
@@ -811,15 +877,54 @@ const keyFacts = [
     { label: "Sprachen", value: "Deutsch (Muttersprache), Englisch" },
     {
         label: "Preise",
-        value: "Festpreise: €2.500 (UX-Audit) bis €75.000+ (SaaS-Produkt)",
+        value: "Festpreise: €2.500 (UX-Audit) bis €75.000+ (Produkt-Design)",
     },
     {
         label: "Kontakt",
         value: "mail@davidschubert.com · cal.com/davidschubert/30min",
     },
+    {
+        label: "Studio",
+        value: "Pukalani Studio (Solo-Studio – Sie arbeiten direkt mit mir)",
+    },
+];
+
+const audiences = [
+    {
+        title: "Mittelständische Unternehmen",
+        description:
+            "Sie brauchen einen erfahrenen Design-Partner, der Ihre Sprache spricht – ohne Fachjargon, ohne Agentur-Overhead. Von der ersten Idee über das Designkonzept bis zur fertigen Website: ein Ansprechpartner, klare Festpreise, verständliche Beratung.",
+    },
+    {
+        title: "Werbe-, Marketing- & Digitalagenturen",
+        description:
+            "Ich verstärke Ihr Team als Senior-Freelancer – zuverlässig, remote und auf Wunsch unsichtbar für Ihren Kunden (White Label). Konzept, UI/UX-Design, Art Direction oder technische Umsetzung: Sie buchen genau die Kompetenz, die im Projekt fehlt.",
+    },
+    {
+        title: "Auf Empfehlung hier?",
+        description:
+            "Viele meiner Projekte entstehen über Empfehlungen ehemaliger Kolleginnen, Kollegen und Kunden. Schön, dass Sie da sind – Arbeitsproben, Referenzen und ein ehrliches Gespräch darüber, ob ich die richtige Besetzung bin, gibt es im kostenlosen Erstgespräch.",
+    },
 ];
 
 const services = [
+    {
+        id: "brand-design",
+        title: "Designkonzept & Digital Brand Design",
+        description:
+            "Der Auftritt, an dem man Sie erkennt: Logos, visuelle Identitäten, Designkonzepte und Strategien – digital und print, aus einem Guss.",
+        deliverables: [
+            "Designkonzept & kreative Leitidee",
+            "Logo & visuelle Identität (Farben, Typografie, Bildwelt)",
+            "Gestaltungsrichtlinien für digital & print",
+            "Art Direction für Kampagnen & Werbemittel",
+        ],
+        result: "Marken-Erfahrung u. a. mit Astra, GEMA, NEFF & Telekom",
+        price: "Festpreis nach Umfang",
+        duration: "je nach Projekt",
+        schemaDescription:
+            "Designkonzepte, Logos, visuelle Identitäten und Art Direction für digitale und gedruckte Markenauftritte.",
+    },
     {
         id: "ux-audit",
         title: "UX-Audit & Conversion-Analyse",
@@ -861,9 +966,9 @@ const services = [
     },
     {
         id: "corporate-website",
-        title: "Corporate Website",
+        title: "Website-Design & technische Umsetzung",
         description:
-            "Professionelle Unternehmensauftritte: Content-Strategie, Informationsarchitektur, barrierefreies Design und SEO-fähige Umsetzung.",
+            "Ihr Unternehmensauftritt aus einer Hand: Inhalte strukturieren, Design entwickeln, barrierefrei und schnell umsetzen – fertig zum Launch.",
         deliverables: [
             "Content-Strategie & Informationsarchitektur",
             "Responsive Design, WCAG 2.1 AA",
@@ -880,9 +985,9 @@ const services = [
     },
     {
         id: "saas-design",
-        title: "SaaS Produkt- & Dashboard-Design",
+        title: "Produkt- & App-Design (Software, Dashboards)",
         description:
-            "Komplexe B2B-Software verständlich machen: User Research, Informationsarchitektur, Dashboard-Design und skalierbare Design Systems.",
+            "Komplexe Software verständlich machen: Nutzer-Recherche, klare Strukturen, Oberflächen-Design und skalierbare Design-Systeme.",
         deliverables: [
             "User Research, Personas & User Journeys",
             "Informationsarchitektur & Dashboard-UX",
@@ -896,6 +1001,23 @@ const services = [
             "SaaS-Produkt- und Dashboard-Design: User Research, Informationsarchitektur, UI-Design und skalierbares Design System mit Component Library und Design Tokens.",
         minPrice: 25000,
         maxPrice: 75000,
+    },
+    {
+        id: "content-produktion",
+        title: "Content-Produktion: Foto, Video & Werbemittel",
+        description:
+            "Inhalte, die zum Design passen: digitale Werbemittel, Fotografie und Videografie inklusive Schnitt – als ausgebildeter Mediengestalter aus einer Hand.",
+        deliverables: [
+            "Digitale Werbemittel & Social-Media-Assets",
+            "Fotografie (Produkt, Business, Location)",
+            "Videografie & Videoschnitt (Final Cut Pro)",
+            "Aufbereitung für Web, Kampagnen & Print",
+        ],
+        result: "Design & Content aus einer Hand – ohne Reibungsverluste",
+        price: "Festpreis nach Umfang",
+        duration: "je nach Projekt",
+        schemaDescription:
+            "Content-Produktion für Marken: digitale Werbemittel, Social-Media-Assets, Fotografie sowie Videografie inklusive Videoschnitt.",
     },
 ];
 
@@ -1049,50 +1171,56 @@ const caseStudies = [
 
 const timeline = [
     {
-        period: "1990er",
+        period: "Ausbildung",
         description:
-            "Erste Webdesign-Projekte in Agenturen – von Anfang an an der Schnittstelle von Gestaltung und Technik.",
+            "Mediengestalter Digital und Print in Hamburg – das Handwerk von Layout und Typografie bis Druck und Bildbearbeitung. Später ergänzt um den Bachelor Professional in Digital Media (IHK) und den Ausbilderschein.",
     },
     {
-        period: "2010er",
+        period: "Agenturjahre",
         description:
-            "Fokus auf Mobile- und Responsive-Design, Aufbau von Frontend-Expertise (HTML, CSS, JavaScript).",
+            "Junior Art Director und Art Director in Hamburger Agenturen (u. a. Arc Worldwide, MEC, azionare) – Kampagnen, Werbemittel und digitale Konzepte für nationale und internationale Marken.",
     },
     {
-        period: "2015+",
+        period: "2011 – Freelance-Start",
         description:
-            "Spezialisierung auf SaaS-Produkte, Dashboards und Design Systems – Figma, Design Tokens, Component Libraries.",
+            "Senior UI/UX Designer im Creative-Tech-Team von Philipp und Keuntje, Hamburg: digitale Konzeptideen und kreative Lösungen für Marken wie Astra, E WIE EINFACH, GEMA, Holsten, Lamborghini, NEFF, Telekom und T-Systems.",
     },
     {
         period: "Heute",
         description:
-            "Freelance Solo-Studio Pukalani Studio: UI/UX Design und Nuxt-Entwicklung, remote für DACH – plus KI-Beratung und -Training.",
+            "Freelance Creative Technologist (Pukalani Studio): Designkonzepte, Brand Design, Websites und Content – remote von Maui für die DACH-Region, plus KI-Beratung und -Training.",
     },
 ];
 
 const stackGroups = [
     {
-        title: "Design",
-        items: ["Figma", "FigJam", "Miro", "Design Tokens", "Prototyping"],
-    },
-    {
-        title: "Entwicklung",
+        title: "Design & Konzept",
         items: [
-            "Nuxt 4 / Vue 3",
-            "TypeScript",
-            "Tailwind CSS 4",
-            "Appwrite",
-            "GSAP & Lenis",
+            "Figma",
+            "Adobe Creative Suite",
+            "Art Direction",
+            "Design Systems",
+            "Prototyping",
         ],
     },
     {
-        title: "Methoden & Standards",
+        title: "Content & Produktion",
         items: [
-            "WCAG 2.1 AA",
-            "Core Web Vitals",
-            "Design Sprints",
-            "A/B-Testing & CRO",
-            "Value-Based Pricing",
+            "Fotografie",
+            "Videografie",
+            "Final Cut Pro (Schnitt)",
+            "Digitale Werbemittel",
+            "Social-Media-Assets",
+        ],
+    },
+    {
+        title: "Technische Umsetzung",
+        items: [
+            "Moderne Web-Technologie (Nuxt/Vue)",
+            "TypeScript",
+            "Tailwind CSS",
+            "Barrierefreiheit (WCAG 2.1 AA)",
+            "Performance (Core Web Vitals)",
         ],
     },
 ];
@@ -1125,8 +1253,16 @@ const faqs = [
         answer: "Sehr gut – die Zeitverschiebung ist ein Vorteil: Feedback, das Sie am Ende Ihres Arbeitstags senden, wird über Nacht umgesetzt und liegt am nächsten Morgen fertig vor. Video-Calls finden am DACH-Abend statt (Hawaii-Morgen). Die restliche Kommunikation läuft asynchron über Slack, Notion oder Linear – auf Deutsch oder Englisch. Workshops vor Ort in DACH sind nach Vereinbarung möglich.",
     },
     {
-        question: "Übernehmen Sie auch die Entwicklung?",
-        answer: "Ja. Als Designer und Web Developer setze ich Websites und Web-Apps selbst um – mit Nuxt 4 (Vue 3), TypeScript, Tailwind CSS 4 und Appwrite. Alternativ übergebe ich developer-ready Figma-Files mit Design Tokens und Dokumentation an Ihr Entwicklungsteam.",
+        question: "Übernehmen Sie auch die technische Umsetzung?",
+        answer: "Ja. Ich gestalte nicht nur, sondern setze Websites und Web-Anwendungen auch selbst um – mit moderner, schneller und suchmaschinenfreundlicher Web-Technologie (u. a. Nuxt/Vue). Sie bekommen eine fertige, live geschaltete Website statt nur Design-Dateien. Alternativ übergebe ich sauber dokumentierte Design-Vorlagen an Ihr Entwicklungsteam oder Ihre Agentur.",
+    },
+    {
+        question: "Machen Sie auch Fotografie, Video und digitale Werbemittel?",
+        answer: "Ja. Als ausgebildeter Mediengestalter produziere ich auch den Content zum Design: digitale Werbemittel, Social-Media-Assets, Fotografie sowie Videografie inklusive Schnitt (Final Cut Pro). Der Vorteil: Design und Inhalte kommen aus einer Hand und passen von Anfang an zusammen.",
+    },
+    {
+        question: "Arbeiten Sie auch für Agenturen?",
+        answer: "Ja, regelmäßig. Ich verstärke Werbe-, Marketing- und Digitalagenturen als Senior-Freelancer – für Konzept, UI/UX-Design, Art Direction oder technische Umsetzung. Auf Wunsch White Label, also unsichtbar für Ihren Endkunden. Agentur-Erfahrung bringe ich aus über einem Jahrzehnt auf Agenturseite selbst mit.",
     },
     {
         question: "Machen Sie auch App-Design für iOS und Android?",
@@ -1151,9 +1287,9 @@ const faqs = [
    ============================================================ */
 
 const pageTitle =
-    "UI/UX Designer & Web Developer für DACH | David Schubert";
+    "Senior UI/UX Designer Freelancer – Mittelstand & Agenturen | David Schubert";
 const pageDescription =
-    "Freelance Senior UI/UX Designer & Web Developer für DACH: SaaS-Dashboards, Corporate Websites, Design Systems. Design + Code aus einer Hand, Festpreise ab €2.500.";
+    "David Schubert: Senior UI/UX Designer & ausgebildeter Mediengestalter (25+ Jahre, u. a. für Astra, GEMA, NEFF, Telekom). Designkonzepte, Brand Design, Websites & Content – remote für DACH, Festpreise.";
 const ogImage = `${SITE_URL}/images/fable/og-pukalani-studio.png`;
 
 const personId = `${SITE_URL}/#david-schubert`;
@@ -1167,26 +1303,39 @@ const jsonLd = {
             "@type": "Person",
             "@id": personId,
             name: "David Schubert",
-            jobTitle: "Senior UI/UX Designer & Web Developer",
+            jobTitle: "Senior UI/UX Designer & Creative Technologist",
             description:
-                "Freelance Senior UI/UX Designer und Web Developer mit über 25 Jahren Erfahrung. Gestaltet und entwickelt SaaS-Dashboards, Corporate Websites und Design Systems – remote für die DACH-Region.",
+                "Senior UI/UX Designer, Creative Technologist und ausgebildeter Mediengestalter mit über 25 Jahren Erfahrung in Design und Werbung. Erarbeitet Designkonzepte, digitales Brand Design, Websites und Content – remote für Mittelstand und Agenturen in der DACH-Region. In Agentur- und Freelance-Projekten für Marken wie Astra, E WIE EINFACH, GEMA, Holsten, Lamborghini, NEFF, Telekom und T-Systems tätig gewesen.",
             url: PAGE_URL,
             email: `mailto:${email}`,
             telephone: phoneTel,
             sameAs: socialProfiles,
             worksFor: { "@id": orgId },
             knowsLanguage: ["de", "en"],
+            hasCredential: [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    name: "Mediengestalter Digital und Print (Ausbildung)",
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    name: "Bachelor Professional in Digital Media (IHK)",
+                },
+            ],
             knowsAbout: [
                 "UI/UX Design",
-                "SaaS Dashboard Design",
-                "Corporate Webdesign",
-                "Design Systems",
+                "Art Direction",
+                "Digitales Brand Design",
+                "Designkonzepte & Strategie",
+                "Webdesign & Websites",
+                "Content-Produktion",
+                "Fotografie",
+                "Videografie & Videoschnitt",
                 "Conversion-Optimierung (CRO)",
                 "Barrierefreiheit (WCAG 2.1 AA)",
-                "User Research",
-                "Informationsarchitektur",
-                "Nuxt & Vue Entwicklung",
+                "Design Systems",
                 "Figma",
+                "Web-Entwicklung (Nuxt, Vue)",
             ],
             address: {
                 "@type": "PostalAddress",
@@ -1207,9 +1356,9 @@ const jsonLd = {
         {
             "@type": "ProfessionalService",
             "@id": `${SITE_URL}/#service`,
-            name: "Pukalani Studio – UI/UX Design & Web Development",
+            name: "Pukalani Studio – UI/UX Design, Brand Design & Web-Umsetzung",
             description:
-                "UI/UX Design und Web-Entwicklung für SaaS, Dashboards, Corporate Websites und Landingpages. Remote für Deutschland, Österreich und die Schweiz.",
+                "Designkonzepte, digitales Brand Design, UI/UX-Design, Websites mit technischer Umsetzung und Content-Produktion (Foto, Video, Werbemittel). Remote für Mittelstand und Agenturen in Deutschland, Österreich und der Schweiz.",
             url: PAGE_URL,
             image: ogImage,
             priceRange: "€2.500 – €75.000+",
@@ -1239,12 +1388,16 @@ const jsonLd = {
                         description: service.schemaDescription,
                         url: `${PAGE_URL}#${service.id}`,
                     },
-                    priceSpecification: {
-                        "@type": "PriceSpecification",
-                        minPrice: service.minPrice,
-                        maxPrice: service.maxPrice,
-                        priceCurrency: "EUR",
-                    },
+                    ...(service.minPrice
+                        ? {
+                              priceSpecification: {
+                                  "@type": "PriceSpecification",
+                                  minPrice: service.minPrice,
+                                  maxPrice: service.maxPrice,
+                                  priceCurrency: "EUR",
+                              },
+                          }
+                        : {}),
                 })),
             },
         },
@@ -1291,7 +1444,7 @@ const jsonLd = {
                 {
                     "@type": "ListItem",
                     position: 2,
-                    name: "UI/UX Designer & Web Developer für DACH",
+                    name: "Senior UI/UX Designer für Mittelstand & Agenturen",
                     item: PAGE_URL,
                 },
             ],

@@ -1591,8 +1591,8 @@ useHead({
                 url: "https://pukalani.studio/best/",
                 image: "https://pukalani.studio/images/profile-photo.jpg",
                 sameAs: [
-                    "https://www.linkedin.com/in/davidschubert",
-                    "https://www.behance.net/davidschubert",
+                    "https://www.linkedin.com/in/davidschubert-uiux/",
+                    "https://www.instagram.com/davidschubert/",
                     "https://github.com/davidschubert",
                 ],
                 knowsAbout: [
@@ -1742,8 +1742,8 @@ useHead({
                 url: "https://pukalani.studio/",
                 logo: "https://pukalani.studio/icon.svg",
                 sameAs: [
-                    "https://www.linkedin.com/in/davidschubert",
-                    "https://www.behance.net/davidschubert",
+                    "https://www.linkedin.com/in/davidschubert-uiux/",
+                    "https://www.instagram.com/davidschubert/",
                     "https://github.com/davidschubert",
                 ],
             }),

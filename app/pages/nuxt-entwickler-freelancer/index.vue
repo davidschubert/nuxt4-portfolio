@@ -74,6 +74,19 @@
                         mit Nuxt&nbsp;4 gebaut – Server-Side-Rendering,
                         PageSpeed-optimiert.
                     </p>
+
+                    <p
+                        class="mt-6 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-200"
+                    >
+                        Diese Seite richtet sich an Digitalagenturen und
+                        Entwicklungsteams. Sie suchen Design, Konzept oder
+                        einen kompletten Webauftritt in verständlicher Sprache?
+                        <NuxtLink
+                            to="/fable"
+                            class="font-semibold underline underline-offset-2"
+                            >Hier geht es zum Design-Portfolio</NuxtLink
+                        >.
+                    </p>
                 </div>
             </header>
 
@@ -390,7 +403,7 @@ const jsonLd = {
             "@type": "Person",
             "@id": personId,
             name: "David Schubert",
-            jobTitle: "Senior UI/UX Designer & Web Developer",
+            jobTitle: "Senior UI/UX Designer & Creative Technologist",
             url: `${SITE_URL}/fable/`,
             knowsAbout: [
                 "Nuxt",
@@ -401,9 +414,9 @@ const jsonLd = {
                 "UI/UX Design",
             ],
             sameAs: [
-                "https://www.linkedin.com/in/davidschubert",
+                "https://www.linkedin.com/in/davidschubert-uiux/",
                 "https://github.com/davidschubert",
-                "https://www.behance.net/davidschubert",
+                "https://www.instagram.com/davidschubert/",
             ],
         },
         {

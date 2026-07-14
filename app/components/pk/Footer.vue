@@ -5,9 +5,10 @@
                 <div>
                     <p class="font-bold text-white">Pukalani Studio</p>
                     <p class="mt-3 text-sm leading-relaxed text-gray-400">
-                        David Schubert – Freelance Senior UI/UX Designer &amp;
-                        Web Developer. SaaS-Dashboards, Corporate Websites und
-                        Design Systems, remote für die DACH-Region.
+                        David Schubert – Senior UI/UX Designer &amp; Creative
+                        Technologist. Designkonzepte, Brand Design, Websites
+                        und Content-Produktion – remote für Mittelstand und
+                        Agenturen in der DACH-Region.
                     </p>
                     <p
                         class="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-800 bg-emerald-950 px-3 py-1 text-xs font-medium text-emerald-300"
@@ -21,7 +22,7 @@
                     <ul class="mt-4 flex gap-4" aria-label="Profile">
                         <li>
                             <a
-                                href="https://www.linkedin.com/in/davidschubert"
+                                href="https://www.linkedin.com/in/davidschubert-uiux/"
                                 target="_blank"
                                 rel="noopener me"
                                 class="text-sm underline-offset-4 hover:text-white hover:underline"
@@ -39,11 +40,11 @@
                         </li>
                         <li>
                             <a
-                                href="https://www.behance.net/davidschubert"
+                                href="https://www.instagram.com/davidschubert/"
                                 target="_blank"
                                 rel="noopener me"
                                 class="text-sm underline-offset-4 hover:text-white hover:underline"
-                                >Behance</a
+                                >Instagram</a
                             >
                         </li>
                     </ul>
@@ -58,6 +59,13 @@
                     <ul class="mt-3 space-y-2 text-sm">
                         <li>
                             <NuxtLink
+                                to="/fable#brand-design"
+                                class="hover:text-white hover:underline underline-offset-4"
+                                >Designkonzept &amp; Brand Design</NuxtLink
+                            >
+                        </li>
+                        <li>
+                            <NuxtLink
                                 to="/ux-audit"
                                 class="hover:text-white hover:underline underline-offset-4"
                                 >UX-Audit (Festpreis-Pakete)</NuxtLink
@@ -65,30 +73,30 @@
                         </li>
                         <li>
                             <NuxtLink
-                                to="/fable#landingpage-cro"
-                                class="hover:text-white hover:underline underline-offset-4"
-                                >Landingpage &amp; CRO</NuxtLink
-                            >
-                        </li>
-                        <li>
-                            <NuxtLink
                                 to="/fable#corporate-website"
                                 class="hover:text-white hover:underline underline-offset-4"
-                                >Corporate Website</NuxtLink
+                                >Website-Design &amp; Umsetzung</NuxtLink
                             >
                         </li>
                         <li>
                             <NuxtLink
                                 to="/fable#saas-design"
                                 class="hover:text-white hover:underline underline-offset-4"
-                                >SaaS &amp; Dashboard-Design</NuxtLink
+                                >Produkt- &amp; App-Design</NuxtLink
+                            >
+                        </li>
+                        <li>
+                            <NuxtLink
+                                to="/fable#content-produktion"
+                                class="hover:text-white hover:underline underline-offset-4"
+                                >Content: Foto, Video &amp; Werbemittel</NuxtLink
                             >
                         </li>
                         <li>
                             <NuxtLink
                                 to="/nuxt-entwickler-freelancer"
                                 class="hover:text-white hover:underline underline-offset-4"
-                                >Nuxt-Entwicklung</NuxtLink
+                                >Web-Entwicklung (für Agenturen)</NuxtLink
                             >
                         </li>
                     </ul>

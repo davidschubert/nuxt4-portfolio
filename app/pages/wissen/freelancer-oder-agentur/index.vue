@@ -50,7 +50,7 @@
                                     class="font-medium text-gray-700 underline decoration-emerald-500 underline-offset-2 hover:text-emerald-700 dark:text-gray-200 dark:hover:text-emerald-400"
                                     >David Schubert</NuxtLink
                                 >
-                                – Senior UI/UX Designer &amp; Web Developer,
+                                – Senior UI/UX Designer &amp; Creative Technologist,
                                 25+ Jahre Erfahrung (Agentur- und
                                 Freelancer-Seite)
                             </p>
@@ -447,12 +447,12 @@ const jsonLd = {
             "@type": "Person",
             "@id": personId,
             name: "David Schubert",
-            jobTitle: "Senior UI/UX Designer & Web Developer",
+            jobTitle: "Senior UI/UX Designer & Creative Technologist",
             url: `${SITE_URL}/fable/`,
             sameAs: [
-                "https://www.linkedin.com/in/davidschubert",
+                "https://www.linkedin.com/in/davidschubert-uiux/",
                 "https://github.com/davidschubert",
-                "https://www.behance.net/davidschubert",
+                "https://www.instagram.com/davidschubert/",
             ],
         },
         {
