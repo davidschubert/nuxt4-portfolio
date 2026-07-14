@@ -9,8 +9,8 @@ module.exports = {
             env: {
                 NODE_ENV: "production",
                 NITRO_HOST: "127.0.0.1",
-                NITRO_PORT: "3009",
-                PORT: "3009",
+                NITRO_PORT: "3001",
+                PORT: "3001",
             },
             // Performance & Stability
             max_memory_restart: "500M", // Restart bei hohem Memory-Verbrauch
