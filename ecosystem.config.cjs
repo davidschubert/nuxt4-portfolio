@@ -4,8 +4,8 @@ module.exports = {
         {
             name: "pukalanistudio",
             script: ".output/server/index.mjs",
-            instances: "max", // Nutzt alle CPU-Kerne für optimale Performance
-            exec_mode: "cluster", // Cluster-Modus für Load Balancing
+            instances: 1, // Einzel-Instanz (Portfolio-Seite braucht keinen Cluster)
+            exec_mode: "fork", // Fork-Modus (ein einzelner Prozess)
             env: {
                 NODE_ENV: "production",
                 NITRO_HOST: "127.0.0.1",
