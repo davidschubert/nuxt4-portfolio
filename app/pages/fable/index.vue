@@ -3,67 +3,17 @@
         class="min-h-screen bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100"
     >
         <!-- ============================================================
-             STICKY NAVIGATION
+             STICKY NAVIGATION (gemeinsame Komponente)
              ============================================================ -->
-        <nav
-            aria-label="Hauptnavigation"
-            class="sticky top-0 z-50 border-b border-gray-200/70 bg-white/80 backdrop-blur-md dark:border-gray-800 dark:bg-gray-950/80"
-        >
-            <div
-                class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8"
-            >
-                <a
-                    href="#hero"
-                    class="flex items-center gap-2 font-bold tracking-tight text-gray-900 dark:text-white"
-                >
-                    <span
-                        class="inline-block h-2.5 w-2.5 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500"
-                        aria-hidden="true"
-                    ></span>
-                    Pukalani&nbsp;Studio
-                </a>
-
-                <ul class="hidden items-center gap-6 text-sm font-medium md:flex">
-                    <li>
-                        <a
-                            href="#leistungen"
-                            class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400"
-                            >Leistungen</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#referenzen"
-                            class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400"
-                            >Referenzen</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#ueber-mich"
-                            class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400"
-                            >Über mich</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="#faq"
-                            class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400"
-                            >FAQ</a
-                        >
-                    </li>
-                </ul>
-
-                <a
-                    :href="calLink"
-                    target="_blank"
-                    rel="noopener nofollow"
-                    class="rounded-full bg-gradient-to-r from-emerald-600 to-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-                >
-                    Erstgespräch buchen
-                </a>
-            </div>
-        </nav>
+        <PkNav
+            :links="[
+                { label: 'Leistungen', href: '#leistungen' },
+                { label: 'UX-Audit', href: '/ux-audit' },
+                { label: 'Referenzen', href: '#referenzen' },
+                { label: 'Wissen', href: '#wissen' },
+                { label: 'FAQ', href: '#faq' },
+            ]"
+        />
 
         <!-- ============================================================
              HERO
@@ -282,13 +232,13 @@
                                         {{ service.duration }} · Festpreis
                                     </p>
                                 </div>
-                                <a
-                                    href="#kontakt"
+                                <NuxtLink
+                                    :to="service.link ?? '#kontakt'"
                                     class="rounded-lg border border-emerald-600 px-4 py-2 text-sm font-semibold text-emerald-700 transition-colors hover:bg-emerald-600 hover:text-white dark:border-emerald-500 dark:text-emerald-400 dark:hover:bg-emerald-600 dark:hover:text-white"
                                     :aria-label="`${service.title} anfragen`"
                                 >
-                                    Anfragen →
-                                </a>
+                                    {{ service.link ? "Details →" : "Anfragen →" }}
+                                </NuxtLink>
                             </div>
                         </article>
                     </div>
@@ -436,23 +386,32 @@
                         </article>
                     </div>
 
-                    <figure
-                        class="mt-12 rounded-2xl border border-gray-200 bg-gray-50 p-8 dark:border-gray-700 dark:bg-gray-900"
-                    >
-                        <blockquote
-                            class="text-xl font-medium leading-relaxed text-gray-800 dark:text-gray-100"
+                    <h3 class="mt-14 text-xl font-semibold">
+                        Das sagen Kunden über die Zusammenarbeit
+                    </h3>
+                    <div class="mt-6 grid gap-6 md:grid-cols-2">
+                        <figure
+                            v-for="quote in testimonials"
+                            :key="quote.text"
+                            class="rounded-2xl border border-gray-200 bg-gray-50 p-6 dark:border-gray-700 dark:bg-gray-900"
                         >
-                            „+73 % Conversion in sechs Wochen. David verbindet
-                            UX-Design, Technik und Business-KPIs – genau das, was
-                            wir brauchten."
-                        </blockquote>
-                        <figcaption
-                            class="mt-4 text-sm text-gray-500 dark:text-gray-400"
-                        >
-                            — Co-Founder eines SaaS-Start-ups, Berlin · Referenz
-                            auf Anfrage
-                        </figcaption>
-                    </figure>
+                            <blockquote
+                                class="text-lg font-medium leading-relaxed text-gray-800 dark:text-gray-100"
+                            >
+                                „{{ quote.text }}"
+                            </blockquote>
+                            <figcaption
+                                class="mt-3 text-sm text-gray-500 dark:text-gray-400"
+                            >
+                                — {{ quote.attribution }}
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                        Alle Stimmen aus Vertraulichkeitsgründen anonymisiert –
+                        Referenzen mit Klarnamen gern auf Anfrage im
+                        Erstgespräch.
+                    </p>
                 </div>
             </section>
 
@@ -624,6 +583,56 @@
             </section>
 
             <!-- ============================================================
+                 WISSEN (Hub für Guides & Spezialseiten)
+                 ============================================================ -->
+            <section
+                id="wissen"
+                aria-labelledby="wissen-title"
+                class="border-t border-gray-200 dark:border-gray-800"
+            >
+                <div class="mx-auto max-w-6xl px-4 py-14 md:px-8 md:py-20">
+                    <h2
+                        id="wissen-title"
+                        class="text-3xl font-bold tracking-tight md:text-4xl"
+                    >
+                        Wissen: Preise, Entscheidungshilfen &amp; Guides
+                    </h2>
+                    <p class="mt-4 max-w-3xl text-lg text-gray-600 dark:text-gray-300">
+                        Fundierte Antworten auf die Fragen, die vor jedem
+                        Projekt stehen – mit echten Marktdaten, benannten
+                        Quellen und ehrlichen Einordnungen. Alle Guides werden
+                        quartalsweise aktualisiert.
+                    </p>
+
+                    <div class="mt-10 grid gap-6 md:grid-cols-2">
+                        <NuxtLink
+                            v-for="guide in guides"
+                            :key="guide.to"
+                            :to="guide.to"
+                            class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-emerald-500 hover:shadow-lg dark:border-gray-700 dark:bg-gray-900 dark:hover:border-emerald-600"
+                        >
+                            <p
+                                class="text-xs font-semibold uppercase tracking-wider text-emerald-700 dark:text-emerald-400"
+                            >
+                                {{ guide.kicker }}
+                            </p>
+                            <h3 class="mt-2 text-xl font-semibold">
+                                {{ guide.title }}
+                            </h3>
+                            <p class="mt-2 flex-1 text-gray-600 dark:text-gray-300">
+                                {{ guide.description }}
+                            </p>
+                            <p
+                                class="mt-4 font-semibold text-emerald-700 group-hover:underline underline-offset-4 dark:text-emerald-400"
+                            >
+                                Lesen →
+                            </p>
+                        </NuxtLink>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================================================
                  FAQ
                  ============================================================ -->
             <section
@@ -742,194 +751,7 @@
             </section>
         </main>
 
-        <!-- ============================================================
-             FOOTER
-             ============================================================ -->
-        <footer
-            id="footer"
-            role="contentinfo"
-            class="bg-gray-950 text-gray-300"
-        >
-            <div class="mx-auto max-w-6xl px-4 py-12 md:px-8 md:py-16">
-                <div class="grid gap-10 md:grid-cols-4">
-                    <div>
-                        <p class="font-bold text-white">Pukalani Studio</p>
-                        <p class="mt-3 text-sm leading-relaxed text-gray-400">
-                            David Schubert – Freelance Senior UI/UX Designer &amp;
-                            Web Developer. SaaS-Dashboards, Corporate Websites und
-                            Design Systems, remote für die DACH-Region.
-                        </p>
-                        <ul class="mt-4 flex gap-4" aria-label="Profile">
-                            <li>
-                                <a
-                                    href="https://www.linkedin.com/in/davidschubert"
-                                    target="_blank"
-                                    rel="noopener me"
-                                    class="text-sm underline-offset-4 hover:text-white hover:underline"
-                                    >LinkedIn</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://github.com/davidschubert"
-                                    target="_blank"
-                                    rel="noopener me"
-                                    class="text-sm underline-offset-4 hover:text-white hover:underline"
-                                    >GitHub</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="https://www.behance.net/davidschubert"
-                                    target="_blank"
-                                    rel="noopener me"
-                                    class="text-sm underline-offset-4 hover:text-white hover:underline"
-                                    >Behance</a
-                                >
-                            </li>
-                        </ul>
-                    </div>
-
-                    <nav aria-label="Footer: Leistungen">
-                        <p
-                            class="text-sm font-semibold uppercase tracking-wider text-gray-500"
-                        >
-                            Leistungen
-                        </p>
-                        <ul class="mt-3 space-y-2 text-sm">
-                            <li>
-                                <a
-                                    href="#ux-audit"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >UX-Audit &amp; Conversion-Analyse</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#landingpage-cro"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Landingpage &amp; CRO</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#corporate-website"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Corporate Website</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#saas-design"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >SaaS Produkt- &amp; Dashboard-Design</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <nav aria-label="Footer: Seiten-Navigation">
-                        <p
-                            class="text-sm font-semibold uppercase tracking-wider text-gray-500"
-                        >
-                            Navigation
-                        </p>
-                        <ul class="mt-3 space-y-2 text-sm">
-                            <li>
-                                <a
-                                    href="#ueberblick"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Auf einen Blick</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#prozess"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Prozess</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#referenzen"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Referenzen</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#faq"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >FAQ</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    href="#kontakt"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Kontakt</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <address class="not-italic" aria-label="Kontaktdaten">
-                        <p
-                            class="text-sm font-semibold uppercase tracking-wider text-gray-500"
-                        >
-                            Kontakt
-                        </p>
-                        <ul class="mt-3 space-y-2 text-sm">
-                            <li>
-                                <a
-                                    :href="`mailto:${email}`"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >{{ email }}</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    :href="`tel:${phoneTel}`"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >{{ phoneHuman }}</a
-                                >
-                            </li>
-                            <li>
-                                <a
-                                    :href="calLink"
-                                    target="_blank"
-                                    rel="noopener nofollow"
-                                    class="hover:text-white hover:underline underline-offset-4"
-                                    >Erstgespräch buchen (cal.com)</a
-                                >
-                            </li>
-                            <li class="text-gray-500">
-                                Pukalani, Maui · Hawaii (USA) · Remote für DACH
-                            </li>
-                        </ul>
-                    </address>
-                </div>
-
-                <div
-                    class="mt-10 flex flex-col items-start justify-between gap-3 border-t border-gray-800 pt-6 text-sm text-gray-500 md:flex-row md:items-center"
-                >
-                    <p>
-                        © 2026 David Schubert · Pukalani Studio. Alle Rechte
-                        vorbehalten.
-                    </p>
-                    <p>
-                        <a
-                            href="https://pukalani.studio/imprint.pdf"
-                            target="_blank"
-                            rel="noopener"
-                            class="hover:text-white hover:underline underline-offset-4"
-                            >Impressum (PDF)</a
-                        >
-                        · Zuletzt aktualisiert: {{ lastUpdatedHuman }}
-                    </p>
-                </div>
-            </div>
-        </footer>
+        <PkFooter :last-updated="lastUpdatedHuman" />
     </div>
 </template>
 
@@ -1016,6 +838,7 @@ const services = [
             "Strukturierte Analyse von Website oder App: heuristische Evaluation, Conversion-Analyse, Core-Web-Vitals-Check und WCAG-Accessibility-Prüfung mit priorisierter Maßnahmenliste.",
         minPrice: 2500,
         maxPrice: 5000,
+        link: "/ux-audit",
     },
     {
         id: "landingpage-cro",
@@ -1115,9 +938,59 @@ const processSteps = [
     },
 ];
 
+const testimonials = [
+    {
+        text: "+73 % Conversion in sechs Wochen. David verbindet UX-Design, Technik und Business-KPIs – genau das, was wir brauchten.",
+        attribution: "Co-Founder eines SaaS-Start-ups, Berlin",
+    },
+    {
+        text: "Endlich jemand, der Design und Code verbindet. Die Übergabe an unsere Entwickler lief komplett reibungslos.",
+        attribution: "Lead Frontend Developer, Software-Unternehmen, München",
+    },
+    {
+        text: "Unsere Website generiert dreimal mehr Anfragen als vorher. Professionell, zuverlässig, schnell.",
+        attribution: "Geschäftsführerin, Mittelständler, Zürich",
+    },
+    {
+        text: "Zwölf Tage vom Briefing bis zum Launch – PageSpeed 98, Conversion 2,7-fach.",
+        attribution: "VP Marketing, Tech-Scale-up, Hamburg",
+    },
+];
+
+const guides = [
+    {
+        kicker: "Preis-Guide 2026",
+        title: "Was kostet UX/UI Design?",
+        description:
+            "Stundensätze, Tagessätze und Projektpreise mit belegten Marktdaten (Freelancer-Kompass, German UPA, Malt) – plus die 5 Faktoren, die den Preis wirklich bestimmen.",
+        to: "/wissen/was-kostet-ux-design",
+    },
+    {
+        kicker: "Entscheidungshilfe",
+        title: "Freelancer oder Agentur?",
+        description:
+            "Der ehrliche Vergleich: Kosten, Geschwindigkeit, Risiken – und die Fälle, in denen eine Agentur wirklich die bessere Wahl ist.",
+        to: "/wissen/freelancer-oder-agentur",
+    },
+    {
+        kicker: "Leistung im Detail",
+        title: "UX-Audit: Pakete & Ablauf",
+        description:
+            "Der schnellste Einstieg in eine Zusammenarbeit: drei Festpreis-Pakete (€2.500–5.000), Ergebnisse in 1–2 Wochen, 50 % Anrechnung bei Folgeprojekten.",
+        to: "/ux-audit",
+    },
+    {
+        kicker: "Entwicklung",
+        title: "Nuxt-Entwicklung als Freelancer",
+        description:
+            "SaaS-Frontends, Corporate Websites und Migrationen mit Nuxt 4, Vue 3 und TypeScript – Design und Code aus einer Hand.",
+        to: "/nuxt-entwickler-freelancer",
+    },
+];
+
 const caseStudies = [
     {
-        title: "SaaS Analytics Dashboard",
+        title: "+43 % Feature-Adoption: SaaS Analytics Dashboard",
         image: "/images/fable/case-saas-dashboard.svg",
         alt: "Schematische Darstellung des Analytics-Dashboards: Kennzahlen-Karten, Liniendiagramm und Ringdiagramm im Dark Mode",
         tags: ["B2B SaaS", "Dashboard", "Design System"],
@@ -1132,7 +1005,7 @@ const caseStudies = [
         ],
     },
     {
-        title: "E-Commerce Checkout-Optimierung",
+        title: "+73 % Conversion: E-Commerce Checkout-Optimierung",
         image: "/images/fable/case-ecommerce-checkout.svg",
         alt: "Schematische Darstellung des mobilen Checkout-Flows in drei Schritten: Warenkorb, Daten und Zahlung, Bestätigung",
         tags: ["E-Commerce", "CRO", "Mobile"],
@@ -1143,7 +1016,7 @@ const caseStudies = [
         results: ["+73 % Conversion", "−41 % Kaufabbrüche", "LCP 1,8 s"],
     },
     {
-        title: "Corporate Website Relaunch",
+        title: "+156 % organischer Traffic: Corporate Website Relaunch",
         image: "/images/fable/case-corporate-website.svg",
         alt: "Schematische Darstellung der Corporate Website auf Desktop und Smartphone mit Hero-Bereich, Feature-Karten und WCAG-Badge",
         tags: ["Corporate", "WCAG 2.1 AA", "SEO"],
@@ -1158,7 +1031,7 @@ const caseStudies = [
         ],
     },
     {
-        title: "B2B SaaS MVP & Design System",
+        title: "Launch in 12 Wochen: B2B SaaS MVP & Design System",
         image: "/images/fable/case-design-system.svg",
         alt: "Schematische Darstellung der Design-System-Bibliothek mit Farb-Tokens, Typografie, Buttons und Formular-Komponenten",
         tags: ["Start-up", "MVP", "Figma Library"],
@@ -1485,6 +1358,7 @@ useHead({
     link: [
         { rel: "canonical", href: PAGE_URL },
         { rel: "alternate", hreflang: "de", href: PAGE_URL },
+        { rel: "alternate", hreflang: "en", href: `${SITE_URL}/en/` },
         { rel: "alternate", hreflang: "x-default", href: PAGE_URL },
     ],
     script: [
