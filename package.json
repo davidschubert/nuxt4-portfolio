@@ -8,7 +8,7 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "start": "PORT=${PORT:-3001} node .output/server/index.mjs"
+        "start": "PORT=${PORT:-3009} node .output/server/index.mjs"
     },
     "dependencies": {
         "@nuxt/image": "^1.11.0",
