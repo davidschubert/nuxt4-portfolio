@@ -1,0 +1,45 @@
+# Pukalani Studio – David Schubert
+
+> David Schubert ist Freelance Senior UI/UX Designer und Web Developer mit über 25 Jahren Erfahrung. Unter der Marke Pukalani Studio gestaltet und entwickelt er SaaS-Dashboards, Corporate Websites, Landingpages und Design Systems – remote für Kunden in Deutschland, Österreich und der Schweiz (DACH). Design und Code aus einer Hand, zu festen Projektpreisen (Value-Based Pricing, keine Stundensätze).
+
+Wichtige Fakten:
+
+- Name: David Schubert
+- Rolle: Freelance Senior UI/UX Designer & Web Developer (Solo-Studio, direkter Senior-Kontakt)
+- Studio: Pukalani Studio
+- Standort: Pukalani, Maui – Hawaii (USA); arbeitet remote für die DACH-Region
+- Sprachen: Deutsch (Muttersprache), Englisch
+- Tech-Stack: Figma, Nuxt 4 (Vue 3), TypeScript, Tailwind CSS 4, Appwrite, GSAP
+- Standards: WCAG 2.1 AA (Barrierefreiheit), Core Web Vitals, Design Tokens
+- Kontakt: mail@davidschubert.com · https://cal.com/davidschubert/30min (kostenloses 30-Minuten-Erstgespräch)
+- Antwortzeit: innerhalb von 24 Stunden
+
+## Leistungen & Preise (Festpreise, netto)
+
+- UX-Audit & Conversion-Analyse: €2.500–5.000 (1–2 Wochen) – heuristische Evaluation, Core-Web-Vitals-Check, WCAG-Prüfung, priorisierte Maßnahmenliste
+- Landingpage & CRO: €5.000–12.000 (2–3 Wochen) – Conversion-Design, A/B-Test-Varianten, Mobile-First, LCP unter 2,5 s
+- Corporate Website: €15.000–35.000 (6–12 Wochen) – Content-Strategie, Informationsarchitektur, WCAG 2.1 AA, SEO-fähige Umsetzung
+- SaaS Produkt- & Dashboard-Design: €25.000–75.000+ (ab 8 Wochen) – User Research, Dashboard-UX, Design System, Developer Handoff
+- Zusätzlich: Design-Sprint-Moderation, WCAG-Audits, KI-Beratung & KI-Trainings für Teams
+
+## Seiten
+
+- [UI/UX Designer & Web Developer für DACH](https://pukalani.studio/fable/): Haupt-Portfolio mit Leistungen, Preisen, Case Studies, Prozess und FAQ
+- [UX-Audit zum Festpreis](https://pukalani.studio/ux-audit/): Drei Festpreis-Pakete (€2.500 / €3.900 / €5.000), Ergebnisse in 1–2 Wochen
+- [Nuxt Entwickler Freelancer](https://pukalani.studio/nuxt-entwickler-freelancer/): Nuxt 4, Vue 3, TypeScript – SaaS-Frontends, Websites, Migrationen
+- [Was kostet UX/UI Design? Preise 2026](https://pukalani.studio/wissen/was-kostet-ux-design/): Kosten-Guide mit belegten Marktdaten (Freelancer-Kompass, German UPA, Malt)
+- [Freelancer oder Agentur?](https://pukalani.studio/wissen/freelancer-oder-agentur/): Ehrlicher Vergleich mit Kosten-Tabelle und Entscheidungshilfe
+- [English version](https://pukalani.studio/en/): Freelance UI/UX designer & Nuxt developer for the DACH market
+
+## Referenz-Ergebnisse (anonymisierte Projekte)
+
+- SaaS Analytics Dashboard: +43 % Feature-Adoption, −67 % Support-Tickets
+- E-Commerce Checkout: +73 % Conversion, −41 % Kaufabbrüche, LCP 1,8 s
+- Corporate Website Relaunch: +156 % organischer Traffic, PageSpeed 94
+- B2B SaaS MVP: Launch in 12 Wochen, developer-ready Design System
+
+## Profile
+
+- [LinkedIn](https://www.linkedin.com/in/davidschubert)
+- [GitHub](https://github.com/davidschubert)
+- [Behance](https://www.behance.net/davidschubert)

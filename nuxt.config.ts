@@ -20,13 +20,24 @@ export default defineNuxtConfig({
     },
     site: {
         url: "https://pukalani.studio",
-        name: "My Awesome Website",
+        name: "Pukalani Studio",
     },
     nitro: {
         preset: "node-server", // Optimiert für VPS/Dedicated Server
         prerender: {
             crawlLinks: true,
-            routes: ["/", "/chatgpt", "/claude", "/best"],
+            routes: [
+                "/",
+                "/chatgpt",
+                "/claude",
+                "/best",
+                "/fable",
+                "/ux-audit",
+                "/nuxt-entwickler-freelancer",
+                "/wissen/was-kostet-ux-design",
+                "/wissen/freelancer-oder-agentur",
+                "/en",
+            ],
         },
         compressPublicAssets: true,
         // Aktiviere Brotli und Gzip Kompression für HTML/CSS/JS
@@ -70,6 +81,36 @@ export default defineNuxtConfig({
             },
         },
         "/best": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/fable": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/ux-audit": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/nuxt-entwickler-freelancer": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/wissen/**": {
+            prerender: true,
+            headers: {
+                "cache-control": "public, max-age=3600, must-revalidate",
+            },
+        },
+        "/en": {
             prerender: true,
             headers: {
                 "cache-control": "public, max-age=3600, must-revalidate",

@@ -21,6 +21,12 @@
                 >
                     Best
                 </NuxtLink>
+                <NuxtLink
+                    to="/fable"
+                    class="px-6 py-3 bg-gradient-to-r from-emerald-700 to-blue-700 text-white rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-colors font-medium focus-visible:ring-4 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                >
+                    Fable
+                </NuxtLink>
             </nav>
         </main>
     </div>
