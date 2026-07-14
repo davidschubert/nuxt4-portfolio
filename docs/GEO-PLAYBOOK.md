@@ -35,4 +35,6 @@ Stand: Juli 2026. Basiert auf drei Recherche-Läufen: (1) Top-Designer-Portfolio
 - **Datenschutzerklärung** (DSGVO-Pflicht) und ggf. HTML-Impressum statt PDF.
 - **Kontaktformular-Backend** (aktuell bewusst weggelassen; cal.com + E-Mail sind die Conversion-Pfade).
 - **Profilfoto** für die Über-mich-Sektion und Person-Schema (E-E-A-T).
-- Wenn `/fable` als Gewinner feststeht: auf `/` umziehen, Canonicals/interne Links anpassen, alte Varianten per 301 weiterleiten oder auf noindex setzen (aktuell konkurrieren vier ähnliche Seiten um dieselben Keywords).
+- ~~Wenn `/fable` als Gewinner feststeht: auf `/` umziehen~~ ✅ Erledigt (Juli 2026): Fable-Variante ist die Startseite, alte Varianten per 301 weitergeleitet.
+- **Eigene Bilder einpflegen:** Fotos/Arbeitsproben von davidschubert.design (oder neu) nach `public/images/` legen und in Referenzen/Über-mich einbinden — die Domain war aus der Session heraus nicht abrufbar.
+- **davidschubert.design prüfen:** Die dortigen „Featured Projects" (Amaterasu, Columbia Pictures, Cambium) sind Exo-Ape-Template-Demos — ersetzen oder entfernen, bevor KI-Suchen sie als eigene Arbeiten zitieren. Langfristig: Domain-Strategie klären (davidschubert.design vs. pukalani.studio vs. davidschubert.com) und per 301 auf die primäre Domain konsolidieren.
