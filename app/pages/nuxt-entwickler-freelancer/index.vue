@@ -11,7 +11,7 @@
                     <nav aria-label="Brotkrumen" class="text-sm text-gray-500 dark:text-gray-400">
                         <ol class="flex flex-wrap items-center gap-2">
                             <li>
-                                <NuxtLink to="/fable" class="hover:text-emerald-600 hover:underline underline-offset-4">Start</NuxtLink>
+                                <NuxtLink to="/" class="hover:text-emerald-600 hover:underline underline-offset-4">Start</NuxtLink>
                             </li>
                             <li aria-hidden="true">→</li>
                             <li aria-current="page">Nuxt Entwickler Freelancer</li>
@@ -82,7 +82,7 @@
                         Entwicklungsteams. Sie suchen Design, Konzept oder
                         einen kompletten Webauftritt in verständlicher Sprache?
                         <NuxtLink
-                            to="/fable"
+                            to="/"
                             class="font-semibold underline underline-offset-2"
                             >Hier geht es zum Design-Portfolio</NuxtLink
                         >.
@@ -404,7 +404,7 @@ const jsonLd = {
             "@id": personId,
             name: "David Schubert",
             jobTitle: "Senior UI/UX Designer & Creative Technologist",
-            url: `${SITE_URL}/fable/`,
+            url: `${SITE_URL}/`,
             knowsAbout: [
                 "Nuxt",
                 "Vue.js",
@@ -453,7 +453,7 @@ const jsonLd = {
                     "@type": "ListItem",
                     position: 1,
                     name: "Start",
-                    item: `${SITE_URL}/fable/`,
+                    item: `${SITE_URL}/`,
                 },
                 {
                     "@type": "ListItem",

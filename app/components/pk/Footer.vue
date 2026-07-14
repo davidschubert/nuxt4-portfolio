@@ -59,7 +59,7 @@
                     <ul class="mt-3 space-y-2 text-sm">
                         <li>
                             <NuxtLink
-                                to="/fable#brand-design"
+                                to="/#brand-design"
                                 class="hover:text-white hover:underline underline-offset-4"
                                 >Designkonzept &amp; Brand Design</NuxtLink
                             >
@@ -73,21 +73,21 @@
                         </li>
                         <li>
                             <NuxtLink
-                                to="/fable#corporate-website"
+                                to="/#corporate-website"
                                 class="hover:text-white hover:underline underline-offset-4"
                                 >Website-Design &amp; Umsetzung</NuxtLink
                             >
                         </li>
                         <li>
                             <NuxtLink
-                                to="/fable#saas-design"
+                                to="/#saas-design"
                                 class="hover:text-white hover:underline underline-offset-4"
                                 >Produkt- &amp; App-Design</NuxtLink
                             >
                         </li>
                         <li>
                             <NuxtLink
-                                to="/fable#content-produktion"
+                                to="/#content-produktion"
                                 class="hover:text-white hover:underline underline-offset-4"
                                 >Content: Foto, Video &amp; Werbemittel</NuxtLink
                             >
@@ -125,7 +125,7 @@
                         </li>
                         <li>
                             <NuxtLink
-                                to="/fable#faq"
+                                to="/#faq"
                                 class="hover:text-white hover:underline underline-offset-4"
                                 >FAQ</NuxtLink
                             >

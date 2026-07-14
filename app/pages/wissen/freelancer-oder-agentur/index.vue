@@ -12,11 +12,11 @@
                         <nav aria-label="Brotkrumen" class="text-sm text-gray-500 dark:text-gray-400">
                             <ol class="flex flex-wrap items-center gap-2">
                                 <li>
-                                    <NuxtLink to="/fable" class="hover:text-emerald-600 hover:underline underline-offset-4">Start</NuxtLink>
+                                    <NuxtLink to="/" class="hover:text-emerald-600 hover:underline underline-offset-4">Start</NuxtLink>
                                 </li>
                                 <li aria-hidden="true">→</li>
                                 <li>
-                                    <NuxtLink to="/fable#wissen" class="hover:text-emerald-600 hover:underline underline-offset-4">Wissen</NuxtLink>
+                                    <NuxtLink to="/#wissen" class="hover:text-emerald-600 hover:underline underline-offset-4">Wissen</NuxtLink>
                                 </li>
                                 <li aria-hidden="true">→</li>
                                 <li aria-current="page">Freelancer oder Agentur</li>
@@ -46,7 +46,7 @@
                             <p>
                                 Von
                                 <NuxtLink
-                                    to="/fable#ueber-mich"
+                                    to="/#ueber-mich"
                                     class="font-medium text-gray-700 underline decoration-emerald-500 underline-offset-2 hover:text-emerald-700 dark:text-gray-200 dark:hover:text-emerald-400"
                                     >David Schubert</NuxtLink
                                 >
@@ -448,7 +448,7 @@ const jsonLd = {
             "@id": personId,
             name: "David Schubert",
             jobTitle: "Senior UI/UX Designer & Creative Technologist",
-            url: `${SITE_URL}/fable/`,
+            url: `${SITE_URL}/`,
             sameAs: [
                 "https://www.linkedin.com/in/davidschubert-uiux/",
                 "https://github.com/davidschubert",
@@ -478,13 +478,13 @@ const jsonLd = {
                     "@type": "ListItem",
                     position: 1,
                     name: "Start",
-                    item: `${SITE_URL}/fable/`,
+                    item: `${SITE_URL}/`,
                 },
                 {
                     "@type": "ListItem",
                     position: 2,
                     name: "Wissen",
-                    item: `${SITE_URL}/fable/#wissen`,
+                    item: `${SITE_URL}/#wissen`,
                 },
                 {
                     "@type": "ListItem",

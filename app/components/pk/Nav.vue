@@ -7,7 +7,7 @@
             class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-8"
         >
             <NuxtLink
-                to="/fable"
+                to="/"
                 class="flex items-center gap-2 font-bold tracking-tight text-gray-900 dark:text-white"
             >
                 <span
@@ -46,11 +46,11 @@ withDefaults(
     }>(),
     {
         links: () => [
-            { label: "Leistungen", href: "/fable#leistungen" },
+            { label: "Leistungen", href: "/#leistungen" },
             { label: "UX-Audit", href: "/ux-audit" },
-            { label: "Referenzen", href: "/fable#referenzen" },
-            { label: "Wissen", href: "/fable#wissen" },
-            { label: "FAQ", href: "/fable#faq" },
+            { label: "Referenzen", href: "/#referenzen" },
+            { label: "Wissen", href: "/#wissen" },
+            { label: "FAQ", href: "/#faq" },
         ],
     }
 );

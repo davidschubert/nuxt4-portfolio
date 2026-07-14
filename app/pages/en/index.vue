@@ -32,7 +32,7 @@
                         <a href="#faq" class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400">FAQ</a>
                     </li>
                     <li>
-                        <NuxtLink to="/fable" class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400">Deutsch</NuxtLink>
+                        <NuxtLink to="/" class="text-gray-600 transition-colors hover:text-emerald-600 dark:text-gray-300 dark:hover:text-emerald-400">Deutsch</NuxtLink>
                     </li>
                 </ul>
 
@@ -330,7 +330,7 @@
                             <a href="https://github.com/davidschubert" target="_blank" rel="noopener me" class="hover:text-white hover:underline underline-offset-4">GitHub</a>
                         </li>
                         <li>
-                            <NuxtLink to="/fable" class="hover:text-white hover:underline underline-offset-4">Deutsche Version</NuxtLink>
+                            <NuxtLink to="/" class="hover:text-white hover:underline underline-offset-4">Deutsche Version</NuxtLink>
                         </li>
                         <li>
                             <a href="https://pukalani.studio/imprint.pdf" target="_blank" rel="noopener" class="hover:text-white hover:underline underline-offset-4">Imprint (PDF)</a>
@@ -522,9 +522,9 @@ useHead({
     ],
     link: [
         { rel: "canonical", href: PAGE_URL },
-        { rel: "alternate", hreflang: "de", href: `${SITE_URL}/fable/` },
+        { rel: "alternate", hreflang: "de", href: `${SITE_URL}/` },
         { rel: "alternate", hreflang: "en", href: PAGE_URL },
-        { rel: "alternate", hreflang: "x-default", href: `${SITE_URL}/fable/` },
+        { rel: "alternate", hreflang: "x-default", href: `${SITE_URL}/` },
     ],
     script: [
         {

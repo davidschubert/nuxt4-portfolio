@@ -28,10 +28,6 @@ export default defineNuxtConfig({
             crawlLinks: true,
             routes: [
                 "/",
-                "/chatgpt",
-                "/claude",
-                "/best",
-                "/fable",
                 "/ux-audit",
                 "/nuxt-entwickler-freelancer",
                 "/wissen/was-kostet-ux-design",
@@ -68,30 +64,15 @@ export default defineNuxtConfig({
                 "cache-control": "public, max-age=3600, must-revalidate",
             },
         },
-        "/chatgpt": {
-            prerender: true,
-            headers: {
-                "cache-control": "public, max-age=3600, must-revalidate",
-            },
-        },
-        "/claude": {
-            prerender: true,
-            headers: {
-                "cache-control": "public, max-age=3600, must-revalidate",
-            },
-        },
-        "/best": {
-            prerender: true,
-            headers: {
-                "cache-control": "public, max-age=3600, must-revalidate",
-            },
-        },
-        "/fable": {
-            prerender: true,
-            headers: {
-                "cache-control": "public, max-age=3600, must-revalidate",
-            },
-        },
+        // Alte Varianten-URLs dauerhaft auf die Startseite umleiten
+        "/chatgpt": { redirect: { to: "/", statusCode: 301 } },
+        "/chatgpt/**": { redirect: { to: "/", statusCode: 301 } },
+        "/claude": { redirect: { to: "/", statusCode: 301 } },
+        "/claude/**": { redirect: { to: "/", statusCode: 301 } },
+        "/best": { redirect: { to: "/", statusCode: 301 } },
+        "/best/**": { redirect: { to: "/", statusCode: 301 } },
+        "/fable": { redirect: { to: "/", statusCode: 301 } },
+        "/fable/**": { redirect: { to: "/", statusCode: 301 } },
         "/ux-audit": {
             prerender: true,
             headers: {
